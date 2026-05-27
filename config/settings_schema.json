@@ -34,6 +34,21 @@
     ]
   },
   {
+    "name": "Hero Banner Preload",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image_desktop",
+        "label": "Hero Image (Desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "hero_image_mobile",
+        "label": "Hero Image (Mobile)"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
@@ -112,7 +127,8 @@
         "type": "font_picker",
         "id": "type_header_font",
         "default": "assistant_n4",
-        "label": "t:settings_schema.typography.settings.type_header_font.label"
+        "label": "t:settings_schema.typography.settings.type_header_font.label",
+        "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
         "type": "range",
@@ -132,7 +148,8 @@
         "type": "font_picker",
         "id": "type_body_font",
         "default": "assistant_n4",
-        "label": "t:settings_schema.typography.settings.type_body_font.label"
+        "label": "t:settings_schema.typography.settings.type_body_font.label",
+        "info": "t:settings_schema.typography.settings.type_body_font.info"
       },
       {
         "type": "range",
@@ -1304,6 +1321,10 @@
     "name": "t:settings_schema.social-media.name",
     "settings": [
       {
+        "type": "header",
+        "content": "t:settings_schema.social-media.settings.header.content"
+      },
+      {
         "type": "text",
         "id": "social_facebook_link",
         "label": "t:settings_schema.social-media.settings.social_facebook_link.label",
@@ -1363,6 +1384,10 @@
     "name": "t:settings_schema.search_input.name",
     "settings": [
       {
+        "type": "header",
+        "content": "t:settings_schema.search_input.settings.header.content"
+      },
+      {
         "type": "checkbox",
         "id": "predictive_search_enabled",
         "default": true,
@@ -1387,6 +1412,10 @@
   {
     "name": "t:settings_schema.currency_format.name",
     "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.currency_format.settings.content"
+      },
       {
         "type": "paragraph",
         "content": "t:settings_schema.currency_format.settings.paragraph"
