@@ -8,9 +8,514 @@
  * ------------------------------------------------------------
  */
 {
-  "current": "Dawn",
+  "current": {
+    "logo": "shopify://shop_images/milvertons-logo-full-trnsp-approved-recmnded-size-4xcmp-200x200-circle-square-live_7a1dd062-1c0a-468c-b40a-9a79e1e692d9.webp",
+    "logo_width": 120,
+    "favicon": "shopify://shop_images/milvertons-favicon-no-background-96x96_e68419aa-318c-4f16-a1bc-ee673bc16340.png",
+    "type_header_font": "sans-serif",
+    "heading_scale": 100,
+    "type_body_font": "sans-serif",
+    "body_scale": 100,
+    "page_width": 1200,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 8,
+    "animations_reveal_on_scroll": false,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "collection_card_style": "standard",
+    "collection_card_image_padding": 0,
+    "collection_card_text_alignment": "left",
+    "collection_card_color_scheme": "background-2",
+    "collection_card_border_thickness": 0,
+    "collection_card_border_opacity": 10,
+    "collection_card_corner_radius": 0,
+    "collection_card_shadow_opacity": 0,
+    "collection_card_shadow_horizontal_offset": 0,
+    "collection_card_shadow_vertical_offset": 4,
+    "collection_card_shadow_blur": 5,
+    "blog_card_style": "standard",
+    "blog_card_image_padding": 0,
+    "blog_card_text_alignment": "left",
+    "blog_card_color_scheme": "background-2",
+    "blog_card_border_thickness": 0,
+    "blog_card_border_opacity": 10,
+    "blog_card_corner_radius": 0,
+    "blog_card_shadow_opacity": 0,
+    "blog_card_shadow_horizontal_offset": 0,
+    "blog_card_shadow_vertical_offset": 4,
+    "blog_card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 0,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
+    "social_facebook_link": "https://facebook.com/milvertonstore",
+    "social_instagram_link": "http://instagram.com/milvertonstore",
+    "social_youtube_link": "",
+    "social_tiktok_link": "",
+    "social_twitter_link": "https://twitter.com/milvertonstore",
+    "social_snapchat_link": "",
+    "social_pinterest_link": "https://pinterest.com/milvertonstore",
+    "social_tumblr_link": "",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": true,
+    "cart_type": "page",
+    "show_vendor": false,
+    "show_cart_note": false,
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Welcome to our store. You Shop. We Give!",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "show_line_separator": true,
+          "color_scheme": "background-1",
+          "mobile_logo_position": "center",
+          "margin_bottom": 0,
+          "padding_top": 20,
+          "padding_bottom": 20
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Company Information",
+              "menu": "footer"
+            }
+          },
+          "542f0775-4ce1-4b96-97aa-db960660743b": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Customer Service",
+              "menu": "customer-service"
+            }
+          },
+          "3b39d08a-1ace-49e7-94fd-cf3a426ef3e4": {
+            "type": "text",
+            "settings": {
+              "heading": "Our Store",
+              "subtext": "<p>The Milvertons Store displays an extensive range of carefully considered and selected contemporary products, with special focus on Women's Shoes, Bags, Clothing and Accessories.</p><p>You will receive responsive and professional advice to help you choose the right products and guide you through the process of ordering, whether it is a single order or multiple orders.</p><p>We offer stress-free online shopping experience, especially with our affordable pricing and refund policy. </p>"
+            }
+          },
+          "footer-2": {
+            "type": "text",
+            "settings": {
+              "heading": "Contact Information",
+              "subtext": "<p>4 Greenmeadow Road, Eastchester,                                     <br/>New York 10709, United States    </p><p>email: sales@milvertons.com<br/>phone: 855-566-3466</p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "542f0775-4ce1-4b96-97aa-db960660743b",
+          "3b39d08a-1ace-49e7-94fd-cf3a426ef3e4",
+          "footer-2"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": true,
+          "margin_top": 48,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "17595556821664008138": {
+        "type": "shopify://apps/zoorix-cross-sell-bundles/blocks/zoorix-head/51fffd07-f9df-4d6a-b901-6d14b243dcad",
+        "disabled": true,
+        "settings": {}
+      },
+      "2153490007123654574": {
+        "type": "shopify://apps/gdpr-ccpa-cookie-management/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "1513253815146976218": {
+        "type": "shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9",
+        "disabled": true,
+        "settings": {}
+      },
+      "16735461377607925125": {
+        "type": "shopify://apps/roar-terms-and-conditions-box/blocks/app-embed/17661ca5-aeea-41b9-8091-d8f7233e8b22",
+        "disabled": false,
+        "settings": {}
+      },
+      "15154131639906026026": {
+        "type": "shopify://apps/tinyimg-speed-seo/blocks/broken-link-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "9901917232353999808": {
+        "type": "shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
+        "disabled": true,
+        "settings": {}
+      },
+      "2950567246721570496": {
+        "type": "shopify://apps/tabs-studio/blocks/global_embed_block/19980fb9-f2ca-4ada-ad36-c0364c3318b8",
+        "disabled": true,
+        "settings": {
+          "init_type": "automatic",
+          "init_selector": "",
+          "replace_contents": false,
+          "init_timing": "immediate",
+          "custom_script": "",
+          "custom_style": ""
+        }
+      },
+      "7553055287323118546": {
+        "type": "shopify://apps/tinytabs/blocks/tabs-embed/cd5da974-394e-41cb-b448-0c9a6d16a42d",
+        "disabled": false,
+        "settings": {
+          "css_selector": "",
+          "custom_css": ""
+        }
+      },
+      "3146350951499932190": {
+        "type": "shopify://apps/simesy-faq-page-product-faq/blocks/simesy-faq-script/467857aa-e495-4e93-917b-0cc9234489fd",
+        "disabled": false,
+        "settings": {}
+      },
+      "judgeme_core_5f69073f": {
+        "type": "shopify://apps/judge-me-product-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "7445024463111146658": {
+        "type": "shopify://apps/pwa-ios-android-app/blocks/app-block/4ac46764-72e4-4b90-933d-c63e9b80bb36",
+        "disabled": true,
+        "settings": {}
+      },
+      "11560147490181472608": {
+        "type": "shopify://apps/rivo-loyalty-referrals/blocks/app-embed/580e9665-b2cd-4dbc-b6ba-6445ac9e6871",
+        "disabled": false,
+        "settings": {}
+      },
+      "4976129024724438625": {
+        "type": "shopify://apps/smart-seo/blocks/brokenLinkDetection/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+        "disabled": false,
+        "settings": {}
+      },
+      "15685250022964305326": {
+        "type": "shopify://apps/elevar-conversion-tracking/blocks/dataLayerEmbed/bc30ab68-b15c-4311-811f-8ef485877ad6",
+        "disabled": false,
+        "settings": {}
+      },
+      "1273784864418556257": {
+        "type": "shopify://apps/smartbn-banner-slider/blocks/embedbanner/4e519896-1b18-4c51-970e-35631a56cec7",
+        "disabled": true,
+        "settings": {}
+      },
+      "13951170544780599758": {
+        "type": "shopify://apps/tapita-seo-speed/blocks/app-embed/cd37ca7a-40ad-4fdc-afd3-768701482209",
+        "disabled": false,
+        "settings": {}
+      },
+      "6406956604159796213": {
+        "type": "shopify://apps/smart-seo/blocks/smartseo/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+        "disabled": false,
+        "settings": {}
+      },
+      "1369284949797581044": {
+        "type": "shopify://apps/tinyseo-seo-speed/blocks/collection-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "2353461558643755616": {
+        "type": "shopify://apps/tinyseo-seo-speed/blocks/breadcrumbs-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "1360768219604461044": {
+        "type": "shopify://apps/tinyseo-seo-speed/blocks/store-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "14971748854670876780": {
+        "type": "shopify://apps/tinyseo-seo-speed/blocks/product-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": true,
+        "settings": {}
+      },
+      "11089864892113081655": {
+        "type": "shopify://apps/tinyseo-seo-speed/blocks/website-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "3782161271425840822": {
+        "type": "shopify://apps/ns-image-swatch-variant-option/blocks/nestscale_product_variant/53eb5ed4-3892-414c-808b-3ea84516b10d",
+        "disabled": false,
+        "settings": {}
+      },
+      "1027443428159536739": {
+        "type": "shopify://apps/hextom-announce-bar/blocks/qab-embeded-block/9ac2a261-3b8b-42c8-9613-d34eb2e079d3",
+        "disabled": false,
+        "settings": {}
+      },
+      "starapps-vtk": {
+        "type": "shopify://apps/variant-title-king/blocks/starapps-vtk-embed/b9b7a642-58c3-4fe1-8f1b-ed3e502da04b",
+        "disabled": false,
+        "settings": {}
+      },
+      "4293466245358296089": {
+        "type": "shopify://apps/smartsize/blocks/app-embed/465a43e0-6a1a-4d30-b82e-fe6118568705",
+        "disabled": false,
+        "settings": {
+          "button_horizontal_aligment": "left",
+          "button_horizontal_aligment_mobile": "left",
+          "smartsize_button_label": "--",
+          "smartsize_conversion_label_CM": "CM",
+          "smartsize_conversion_label_IN": "INCHES"
+        }
+      },
+      "15491329222024606408": {
+        "type": "shopify://apps/rt-trust-badges-builder/blocks/app-embed/73c1d544-55f5-4ecf-8ac3-68e3c4a757bc",
+        "disabled": false,
+        "settings": {}
+      },
+      "3138269044488530766": {
+        "type": "shopify://apps/uppromote-affiliate/blocks/core-script/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+        "disabled": false,
+        "settings": {}
+      },
+      "16510219240223340300": {
+        "type": "shopify://apps/whatmore-shoppable-videos/blocks/app-embed/20db8a72-315a-4364-8885-64219ee48303",
+        "disabled": false,
+        "settings": {
+          "minimized_video_position": "right",
+          "horizontal-padding": 5,
+          "vertical-padding": 150,
+          "app-size": 50,
+          "minimized_video_position_landscape": "right",
+          "horizontal-padding-landscape": 5,
+          "vertical-padding-landscape": 150,
+          "app-size-landscape": 50,
+          "video-title": "",
+          "use-variant": "false"
+        }
+      },
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {}
+      },
+      "pagefly-page-builder": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "13790739142488346433": {
+        "type": "shopify://apps/lai-product-reviews/blocks/appBlockEmbed/cad3c6c6-329e-4416-ba74-b79359b5b6e1",
+        "disabled": true,
+        "settings": {}
+      },
+      "53419374109736018": {
+        "type": "shopify://apps/nabu-redirect-manager/blocks/script-block/1ec76215-4f32-4e94-950a-ce6073ea1b48",
+        "disabled": false,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#3389b6",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#6a6a6a",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "higher",
+          "greeting_message": "👋 Hello! Please message us if you have questions, or give an idea of what you’re looking for. We’re happy to make recommendations."
+        }
+      },
+      "13417815402603211594": {
+        "type": "shopify://apps/uppush-email-web-push/blocks/push-notification/89fcbaff-b715-4dc6-a755-6fdb7b790bee",
+        "disabled": true,
+        "settings": {}
+      },
+      "22230382528836309": {
+        "type": "shopify://apps/xb-ai-cart-upsell/blocks/core_script/e9179814-5d2a-40d0-a03d-245bcb819e73",
+        "disabled": false,
+        "settings": {}
+      },
+      "13987313001505098986": {
+        "type": "shopify://apps/cozy-antitheft/blocks/Cozy_Antitheft_Script_1.0.0/a34a1874-f183-4394-8a9a-1e3f3275f1a7",
+        "disabled": false,
+        "settings": {}
+      },
+      "11104565113590962351": {
+        "type": "shopify://apps/tinyseo/blocks/article-json-ld-embed/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {}
+      },
+      "8357711462606235960": {
+        "type": "shopify://apps/seo-alpin-internal-linking/blocks/seo-alpin/019ddd9a-dec2-7167-a988-46f22065142c",
+        "disabled": false,
+        "settings": {}
+      }
+    },
+    "color_schemes": {
+      "background-1": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "background-2": {
+        "settings": {
+          "background": "#f3f3f3",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#121212",
+          "button_label": "#f3f3f3",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "inverse": {
+        "settings": {
+          "background": "#121212",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#121212",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "accent-1": {
+        "settings": {
+          "background": "#121212",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#121212",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "accent-2": {
+        "settings": {
+          "background": "#334fb4",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#334fb4",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      }
+    }
+  },
   "presets": {
-    "Dawn": {
+    "Default": {
       "logo_width": 90,
       "color_schemes": {
         "scheme-1": {
@@ -200,5 +705,18 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "/* 11-13-2025 - Style \"As Seen On\" badge */ /* Retina‑Optimized CSS for Social Icons */ /* Wrapper */.as-seen-badge-icons {display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap;}",
+      " /* Icon defaults */.as-seen-badge__img {height: 48px; /* consistent height */ max-width: 120px; /* prevents wide logos from looking huge */ width: auto; object-fit: contain; image-rendering: -webkit-optimize-contrast; transition: transform 0.2s ease, opacity 0.2s ease; opacity: 0.9;}",
+      " /* Hover effect */.as-seen-badge__img:hover {transform: scale(1.1); opacity: 1;}",
+      " /* Mobile override */@media screen and (max-width: 749px) {.as-seen-badge__img {height: 36px; /* smaller size for mobile */ max-width: 90px; /* scale max-width down too */ } .as-seen-badge-icons {gap: 16px; }}",
+      " /* Retina / high-DPI optimization */@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {.as-seen-badge__img {height: 48px; max-width: 120px; }}",
+      " /* 9-24-2025 - Add the percentage saved (Percent off) on the same line as the price */.percent-saved-badge {background: #ff4444; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; margin: 0 8px; display: inline-block;}",
+      ".price__sale {display: flex; align-items: center; flex-wrap: wrap; gap: 8px;}",
+      " /* 11-7-2023 Fix - Account Icon Missing On Mobile */a.header__icon.header__icon--account.link.focus-inset.small-hide {display: flex !important;}",
+      " /* 2-8-2023 Make \"Add to cart\" button black */product-form [type=\"submit\"] {color: #ffffff !important; background-color: black !important; font-weight: bolder !important;}"
+    ]
   }
 }
