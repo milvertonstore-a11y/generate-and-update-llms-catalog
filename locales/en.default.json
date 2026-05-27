@@ -68,7 +68,7 @@
   },
   "newsletter": {
     "label": "Email",
-    "success": "Thanks for subscribing",
+    "success": "Thanks for subscribing! Check your inbox for your exclusive 15% discount. Simply click the link in the email to automatically apply it to your first order.",
     "button_label": "Subscribe"
   },
   "accessibility": {
