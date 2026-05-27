@@ -7,8 +7,96 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+  <script>/* start spd config */window._spt_delay_keywords=["/gtag/js,gtag(,/checkouts,/tiktok-track.js,/hotjar-,/smile-,/adoric.js,/wpm/,fbq("];window._spt_customer_delay_keywords=["/gtag/js","gtag(","/checkouts","/tiktok-track.js","/hotjar-","/smile-","/adoric.js"];/* end spd config */</script>
+
+    <!-- 2-5-2026 - Use "Preconnect" to warm up the connection to the Shopify CDN -->
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.shopify.com">
+
+    <!-- 2-12-2026 - Preload the LCP Image -->
+    {%- if template == 'index' -%}
+      {%- assign lcp_img = images['milvertons-homepage-hero-banner-new-collection-1600x800px.webp'] -%}
+      {%- if lcp_img != blank -%}
+        <link
+          rel="preload"
+          as="image"
+          media="(max-width: 749px)"
+          href="{{ lcp_img | image_url: width: 1200 }}"
+          imagesrcset="
+            {{ lcp_img | image_url: width: 375 }} 375w,
+            {{ lcp_img | image_url: width: 550 }} 550w,
+            {{ lcp_img | image_url: width: 750 }} 750w,
+            {{ lcp_img | image_url: width: 800 }} 800w,
+            {{ lcp_img | image_url: width: 1100 }} 1100w,
+            {{ lcp_img | image_url: width: 1200 }} 1200w"
+          imagesizes="100vw"
+          fetchpriority="high"
+        >
+        <link
+          rel="preload"
+          as="image"
+          media="(min-width: 750px)"
+          href="{{ lcp_img | image_url: width: 1600 }}"
+          imagesrcset="
+            {{ lcp_img | image_url: width: 750 }} 750w,
+            {{ lcp_img | image_url: width: 1100 }} 1100w,
+            {{ lcp_img | image_url: width: 1400 }} 1400w,
+            {{ lcp_img | image_url: width: 1600 }} 1600w,
+            {{ lcp_img | image_url: width: 2000 }} 2000w,
+            {{ lcp_img | image_url: width: 3000 }} 3000w"
+          imagesizes="100vw"
+          fetchpriority="high"
+        >
+      {%- endif -%}
+    {%- endif -%}
+
+    <style id="Stability-Accessibility-Core">
+      .banner, .banner__media, .banner__content, .banner__box {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        z-index: 5;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .banner__media img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+        margin-bottom: 0 !important;
+      }
+      .percent-saved-badge {
+        background-color: #e62117 !important;
+        color: #ffffff !important;
+        display: inline-block !important;
+        padding: 3px 10px !important;
+        font-weight: 700 !important;
+      }
+      .jdgm-prev-badge__stars {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        color: #ffbf00 !important;
+      }
+      .jdgm-star { margin: 0 !important; padding: 0 !important; font-size: 16px !important; }
+      .card__heading a.full-unstyled-link {
+        display: block !important;
+        min-height: 44px !important;
+        padding: 8px 0 !important;
+      }
+    </style>
+
     {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/apple-touch-icon.png">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 48, height: 48 }}">
+      <link rel="mask-icon" href="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/safari-pinned-tab.svg" color="#5bbad5">
+      <link rel="manifest" href="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/site.webmanifest">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="msapplication-config" content="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/browserconfig.xml">
+      <meta name="theme-color" content="#ffffff">
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
@@ -16,17 +104,56 @@
     {%- endunless -%}
 
     <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if request.page_type == 'index' -%}
+        {%- assign home_title = page_title -%}
+        {%- if home_title.size <= 70 -%}
+          {{ home_title }}
+        {%- else -%}
+          {{ home_title | truncate: 70, "" }}
+        {%- endif -%}
+      {%- elsif canonical_url contains "/a/sitemap-tools/sitemap" -%}
+        Sitemap - {{ shop.name }}
+      {%- elsif canonical_url contains "/apps/help-center" -%}
+        FAQs - Frequently Asked Questions - Milvertons
+      {%- else -%}
+        {{ page_title | default: shop.name }}
+        {%- if current_tags %} - tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %} - Page {{ current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %} - {{ shop.name }}{% endunless -%}
+      {%- endif -%}
     </title>
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
+    <!-- Google Consent Mode V2 integration script from Consentmo GDPR App -->
+    {% render 'gcm-integration-script' %}
+
+    <!-- Dynamic robots directive -->
+    {%- liquid
+      assign robots_directive = ''
+      if template.name == 'search'
+        assign robots_directive = 'noindex, follow'
+      elsif template.name == 'collection' and current_tags
+        assign robots_directive = 'noindex, follow'
+      elsif canonical_url contains 'page='
+        assign page_number = canonical_url | split: 'page=' | last | plus: 0
+        if page_number > 2
+          assign robots_directive = 'noindex, follow'
+        endif
+      elsif canonical_url contains '/apps/' or canonical_url contains '/tools/'
+        assign robots_directive = 'noindex, follow'
+      elsif template contains 'customers'
+        assign robots_directive = 'noindex, nofollow'
+      endif
+    -%}
+    {%- if robots_directive != '' -%}
+      <meta name="robots" content="{{ robots_directive }}">
+    {%- endif -%}
+
+
+    {% render 'meta-tags', page_description: page_description, page_title: page_title %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -39,7 +166,127 @@
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {{ content_for_header }}
+    {%- if template == 'index' -%}
+      {%- comment -%}
+        IDLE LOAD CHECKOUT CSS: Captures versioning in a dummy attribute to prevent render-blocking.
+      {%- endcomment -%}
+      {{ content_for_header | replace: "accelerated-checkout-backwards-compat.css", "accelerated-checkout-backwards-compat.css' media='print' onload='this.media=\"all\"' data-v='" }}
+    {%- else -%}
+      {{ content_for_header }}
+    {%- endif -%}
+    
+    <!-- Inline Critical CSS for LCP Image Banner -->
+    {% if template == 'index' %}
+      <style>
+        .banner:not([class*="xb-"]),
+        .banner:not([class*="xb-"]) *:not([class*="xb-"]),
+        .announcement-bar,
+        .header:not([class*="xb-"]) {
+          animation: none !important;
+          transition: none !important;
+          transform: none !important;
+          will-change: auto !important;
+        }
+        .banner__content,
+        .banner__media,
+        .banner__media img {
+          opacity: 1 !important;
+          visibility: visible !important;
+          animation: none !important;
+        }
+        .banner {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          isolation: isolate;
+          min-height: 200px !important;
+        }
+        .banner__media {
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        .banner__media-half { width: 50%; }
+        .banner__media-image-half {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+        .banner__content {
+          padding: 0;
+          display: flex;
+          position: relative;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+        }
+        .banner__box {
+          padding: 4rem 1.5rem;
+          position: relative;
+          height: fit-content;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          word-wrap: break-word;
+          z-index: 1;
+        }
+        .banner__box > * + * { margin-top: 1rem; }
+        .banner__box > *:first-child { margin-top: 0; }
+        .banner__heading { margin-bottom: 0; }
+        .banner__box .banner__heading + * { margin-top: 1rem; }
+        .banner__box > * + .banner__buttons { margin-top: 2rem; }
+        .banner__buttons {
+          display: inline-flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          max-width: 45rem;
+          word-break: break-word;
+        }
+        @media screen and (max-width: 749px) {
+          .banner--adapt .banner__media::before {
+            content: '';
+            display: block;
+            padding-bottom: 55.56%;
+          }
+          .banner--mobile-bottom .banner__media {
+            position: relative !important;
+            height: 200px !important;
+          }
+        }
+        @media screen and (min-width: 750px) {
+          .banner--adapt .banner__media::before {
+            content: '';
+            display: block;
+            padding-bottom: 15.63%;
+          }
+        }
+      </style>
+    {% endif %}
+
+    <!-- 4-3-2023 - Google site verification -->
+    <meta name="google-site-verification" content="rFEHfYJ6fSriTIl0--9G0LI5xLlerGiBveRWXc5D2co" />
+
+    <!-- 2-6-2025 - Add Alt text to ModeMagic trust badge placeholder -->
+    <script>
+      (function() {
+        function addAltToPlaceholderImage() {
+          const images = document.querySelectorAll('img[src*="modemagic-store-conversions"]');
+          if(images.length === 0) return;
+          images.forEach((img) => {
+            if (!img.alt) { img.alt = "Trust Badge Placeholder"; }
+          });
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(addAltToPlaceholderImage);
+        } else {
+          setTimeout(addAltToPlaceholderImage, 4000);
+        }
+      })();
+    </script>
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -256,6 +503,28 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+
+    <!-- 1-26-2026 - Async app CSS -->
+    <link rel="stylesheet" href="https://cdn.shopify.com/extensions/2dac4d8b-4911-4616-a9a2-add718511d79/1.0.0/assets/trust.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019a2c75-764c-7925-b253-e24466484d41/legal-7/assets/legal.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019cf9d3-d4b8-7e5e-b006-be8d48ef090f/xb-sticky-add-to-cart-upsell-454/assets/core.css" media="print" onload="this.media='all'">
+
+    <!-- Accelerated Checkout CSS - product/cart only -->
+    {% if template.name == 'product' or template.name == 'cart' %}
+      <link rel="stylesheet" href="https://milvertons.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" media="print" onload="this.media='all'">
+    {% endif %}
+
+    <!-- 8-17-2025 - Async image banner CSS -->
+    <link rel="preload" href="{{ 'section-image-banner.css' | asset_url }}" as="style">
+    <link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}"></noscript>
+
+    <!-- 8-25-2025 - Deferred shop-js modal -->
+    <script src="https://milvertons.com/cdn/shopifycloud/shop-js/modules/v2/chunk.modal_4fr7SCRr.esm.js" defer="defer"></script>
+
+    <!-- 8-31-2024 - Deferred UPPush notification -->
+    <script src="https://milvertons.com/apps/pushup-notification/uppush-notification.min.js?v=1.15" defer="defer"></script>
+
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -296,6 +565,79 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <!-- 4-3-2026 - FAQ Schema Markup - homepage only -->
+    {%- if template == 'index' -%}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you offer free shipping to the USA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! All orders to continental USA ship completely FREE with tracking. Typical delivery time is 5-10 business days from order confirmation. International shipping to the UK, Canada, Nigeria, Ghana, and other countries is available—rates calculated at checkout based on weight and destination."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I track my order?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Once your order ships, you'll receive an email with tracking number and carrier information. You can also log into your Milvertons account to view order status. Most USA orders arrive within 5-10 business days. If you haven't received tracking info within 5 business days of ordering, you can contact us at sales@milvertons.com."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you ship to African countries?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! We ship to Nigeria, Ghana, Kenya, South Africa, and other African countries. International Shipping typically takes 15-35 business days. Import duties and taxes may apply based on your country's regulations—these are the customer's responsibility."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I choose the right size?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most of our shoes use European sizing (EU 37-43). To find your size: measure your foot from heel to toe in centimeters and compare to our size chart: EU 37=23.5cm, EU 38=24.5cm, EU 39=25cm, EU 40=26cm, EU 41=26.5cm, EU 42=27.5cm, EU 43=28cm. If between sizes, size up."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is your return policy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer 30-day returns on unworn items in original packaging with tags attached. To initiate a return, email sales@milvertons.com with your order number. Refunds processed within 5-10 business days of receiving the return."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer Buy Now, Pay Later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! At checkout, select Shop Pay Installments or Klarna to split your purchase into 4 interest-free payments. No credit check required for orders under $500."
+            }
+          }
+        ]
+      }
+      </script>
+
+      <!-- 4-3-2026 - Deferred script loader -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var scripts = document.querySelectorAll('script[data-defer]');
+          scripts.forEach(function(script) {
+            var newScript = document.createElement('script');
+            newScript.src = script.dataset.src;
+            script.parentNode.replaceChild(newScript, script);
+          });
+        });
+      </script>
+    {%- endif -%}
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -310,6 +652,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {% render 'breadcrumbs' %}
       {{ content_for_layout }}
     </main>
 
@@ -365,12 +708,136 @@
       };
     </script>
 
-    {%- if settings.predictive_search_enabled -%}
-      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    <!-- 1-24-2026 - Delay Shopify Inbox chat bubble by 24 seconds -->
+    <style id="delay-inbox-style">
+      #shopify-chat, .shopify-chat, iframe#dummy-chat-button-iframe {
+        display: none !important;
+        visibility: hidden !important;
+      }
+    </style>
 
-    {%- if settings.cart_type == 'drawer' -%}
-      <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    <script>
+      (function() {
+        const delayTime = 24000;
+        function showInbox() {
+          const styleTag = document.getElementById('delay-inbox-style');
+          if (styleTag) styleTag.remove();
+          const chatWidget = document.querySelector('#shopify-chat') ||
+                            document.querySelector('.shopify-chat') ||
+                            document.querySelector('iframe#dummy-chat-button-iframe');
+          if (chatWidget) {
+            chatWidget.style.setProperty('display', 'block', 'important');
+            chatWidget.style.setProperty('visibility', 'visible', 'important');
+          }
+        }
+        setTimeout(showInbox, delayTime);
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node.id === 'shopify-chat' || node.id === 'dummy-chat-button-iframe') {
+                node.style.setProperty('display', 'none', 'important');
+              }
+            });
+          });
+        });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+        setTimeout(() => observer.disconnect(), delayTime + 500);
+      })();
+    </script>
+
+    <!-- 2-18-2026 - Master Idle Loader -->
+    {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%}
+
+    <script>
+      (function() {
+        const loadDelayedScripts = () => {
+          const inject = (src) => {
+            const s = document.createElement('script');
+            s.src = src;
+            s.defer = true;
+            document.body.appendChild(s);
+          };
+
+          {%- if settings.predictive_search_enabled -%}
+            inject("{{ 'predictive-search.js' | asset_url }}");
+          {%- endif -%}
+
+          {%- if settings.cart_type == 'drawer' -%}
+            inject("{{ 'cart-drawer.js' | asset_url }}");
+          {%- endif -%}
+
+          {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+            inject("{{ 'localization-form.js' | asset_url }}");
+          {%- endif -%}
+
+          inject("{{ shop.metafields.CZAT.shopat_script }}");
+          inject("https://d1mqdk3pxfmmxi.cloudfront.net/bC6eWkwy9zz1l2yy.js");
+          inject("https://cdn.shopify.com/extensions/019ca303-e909-78a0-adca-662e9357a616/xb-sticky-add-to-cart-upsell-452/assets/core_script.js");
+          inject("https://milvertons.com/cdn/shopifycloud/shop-js/modules/v2/client.shop-follow-button_DzGbq68Y.en.esm.js");
+
+          {%- if content_for_header contains 'adoric.com' -%}
+            {%- render 'adoric-ads' -%}
+          {%- endif -%}
+        };
+
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(() => {
+            setTimeout(loadDelayedScripts, 2500);
+          }, { timeout: 4000 });
+        } else {
+          setTimeout(loadDelayedScripts, 3000);
+        }
+      })();
+    </script>
+
+    <!-- MakeAnOffer -->
+    <script>
+      var makeAnOfferData = (function() {
+        var data = {
+          product: null,
+          cartProducts: [],
+          currency_iso_code: "{{ currency.iso_code }}",
+          settings: {{ shop.metafields.make_an_offer.user_setting | json }},
+          customer_email: "{{ customer.email }}"
+        };
+        {% if product %}
+          data.product = (function() {
+            var mf_featured_image = "{{ product.selected_or_first_available_variant.featured_image | default: product.featured_image | img_url: '1024x1024'}}";
+            var mf_other_image = "{{ product.images.first | img_url: '1024x1024' }}";
+            return {
+              title: {{ product.title | json }},
+              price: "{{ product.price | money_without_currency }}",
+              currency: {{ shop.money_format | json }},
+              image: mf_featured_image || mf_other_image,
+              variants: {{ product.variants | json }},
+              tags: {{ product.tags | json }},
+              collections: {{ product.collections | json }},
+              url: "{{ product.url | within: collections.all }}",
+              available: {{ product.available }}
+            }
+          })();
+        {% endif %}
+        {% if cart.items.size > 0 %}
+          {% for item in cart.items %}
+            data.cartProducts.push((function() {
+              return {
+                title: {{ item.product.title | json }},
+                price: `{{ item.price | money }}`,
+                image: "{{ item | img_url: '1024x1024' }}",
+                variants: {{ item.variants | json }},
+                variant_id: "{{ item.variant.id }}",
+                url: "{{ item.url | within: collections.all }}",
+                sku: "{{ item.sku }}",
+                tags: {{ item.product.tags | json }},
+                collections: {{ item.product.collections | json }},
+                available: {{ item.product.available }}
+              }
+            })());
+          {% endfor %}
+        {% endif %}
+        return data;
+      })();
+    </script>
+
   </body>
 </html>
