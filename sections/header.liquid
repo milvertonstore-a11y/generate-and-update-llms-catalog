@@ -110,6 +110,20 @@
   endfor
 -%}
 
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-reset" class="icon icon-close" fill="none" viewBox="0 0 18 18" stroke="currentColor">
+    <circle r="8.5" cy="9" cx="9" stroke-opacity="0.2"/>
+    <path d="M6.82972 6.82915L1.17193 1.17097" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"/>
+    <path d="M1.22896 6.88502L6.77288 1.11523" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"/>
+  </symbol>
+  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+  </symbol>
+</svg>
+
 {% liquid
   assign header_tag = 'div'
 
@@ -149,7 +163,8 @@
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
-        <h1 class="header__heading">
+        <!-- 12-6-2023 Swap h1 for div in header -->
+        <div class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
         {%- if settings.logo != blank -%}
@@ -176,7 +191,7 @@
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
-        </h1>
+        </div> <!-- 12-6-2023 Swap h1 for div in header -->
       {%- endif -%}
     {%- endif -%}
 
@@ -192,7 +207,8 @@
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
-        <h1 class="header__heading">
+        <!-- 12-6-2023 Swap h1 for div in header -->
+        <div class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
         {%- if settings.logo != blank -%}
@@ -219,7 +235,7 @@
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
-        </h1>
+        </div> <!-- 12-6-2023 Swap h1 for div in header -->
       {%- endif -%}
     {%- endif -%}
 
@@ -434,6 +450,9 @@
     {% if settings.logo %}
       "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
+    {% if settings.logo %}
+      "image": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+    {% endif %}  
     "sameAs": [
       {{ settings.social_twitter_link | json }},
       {{ settings.social_facebook_link | json }},
@@ -445,7 +464,27 @@
       {{ settings.social_youtube_link | json }},
       {{ settings.social_vimeo_link | json }}
     ],
-    "url": {{ request.origin | append: page.url | json }}
+    "url": {{ request.origin | append: page.url | json }},
+    "description": "{{ shop.description | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+    "telephone": "{{ shop.address.phone | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+    "address": {
+            "@type": "PostalAddress",
+        {%- if shop.address.street != blank %}
+            "streetAddress": "{{ shop.address.street | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+        {%- endif -%}
+        {%- if shop.address.city != blank %}
+            "addressLocality": "{{ shop.address.city | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+        {%- endif -%}
+        {%- if shop.address.province != blank %}
+            "addressRegion": "{{ shop.address.province | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+        {%- endif -%}
+        {%- if shop.address.zip != blank %}
+            "postalCode": "{{ shop.address.zip | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}",
+        {%- endif -%}
+        {%- if shop.address.country_code != blank %}
+            "addressCountry": "{{ shop.address.country_code | strip_newlines | strip_html | escape_once | replace: '\', '\\\\' }}"
+        {%- endif %}
+        }
   }
 </script>
 
