@@ -1,9 +1,10 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{{ 'section-footer.css' | asset_url | stylesheet_tag }}
-{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
-{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
-{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
-{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+<!-- 9-2-2024 - Async these CSS to prevent render blocking -->
+<link rel="stylesheet" href="{{ 'section-footer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {%- style -%}
   .footer {
@@ -287,7 +288,9 @@
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
             <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
+              <!-- 8-17-2024 - Custom payment types including Klarna -->
+              {% assign enabled_payment_types = 'amazon,american_express,apple_pay,diners_club,discover,google_pay,klarna,facebook_pay,master,paypal,shopify_pay,venmo,visa' | remove: ' ' | split: ',' %}
+              {% for type in enabled_payment_types %}
                 <li class="list-payment__item">
                   {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
                 </li>
@@ -302,7 +305,23 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        <!-- 10-7-2024 - Shopify SSL Secure Badge -->
+        <a
+          href="https://www.shopify.com/security/pci-compliant?utm_medium=shop&utm_source=secure"
+          title="This online store is secured by Shopify"
+          target="_blank"
+          rel="nofollow"
+          style="display: block; margin-bottom: 35px;"
+        >
+          <img
+            src="https://cdn.shopify.com/s/images/badges/shopify-secure-badge-white.svg"
+            alt="Shopify secure badge"
+            width="102"
+            height="44"
+            loading="lazy"
+          >
+        </a>
+        <small class="copyright__content"></small>        
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -342,7 +361,8 @@
           "type": "link_list",
           "id": "menu",
           "default": "footer",
-          "label": "t:sections.footer.blocks.link_list.settings.menu.label"
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
         }
       ]
     },
@@ -350,6 +370,10 @@
       "type": "brand_information",
       "name": "t:sections.footer.blocks.brand_information.name",
       "settings": [
+        {
+          "type": "header",
+          "content": "t:sections.footer.blocks.brand_information.settings.header__1.content"
+        },
         {
           "type": "paragraph",
           "content": "t:sections.footer.blocks.brand_information.settings.paragraph.content"
