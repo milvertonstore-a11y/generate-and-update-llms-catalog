@@ -152,9 +152,10 @@
                       {%- if product.selected_or_first_available_variant.inventory_quantity
                           <= block.settings.inventory_threshold
                       -%}
-                        <span class="svg-wrapper" style="color: rgb(238, 148, 65)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
-                        </span>
+                        <svg width="15" height="15" aria-hidden="true">
+                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(238,148,65, 0.3)"/>
+                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(238,148,65)"/>
+                        </svg>
                         {%- if block.settings.show_inventory_quantity -%}
                           {{-
                             'products.product.inventory_low_stock_show_count'
@@ -164,9 +165,10 @@
                           {{- 'products.product.inventory_low_stock' | t -}}
                         {%- endif -%}
                       {%- else -%}
-                        <span class="svg-wrapper" style="color: rgb(62, 214, 96)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
-                        </span>
+                        <svg width="15" height="15" aria-hidden="true">
+                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
+                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
+                        </svg>
                         {%- if block.settings.show_inventory_quantity -%}
                           {{-
                             'products.product.inventory_in_stock_show_count'
@@ -178,14 +180,16 @@
                       {%- endif -%}
                     {%- else -%}
                       {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
-                        <span class="svg-wrapper" style="color: rgb(62, 214, 96)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
-                        </span>
+                        <svg width="15" height="15" aria-hidden="true">
+                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
+                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
+                        </svg>
                         {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
                       {%- else -%}
-                        <span class="svg-wrapper" style="color: rgb(200, 200, 200)">
-                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
-                        </span>
+                        <svg width="15" height="15" aria-hidden="true">
+                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(200,200,200, 0.3)"/>
+                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(200,200,200)"/>
+                        </svg>
                         {{- 'products.product.inventory_out_of_stock' | t -}}
                       {%- endif -%}
                     {%- endif -%}
@@ -732,8 +736,144 @@
       endif
     -%}
 
+    <!-- 6-1-2026 - Added judgeme assignments from the modified JSON-LD script in Dawn Theme 12.00 -->  
+    {%- if product.metafields.judgeme.badge != blank %}
+      {%- assign rating_value_review_array = product.metafields.judgeme.badge | split: "data-average-rating='" -%}
+      {%- assign rating_value_arr = rating_value_review_array[1] | split: "'" -%}
+      {%- assign review_value = rating_value_arr[0] -%}
+      {%- assign reviews_count_str_array = product.metafields.judgeme.badge | split: "data-number-of-reviews='" -%}
+      {%- assign reviews_count_arr = reviews_count_str_array[1] | split: "'" -%}
+      {%- assign reviews_count = reviews_count_arr[0] -%}
+      {%- unless reviews_count == '0' -%}
+        {%- assign review_app_description = '"Judge.me Reviews"' -%}
+        {%- assign rating_value = review_value -%}
+        {%- assign review_count = reviews_count -%}
+      {%- endunless -%}
+    {%- endif -%}
+
+    {%- assign days_product_price_valid_until = 90 | times: 86400 %}
+
+    <!-- 6-1-2026 - Comment out and Replace this Dawn Theme 15.4.1 (and later) default JSON-LD script with the modified JSON-LD script from Dawn Theme 12.00 --> 
+    <!-- { product | structured_data } -->
+
+    <!-- 6-1-2026 - Added a richer image array (for image sitemap) from all product media -->
     <script type="application/ld+json">
-      {{ product | structured_data }}
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+
+      "@id": {{ canonical_url | append: '#product' | json }},
+      "name": {{ product.title | json }},
+      "url": {{ request.origin | append: product.url | json }},
+
+      "image": [
+        {% for media in product.media %}
+          {% if media.media_type == 'image' %}
+            "{{ media.src | img_url: 'master' | prepend: 'https:' }}"{% unless forloop.last %},{% endunless %}
+          {% endif %}
+        {% endfor %}
+      ],
+
+      "description": {{ product.description | strip_html | json }},
+
+      {% if product.selected_or_first_available_variant.sku != blank -%}
+        "sku": {{ product.selected_or_first_available_variant.sku | json }},
+      {%- endif %}
+
+      "brand": {
+        "@type": "Brand",
+        "name": {{ product.vendor | json }}
+      },
+
+      {%- if review_app_description != blank and rating_value and review_count %}
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "description": {{ review_app_description }},
+          "ratingValue": "{{ rating_value }}",
+          "reviewCount": "{{ review_count }}",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+      {%- endif %}
+
+      "offers": [
+        {%- for variant in product.variants -%}
+          {
+            "@type" : "Offer",
+            {%- if variant.sku != blank -%}
+              "sku": {{ variant.sku | json }},
+            {%- endif -%}
+            {%- if variant.barcode.size == 12 -%}
+              "gtin12": {{ variant.barcode }},
+            {%- endif -%}
+            {%- if variant.barcode.size == 13 -%}
+              "gtin13": {{ variant.barcode }},
+            {%- endif -%}
+            {%- if variant.barcode.size == 14 -%}
+              "gtin14": {{ variant.barcode }},
+            {%- endif -%}
+            "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+            "priceValidUntil": "{{ "now" | date: "%s" | plus: days_product_price_valid_until | date: "%Y-%m-%d" }}",
+            "price" : {{ variant.price | divided_by: 100.00 | json }},
+            "priceCurrency" : {{ cart.currency.iso_code | json }},
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "USD"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "businessDays": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "https://schema.org/Monday",
+                    "https://schema.org/Tuesday",
+                    "https://schema.org/Wednesday",
+                    "https://schema.org/Thursday",
+                    "https://schema.org/Friday"
+                  ]
+                },
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "2",
+                  "maxValue": "4",
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": "7",
+                  "maxValue": "21",
+                  "unitCode": "DAY"
+                }
+              },
+              "shippingDestination": [
+                {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "US",
+                  "addressRegion": ["US"]
+                }
+              ]
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "US",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 30,
+              "returnFees": "https://schema.org/ReturnShippingFees",
+              "returnShippingFeesAmount": {
+                "@type": "MonetaryAmount",
+                "value": "25",
+                "currency": "USD"
+              },
+              "returnMethod": "https://schema.org/ReturnByMail"
+            },
+            "url" : {{ request.origin | append: variant.url | json }}
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    }
     </script>
   </div>
 </product-info>
