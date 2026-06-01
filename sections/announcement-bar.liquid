@@ -1,5 +1,6 @@
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+<!-- 9-2-2024 - Async load these CSS to prevent render blocking -->
+<link rel="stylesheet" href="{{ 'component-slideshow.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {%- liquid
   assign social_icons = true
@@ -15,13 +16,15 @@
 -%}
 
 {% if social_icons %}
-  {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+  <!-- 9-2-2024 - Async load this CSS to prevent render blocking -->
+  <link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
 {% endif %}
 
 <div
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
 >
   <div class="page-width utility-bar__grid{% if announcement_bar and language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--3-col{% elsif language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--2-col{% endif %}">
+    <!-- Debug: section.index is {{ section.index }} -->
     {%- if section.settings.show_social and social_icons -%}
       {%- render 'social-icons' -%}
     {%- endif -%}
@@ -30,7 +33,6 @@
         class="announcement-bar{% if section.settings.show_social %} announcement-bar--one-announcement{% endif %}"
         role="region"
         aria-label="{{ 'sections.header.announcement' | t }}"
-        {{ section.blocks.first.shopify_attributes }}
       >
         {%- if section.blocks.first.settings.text != blank -%}
           {%- if section.blocks.first.settings.link != blank -%}
@@ -91,6 +93,7 @@
                   class="announcement-bar__announcement"
                   role="region"
                   aria-label="{{ 'sections.header.announcement' | t }}"
+                  {{ block.shopify_attributes }}
                 >
                   {%- if block.settings.text != blank -%}
                     {%- if block.settings.link != blank -%}
