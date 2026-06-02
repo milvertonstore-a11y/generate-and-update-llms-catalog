@@ -29,14 +29,16 @@
   <div class="page-width">
     <div class="title-wrapper-with-link">
       <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
-      <a href="{{ routes.all_products_collection_url }}" class="underlined-link">
+      <!-- 4-27-2025 - Make the "Continue Shopping" button redirect back to the previous page -->
+      <a href="{{ 'javascript&colon;history.back()' }}" class="underlined-link">
         {{- 'general.continue_shopping' | t -}}
       </a>
     </div>
 
     <div class="cart__warnings">
       <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
-      <a href="{{ routes.all_products_collection_url }}" class="button">
+      <!-- 4-27-2025 - Make the "Continue Shopping" button redirect back to the previous page -->
+      <a href="{{ 'javascript&colon;history.back()' }}" class="button">
         {{ 'general.continue_shopping' | t }}
       </a>
 
@@ -180,7 +182,27 @@
                     <td class="cart-item__totals right medium-hide large-up-hide">
                       {%- render 'loading-spinner' -%}
                       <div class="cart-item__price-wrapper">
-                        {%- if item.original_line_price != item.final_line_price -%}
+                        <!-- 9-24-2025 - Show compare price for sale price in Cart page -->
+                        {%- if item.variant.compare_at_price > item.variant.price -%}
+                          {%- comment -%} Show compare price for product sale {%- endcomment -%}
+                          <dl class="cart-item__discounted-prices">
+                            <dt class="visually-hidden">
+                              {{ 'products.product.price.regular_price' | t }}
+                            </dt>
+                            <dd>
+                              <s class="cart-item__old-price price price--end">
+                                {{ item.variant.compare_at_price | times: item.quantity | money }}
+                              </s>
+                            </dd>
+                            <dt class="visually-hidden">
+                              {{ 'products.product.price.sale_price' | t }}
+                            </dt>
+                            <dd class="price price--end">
+                              {{ item.final_line_price | money }}
+                            </dd>
+                          </dl>
+                        {%- elsif item.original_line_price != item.final_line_price -%}
+                          {%- comment -%} Show original price for cart discounts {%- endcomment -%}
                           <dl class="cart-item__discounted-prices">
                             <dt class="visually-hidden">
                               {{ 'products.product.price.regular_price' | t }}
@@ -397,9 +419,17 @@
                         {%- endif -%}
                         <div class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}" role="alert">
                           <small class="cart-item__error-text"></small>
-                          <span class="svg-wrapper">
-                            {{- 'icon-error.svg' | inline_asset_content -}}
-                          </span>
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            class="icon icon-error"
+                            viewBox="0 0 13 13"
+                          >
+                            <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+                            <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+                            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+                            <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                          </svg>
                         </div>
                       </quantity-popover>
                     </td>
@@ -407,7 +437,27 @@
                     <td class="cart-item__totals right small-hide">
                       {%- render 'loading-spinner' -%}
                       <div class="cart-item__price-wrapper">
-                        {%- if item.original_line_price != item.final_line_price -%}
+                        <!-- 9-24-2025 - Show compare price for sale price in Cart page -->
+                        {%- if item.variant.compare_at_price > item.variant.price -%}
+                          {%- comment -%} Show compare price for product sale {%- endcomment -%}
+                          <dl class="cart-item__discounted-prices">
+                            <dt class="visually-hidden">
+                              {{ 'products.product.price.regular_price' | t }}
+                            </dt>
+                            <dd>
+                              <s class="cart-item__old-price price price--end">
+                                {{ item.variant.compare_at_price | times: item.quantity | money }}
+                              </s>
+                            </dd>
+                            <dt class="visually-hidden">
+                              {{ 'products.product.price.sale_price' | t }}
+                            </dt>
+                            <dd class="price price--end">
+                              {{ item.final_line_price | money }}
+                            </dd>
+                          </dl>
+                        {%- elsif item.original_line_price != item.final_line_price -%}
+                          {%- comment -%} Show original price for cart discounts {%- endcomment -%}
                           <dl class="cart-item__discounted-prices">
                             <dt class="visually-hidden">
                               {{ 'products.product.price.regular_price' | t }}
