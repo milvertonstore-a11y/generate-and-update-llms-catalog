@@ -1,6 +1,14 @@
-{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+<!-- 9-21-2024 - Asynchronously load 'section-image-banner.css' based on section.index -->
+{% if section.index > 2 %}
+  <link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}</noscript>
+{% else %}
+  {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<!-- 9-2-2024 - Async load these CSS to prevent render blocking -->
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-slideshow.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
@@ -166,7 +174,7 @@
               </h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class="banner__text rte">
+              <div class="banner__text rte" {{ block.shopify_attributes }}>
                 <p>{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
