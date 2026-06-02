@@ -1,0 +1,111 @@
+{% comment %}
+Reusable "As Seen On" badge section for product pages.
+Upload assets (SVG/PNG) to the theme's Assets folder or use image pickers.
+{% endcomment %}
+
+<section class="section as-seen-badge-section">
+  <div class="page-width">
+    <div class="as-seen-badge-wrapper">
+      {% if section.settings.heading != blank %}
+        <h3 class="as-seen-badge-heading">{{ section.settings.heading }}</h3>
+      {% endif %}
+
+      <div class="as-seen-badge-icons">
+        {% if section.settings.pinterest_icon != blank and section.settings.pinterest_url != blank %}
+          <a href="{{ section.settings.pinterest_url }}" target="_blank" rel="noopener">
+            {{ section.settings.pinterest_icon | image_url: width: 128 | image_tag: alt: 'Pinterest', class: 'as-seen-badge__img' }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.instagram_icon != blank and section.settings.instagram_url != blank %}
+          <a href="{{ section.settings.instagram_url }}" target="_blank" rel="noopener">
+            {{ section.settings.instagram_icon | image_url: width: 128 | image_tag: alt: 'Instagram', class: 'as-seen-badge__img' }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.facebook_icon != blank and section.settings.facebook_url != blank %}
+          <a href="{{ section.settings.facebook_url }}" target="_blank" rel="noopener">
+            {{ section.settings.facebook_icon | image_url: width: 128 | image_tag: alt: 'Facebook', class: 'as-seen-badge__img' }}
+          </a>
+        {% endif %}
+
+        {% if section.settings.x_icon != blank and section.settings.x_url != blank %}
+          <a href="{{ section.settings.x_url }}" target="_blank" rel="noopener">
+            {{ section.settings.x_icon | image_url: width: 128 | image_tag: alt: 'X', class: 'as-seen-badge__img' }}
+          </a>
+        {% endif %}
+      </div>
+
+      {% if section.settings.subtext != blank %}
+        <p class="as-seen-badge-subtext">{{ section.settings.subtext }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "As Seen On Badge",
+  "tag": "section",
+  "class": "as-seen-badge",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "As Seen On"
+    },
+    {
+      "type": "image_picker",
+      "id": "pinterest_icon",
+      "label": "Pinterest icon"
+    },
+    {
+      "type": "url",
+      "id": "pinterest_url",
+      "label": "Pinterest link"
+    },
+    {
+      "type": "image_picker",
+      "id": "instagram_icon",
+      "label": "Instagram icon"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram link"
+    },
+    {
+      "type": "image_picker",
+      "id": "facebook_icon",
+      "label": "Facebook icon"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook link"
+    },
+    {
+      "type": "image_picker",
+      "id": "x_icon",
+      "label": "X icon"
+    },
+    {
+      "type": "url",
+      "id": "x_url",
+      "label": "X link"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Join 6,800+ Fashion Lovers Following Our Latest Trends"
+    }
+  ],
+  "presets": [
+    {
+      "name": "As Seen On Badge"
+    }
+  ]
+}
+{% endschema %}
