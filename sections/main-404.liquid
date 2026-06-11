@@ -10,6 +10,11 @@
   }
 </style>
 
+<!-- 3-24-2025 - Fix - 'Not found (404)' error - Display the Homepage instead of the 404 page -->
+<script>
+  window.location.href = '/';
+</script>
+
 <div class="template-404 page-width page-margin center">
   <p>
     {{ 'templates.404.subtext' | t }}
