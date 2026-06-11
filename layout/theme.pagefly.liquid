@@ -1,0 +1,1130 @@
+<!doctype html>
+<html class="js" lang="{{ request.locale.iso_code }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+      
+ <script>/* start spd config */window._spt_delay_keywords=["/gtag/js,gtag(,/checkouts,/tiktok-track.js,/hotjar-,/smile-,/adoric.js,/wpm/,fbq("];window._spt_customer_delay_keywords=["/gtag/js","gtag(","/checkouts","/tiktok-track.js","/hotjar-","/smile-","/adoric.js"];/* end spd config */</script> 
+   
+    <!-- 2-5-2026 - Use "Preconnect" to warm up the connection to the Shopify CDN -->
+    <!-- So the image can start downloading the millisecond the browser is ready -->
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.shopify.com">    
+
+    <!-- 2-12-2026 - Preload the LCP Image -->
+    <!-- The 'imagesrcset' string is identical to what is in 'image-banner.liquid' -->
+    <!-- Cap the Mobile Preload exactly at 1200w -->
+    <!-- Placed high withn the 'head' tag before any CSS file is loaded -->
+    {%- if template == 'index' -%}
+      {%- assign lcp_img = images['milvertons-homepage-hero-banner-new-collection-1600x800px.webp'] -%}
+      {%- if lcp_img != blank -%}
+        
+        {%- comment -%} 
+          MOBILE PRELOAD: STRICT CAP AT 1200px
+          This forces the browser to download the 1200px version (perfect for iPhone 12 Pro)
+          and prevents it from fetching the 1600px version.
+        {%- endcomment -%}
+        <link 
+          rel="preload" 
+          as="image" 
+          media="(max-width: 749px)"
+          href="{{ lcp_img | image_url: width: 1200 }}" 
+          imagesrcset="
+            {{ lcp_img | image_url: width: 375 }} 375w,
+            {{ lcp_img | image_url: width: 550 }} 550w,
+            {{ lcp_img | image_url: width: 750 }} 750w,
+            {{ lcp_img | image_url: width: 800 }} 800w,
+            {{ lcp_img | image_url: width: 1100 }} 1100w,
+            {{ lcp_img | image_url: width: 1200 }} 1200w"
+          imagesizes="100vw"
+          fetchpriority="high"
+        >
+
+        {%- comment -%} DESKTOP PRELOAD {%- endcomment -%}
+        <link 
+          rel="preload" 
+          as="image" 
+          media="(min-width: 750px)"
+          href="{{ lcp_img | image_url: width: 1600 }}" 
+          imagesrcset="
+            {{ lcp_img | image_url: width: 750 }} 750w,
+            {{ lcp_img | image_url: width: 1100 }} 1100w,
+            {{ lcp_img | image_url: width: 1400 }} 1400w,
+            {{ lcp_img | image_url: width: 1600 }} 1600w,
+            {{ lcp_img | image_url: width: 2000 }} 2000w,
+            {{ lcp_img | image_url: width: 3000 }} 3000w"
+          imagesizes="100vw"
+          fetchpriority="high"
+        >
+      {%- endif -%}
+    {%- endif -%}
+
+    <style id="Stability-Accessibility-Core">
+      /* BANNER CORE: High visibility + Gap Elimination */
+      .banner, .banner__media, .banner__content, .banner__box {
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        z-index: 5;
+        margin-bottom: 0 !important; /* REMOVES THE WHITE GAP ON DESKTOP */
+        padding-bottom: 0 !important;
+      }
+
+      /* THE SPECIFICITY & GAP FIX: snap image to container bottom */
+      .banner__media img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important; 
+        object-fit: cover;
+        margin-bottom: 0 !important;
+      }
+
+      /* LCP GATE: Visibility logic */
+      /* 
+        html:not(.lcp-ready) .as-seen-badge-wrapper {
+        opacity: 0;
+        transform: translateY(10px);
+      } 
+      */
+
+      /* ACCESSIBILITY & CONTRAST FIXES */
+      .percent-saved-badge {
+        background-color: #e62117 !important; 
+        color: #ffffff !important;
+        display: inline-block !important;
+        padding: 3px 10px !important;
+        font-weight: 700 !important;
+      }
+
+      .jdgm-prev-badge__stars {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        color: #ffbf00 !important;
+      }
+
+      .jdgm-star { margin: 0 !important; padding: 0 !important; font-size: 16px !important; }
+
+      .card__heading a.full-unstyled-link {
+        display: block !important;
+        min-height: 44px !important;
+        padding: 8px 0 !important;
+      }
+    </style>
+     
+<!-- 3-26.2024 - Add Google Consent Mode V2 integration script from Consentmo GDPR App -->
+<!-- Place right after the opening <head> tag as the Google Consent Mode needs to be executed before the other tracking services (Google Tag Manager, Google Ads, etc.) -->
+{% render 'gcm-integration-script' %}
+
+    <!-- 9-2-2025 - Dynamically inject a '<meta name="robots" content="noindex, nofollow">' tag into the '<head>' of pages that are thin, duplicate, or utility-based. -->
+    <!-- Prevent indexing of pages that are thin, duplicate, or utility-based (internal tools or utility pages) -->
+    {% assign page_number = canonical_url | split: 'page=' | last | plus: 0 %}
+    {% if 
+      canonical_url contains "/search" or
+      canonical_url contains "/collections/" and canonical_url contains "/tag-" or
+      canonical_url contains "/collections/" and canonical_url contains "/products/" or
+      canonical_url contains "/apps/" or
+      canonical_url contains "/a/sitemap-tools/" or
+      canonical_url contains "/admin" or
+      canonical_url contains "/checkout" or
+      canonical_url contains "/inventory-sync" or
+      canonical_url contains "/debug" or
+      canonical_url contains "/internal" or
+      canonical_url contains "/tools" or
+      page_number > 2
+    %}
+      <meta name="robots" content="noindex, follow">
+    {% endif %}
+
+    <!-- 2-10-2025 - Ensure that only one `favicon` is specified -->
+    {%- if settings.favicon != blank -%}
+      <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/apple-touch-icon.png">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 48, height: 48 }}">
+      <link rel="mask-icon" href="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/safari-pinned-tab.svg" color="#5bbad5">
+      <link rel="manifest" href="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/site.webmanifest">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="msapplication-config" content="https://cdn.shopify.com/s/files/1/0054/0694/9422/files/browserconfig.xml">
+      <meta name="theme-color" content="#ffffff">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+  
+    <!-- 12-10-2023 - Add unique seo meta titles for the 'HTML Sitemap' and 'HelpCenter FAQ' pages -->
+    <!-- 4-30-2024 - Removed this line of code - % if canonical_url contains "/apps/sitemap" % -->
+    <!-- 4-30-2024 - Replaced the above line of code with the line of code below -->
+    <!-- 12-14-2025 - Fix missing title tag on the homepage - Dynamic version with character limit -->
+    <title>
+      {%- if request.page_type == 'index' -%}
+        {%- assign home_title = page_title -%}
+        {%- if home_title.size <= 70 -%}
+          {{ home_title }}
+        {%- else -%}
+          {{ home_title | truncate: 70, "" }}
+        {%- endif -%}
+      {%- elsif canonical_url contains "/a/sitemap-tools/sitemap" -%}
+        Sitemap - {{ shop.name }}
+      {%- elsif canonical_url contains "/apps/help-center" -%}
+        FAQs - Frequently Asked Questions - Milvertons
+      {%- else -%}
+        {{ page_title | default: shop.name }}
+        {%- if current_tags %} - tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %} - Page {{ current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %} - {{ shop.name }}{% endunless -%}
+      {%- endif -%}
+    </title> 
+  
+    <!-- 12-14-2025 - Fix missing description on the homepage - Dynamic version with character limit -->
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags', page_description: page_description, page_title: page_title  %}
+    
+    <!-- Inline Critical CSS for LCP Image Banner. Last extracted 8-17-2025 -->
+    {% if template == 'index' %}
+          <style>        
+
+            /* === 1-14-2026 Added LCP SAFETY: Disable above-the-fold animations & Hide Hijackers === */
+
+            /* === 1-31-2026 Updated LCP SAFETY: Optimized for App Compatibility === */
+            /* We still disable animations for core theme elements to protect LCP, 
+            but we EXCLUDE elements that belong to apps (like xb-sticky). */
+            /* Target only elements that participate in LCP paint */
+            .banner:not([class*="xb-"]),
+            .banner:not([class*="xb-"]) *:not([class*="xb-"]),
+            .announcement-bar,
+            .header:not([class*="xb-"]) {
+              animation: none !important;
+              transition: none !important;
+              transform: none !important;
+              will-change: auto !important;
+            }
+
+            /* 2-4-2026 - Optimized LCP Gate Logic */
+
+            /* 1. Elements to HIDE until LCP is ready */
+            /*
+            html:not(.lcp-ready) .as-seen-badge-wrapper,
+            html:not(.lcp-ready) .featured-collection { 
+              opacity: 0; 
+              pointer-events: none;
+            }
+
+            /* 2. Elements to SHOW once LCP is ready */
+            /*
+            html.lcp-ready .as-seen-badge-wrapper,
+            html.lcp-ready .featured-collection {
+              opacity: 1;
+              transition: opacity 0.5s ease-in;
+            }
+            */
+
+            /* 3. Elements that MUST show immediately (The Hero) */
+            /* We target the banner content and media directly by class */
+            .banner__content, 
+            .banner__media,
+            .banner__media img {
+              opacity: 1 !important;
+              visibility: visible !important;
+              animation: none !important; /* Prevents CSS "fade-in" delays */
+            }
+
+            /* === Critical CSS for Banner LCP Rendering === */
+
+            /* Banner container */
+            .banner {
+              display: flex;
+              position: relative;
+              flex-direction: column;
+              isolation: isolate;
+            }
+
+            /* Banner media (image container) */
+            .banner__media {
+              height: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+            }
+
+            /* Half-width media layout */
+            .banner__media-half {
+              width: 50%;
+            }
+
+            .banner__media-image-half {
+              display: block;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+
+            /* Banner content container */
+            .banner__content {
+              padding: 0;
+              display: flex;
+              position: relative;
+              width: 100%;
+              align-items: center;
+              justify-content: center;
+              z-index: 2;
+            }
+
+            /* Content box */
+            .banner__box {
+              padding: 4rem 1.5rem;
+              position: relative;
+              height: fit-content;
+              align-items: center;
+              text-align: center;
+              width: 100%;
+              word-wrap: break-word;
+              z-index: 1;
+            }
+
+            /* Content spacing */
+            .banner__box > * + * {
+              margin-top: 1rem;
+            }
+
+            .banner__box > *:first-child {
+              margin-top: 0;
+            }
+
+            .banner__heading {
+              margin-bottom: 0;
+            }
+
+            .banner__box .banner__heading + * {
+              margin-top: 1rem;
+            }
+
+            .banner__box > * + .banner__buttons {
+              margin-top: 2rem;
+            }
+
+            /* Button layout */
+            .banner__buttons {
+              display: inline-flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+              max-width: 45rem;
+              word-break: break-word;
+            }
+
+            /* Aspect ratio padding for adaptive image height */
+            @media screen and (max-width: 749px) {
+              .banner--adapt .banner__media::before {
+                content: '';
+                display: block;
+                padding-bottom: 55.56%; /* 200 / 360 */
+              }
+            }
+
+            @media screen and (min-width: 750px) {
+              .banner--adapt .banner__media::before {
+                content: '';
+                display: block;
+                padding-bottom: 15.63%; /* 200 / 1280 */
+              }
+            }
+
+            /* Ensure the banner has area even before the image loads */
+            .banner {
+              min-height: 200px !important; /* Forces the banner to be larger than the icons immediately */
+            }
+
+            /* If you use "Adapt to first image", force the aspect ratio reserve */
+            @media screen and (max-width: 749px) {
+              .banner--mobile-bottom .banner__media {
+                position: relative !important;
+                height: 200px !important; /* Reserved space for the mobile LCP */
+              }
+            }        
+
+          </style>
+        {% endif %} 
+
+    <!-- 9-16-2024 - Move these JS links back to this original position here in the `<head>` tag, below 'meta-tags' --> 
+    <!-- Place CSS links before any JS links within the `<head> tag -->
+    <!-- To ensure that CSS files are loaded before JS files -->    
+    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+
+    {%- if settings.animations_reveal_on_scroll -%}
+      <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}  
+
+    {% comment %}
+    <!-- 9-10-2024 - Leverage Browser Caching -->
+    <!-- Leverage HTTP headers to instruct browsers to cache static assets (Images, CSS, and JS files) -->
+    <!-- Set Up Browser Caching for JS and CSS files, Add caching headers for JS and CSS files -->
+    {% if request.path contains 'assets' %}
+      <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+      <meta http-equiv="Expires" content="{{ 'now' | date: "%a, %d %b %Y %H:%M:%S GMT" | plus: 31536000 }}">
+    {% endif %}  
+    {% endcomment %}
+
+    <!-- 2-15-2026 - Replace '{{ content_for_header }}' with this logic -->
+    {%- if template == 'index' -%}
+      {%- comment -%} 
+        IDLE LOAD CHECKOUT CSS: Captures versioning in a dummy attribute to prevent render-blocking.
+      {%- endcomment -%}
+      {{ content_for_header | replace: "accelerated-checkout-backwards-compat.css", "accelerated-checkout-backwards-compat.css' media='print' onload='this.media=\"all\"' data-v='" }}
+    {%- else -%}
+      {{ content_for_header }}
+    {%- endif -%}
+    
+    {% comment %}{%- if tinyscript -%}{{ content_for_header }}{%- else -%}{% render 'tiny-script-control' %}{%- endif -%}{% endcomment %}    
+
+    {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+    %}
+
+    {% style %}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ body_font_bold | font_face: font_display: 'swap' }}
+      {{ body_font_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+      {{ settings.type_header_font | font_face: font_display: 'swap' }}
+
+      {% for scheme in settings.color_schemes -%}
+        {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
+        {% if forloop.index == 1 -%}
+          :root,
+        {%- endif %}
+        .color-{{ scheme.id }} {
+          --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        {% if scheme.settings.background_gradient != empty %}
+          --gradient-background: {{ scheme.settings.background_gradient }};
+        {% else %}
+          --gradient-background: {{ scheme.settings.background }};
+        {% endif %}
+
+        {% liquid
+          assign background_color = scheme.settings.background
+          assign background_color_brightness = background_color | color_brightness
+          if background_color_brightness <= 26
+            assign background_color_contrast = background_color | color_lighten: 50
+          elsif background_color_brightness <= 65
+            assign background_color_contrast = background_color | color_lighten: 5
+          else
+            assign background_color_contrast = background_color | color_darken: 25
+          endif
+        %}
+
+        --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
+        --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
+        --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
+        --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+        --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+      }
+      {% endfor %}
+
+      {{ scheme_classes | prepend: 'body' }} {
+        color: rgba(var(--color-foreground), 0.75);
+        background-color: rgb(var(--color-background));
+      }
+
+      :root {
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-style: {{ settings.type_body_font.style }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
+        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-style: {{ settings.type_header_font.style }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};
+
+        --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
+        --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+
+        --media-padding: {{ settings.media_padding }}px;
+        --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
+        --media-border-width: {{ settings.media_border_thickness }}px;
+        --media-radius: {{ settings.media_radius }}px;
+        --media-shadow-opacity: {{ settings.media_shadow_opacity | divided_by: 100.0 }};
+        --media-shadow-horizontal-offset: {{ settings.media_shadow_horizontal_offset }}px;
+        --media-shadow-vertical-offset: {{ settings.media_shadow_vertical_offset }}px;
+        --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
+        --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
+
+        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+
+        --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
+        --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
+        --product-card-text-alignment: {{ settings.card_text_alignment }};
+        --product-card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
+        --product-card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
+        --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
+        --product-card-shadow-visible: {% if settings.card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --product-card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --collection-card-image-padding: {{ settings.collection_card_image_padding | divided_by: 10.0 }}rem;
+        --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
+        --collection-card-text-alignment: {{ settings.collection_card_text_alignment }};
+        --collection-card-border-width: {{ settings.collection_card_border_thickness | divided_by: 10.0 }}rem;
+        --collection-card-border-opacity: {{ settings.collection_card_border_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-opacity: {{ settings.collection_card_shadow_opacity | divided_by: 100.0 }};
+        --collection-card-shadow-visible: {% if settings.collection_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --collection-card-shadow-horizontal-offset: {{ settings.collection_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-vertical-offset: {{ settings.collection_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --collection-card-shadow-blur-radius: {{ settings.collection_card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --blog-card-image-padding: {{ settings.blog_card_image_padding | divided_by: 10.0 }}rem;
+        --blog-card-corner-radius: {{ settings.blog_card_corner_radius | divided_by: 10.0 }}rem;
+        --blog-card-text-alignment: {{ settings.blog_card_text_alignment }};
+        --blog-card-border-width: {{ settings.blog_card_border_thickness | divided_by: 10.0 }}rem;
+        --blog-card-border-opacity: {{ settings.blog_card_border_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-opacity: {{ settings.blog_card_shadow_opacity | divided_by: 100.0 }};
+        --blog-card-shadow-visible: {% if settings.blog_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --blog-card-shadow-horizontal-offset: {{ settings.blog_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+        --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
+
+        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
+
+        --popup-border-width: {{ settings.popup_border_thickness }}px;
+        --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};
+        --popup-corner-radius: {{ settings.popup_corner_radius }}px;
+        --popup-shadow-opacity: {{ settings.popup_shadow_opacity | divided_by: 100.0 }};
+        --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
+        --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
+        --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+
+        --drawer-border-width: {{ settings.drawer_border_thickness }}px;
+        --drawer-border-opacity: {{ settings.drawer_border_opacity | divided_by: 100.0 }};
+        --drawer-shadow-opacity: {{ settings.drawer_shadow_opacity | divided_by: 100.0 }};
+        --drawer-shadow-horizontal-offset: {{ settings.drawer_shadow_horizontal_offset }}px;
+        --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
+        --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
+
+        --spacing-sections-desktop: {{ settings.spacing_sections }}px;
+        --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
+
+        --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
+        --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
+        --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical | divided_by: 2 }}px;
+        --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal | divided_by: 2 }}px;
+
+        --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
+        --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;
+        --text-boxes-radius: {{ settings.text_boxes_radius }}px;
+        --text-boxes-shadow-opacity: {{ settings.text_boxes_shadow_opacity | divided_by: 100.0 }};
+        --text-boxes-shadow-visible: {% if settings.text_boxes_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --text-boxes-shadow-horizontal-offset: {{ settings.text_boxes_shadow_horizontal_offset }}px;
+        --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
+        --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
+
+        --buttons-radius: {{ settings.buttons_radius }}px;
+        --buttons-radius-outset: {% if settings.buttons_radius > 0 %}{{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
+        --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
+        --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
+        --buttons-shadow-visible: {% if settings.buttons_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
+        --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
+        --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
+        --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
+
+        --inputs-radius: {{ settings.inputs_radius }}px;
+        --inputs-border-width: {{ settings.inputs_border_thickness }}px;
+        --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
+        --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
+        --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}px;
+        --inputs-margin-offset: {% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_opacity > 0 %}{{ settings.inputs_shadow_vertical_offset | abs }}{% else %}0{% endif %}px;
+        --inputs-shadow-vertical-offset: {{ settings.inputs_shadow_vertical_offset }}px;
+        --inputs-shadow-blur-radius: {{ settings.inputs_shadow_blur }}px;
+        --inputs-radius-outset: {% if settings.inputs_radius > 0 %}{{ settings.inputs_radius | plus: settings.inputs_border_thickness }}{% else %}0{% endif %}px;
+
+        --variant-pills-radius: {{ settings.variant_pills_radius }}px;
+        --variant-pills-border-width: {{ settings.variant_pills_border_thickness }}px;
+        --variant-pills-border-opacity: {{ settings.variant_pills_border_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-opacity: {{ settings.variant_pills_shadow_opacity | divided_by: 100.0 }};
+        --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
+        --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
+        --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: calc(var(--font-body-scale) * 62.5%);
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 100%;
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.06rem;
+        line-height: calc(1 + 0.8 / var(--font-body-scale));
+        font-family: var(--font-body-family);
+        font-style: var(--font-body-style);
+        font-weight: var(--font-body-weight);
+      }
+
+      @media screen and (min-width: 750px) {
+        body {
+          font-size: 1.6rem;
+        }
+      }
+    {% endstyle %}
+    
+    <!-- 1-19-2026 - Move 'base.css' as-is back to its original position here, i.e., immediately above 'component-cart-items.css' -->
+    <!-- 1-19-2026 - Load 'component-cart-items.css' as originally designed, ie, remove manual rel="preload" link -->
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+
+    {%- if settings.cart_type == 'drawer' -%}
+      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+      {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+      {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+      {{ 'component-price.css' | asset_url | stylesheet_tag }}
+      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
+
+    <!-- 1-26-2026 - Mitigate "LCP Element Render Delay" -->
+    <!-- Place these scripts after 'base.css' -->
+    <link rel="stylesheet" href="https://cdn.shopify.com/extensions/2dac4d8b-4911-4616-a9a2-add718511d79/1.0.0/assets/trust.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019a2c75-764c-7925-b253-e24466484d41/legal-7/assets/legal.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019cf9d3-d4b8-7e5e-b006-be8d48ef090f/xb-sticky-add-to-cart-upsell-454/assets/core.css" media="print" onload="this.media='all'">    
+
+    <!-- Accelerated Checkout Compatibility CSS -->
+    <!-- 1-27-2026 - Fully excluded from homepage to mitigate LCP render blocking -->
+    <!-- Place this script after 'base.css' -->
+    {% if template.name == 'product' or template.name == 'cart' %}
+      <link rel="stylesheet" href="https://milvertons.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" media="print" onload="this.media='all'">
+    {% endif %}
+
+    {%- unless settings.type_body_font.system? -%}
+      {% comment %}theme-check-disable AssetPreload{% endcomment %}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-enable AssetPreload{% endcomment %}
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      {% comment %}theme-check-disable AssetPreload{% endcomment %}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+      {% comment %}theme-check-enable AssetPreload{% endcomment %}
+    {%- endunless -%}
+    
+    <!-- 1-19-2026 - Load 'component-localization-form.css' as originally designed, ie, remove manual rel="preload" link -->
+    {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}      
+    {%- endif -%}
+    
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
+
+    {% comment %}
+      1-26-2026 - Mitigate "LCP Element Render Delay"
+      1-26-2026 – Optimized async/preload styles based on section index
+    {% endcomment %}
+    {% if settings.section.index > 2 %}
+      <!-- Async load for non-critical (below-the-fold) sections -->
+      <!-- Legal.css -->
+      <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019a2c75-764c-7925-b253-e24466484d41/legal-7/assets/legal.css" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://cdn.shopify.com/extensions/019a2c75-764c-7925-b253-e24466484d41/legal-7/assets/legal.css"></noscript>
+      <!-- Trust CSS -->
+      <link rel="stylesheet" href="https://cdn.shopify.com/extensions/2dac4d8b-4911-4616-a9a2-add718511d79/1.0.0/assets/trust.css" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://cdn.shopify.com/extensions/2dac4d8b-4911-4616-a9a2-add718511d79/1.0.0/assets/trust.css"></noscript>
+      <!-- XB Cart Upsell core.css -->
+      <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019cf9d3-d4b8-7e5e-b006-be8d48ef090f/xb-sticky-add-to-cart-upsell-454/assets/core.css" media="print" onload="this.media='all'">
+      <noscript><link rel="stylesheet" href="https://cdn.shopify.com/extensions/019cf9d3-d4b8-7e5e-b006-be8d48ef090f/xb-sticky-add-to-cart-upsell-454/assets/core.css"></noscript>
+    {% else %}
+      <!-- Preload for early or above-the-fold sections -->
+      <!-- Legal.css -->
+      <link rel="preload" href="https://cdn.shopify.com/extensions/019a2c75-764c-7925-b253-e24466484d41/legal-7/assets/legal.css" as="style">
+      <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019a2c75-764c-7925-b253-e24466484d41/legal-7/assets/legal.css">
+      <!-- Trust CSS -->
+      <link rel="preload" href="https://cdn.shopify.com/extensions/2dac4d8b-4911-4616-a9a2-add718511d79/1.0.0/assets/trust.css" as="style">
+      <link rel="stylesheet" href="https://cdn.shopify.com/extensions/2dac4d8b-4911-4616-a9a2-add718511d79/1.0.0/assets/trust.css">
+      <!-- XB Cart Upsell core.css -->
+      <link rel="preload" href="https://cdn.shopify.com/extensions/019cf9d3-d4b8-7e5e-b006-be8d48ef090f/xb-sticky-add-to-cart-upsell-454/assets/core.css" as="style">
+      <link rel="stylesheet" href="https://cdn.shopify.com/extensions/019cf9d3-d4b8-7e5e-b006-be8d48ef090f/xb-sticky-add-to-cart-upsell-454/assets/core.css">
+    {% endif %}
+
+    <!-- 8-17-2025 - Non-critical full banner styles: load asynchronously -->
+    <!-- Refer above to the 'Inline Critical CSS for LCP Image Banner' -->
+      <link rel="preload" href="{{ 'section-image-banner.css' | asset_url }}" as="style">
+      <link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}" media="print" onload="this.media='all'">
+      <noscript>
+        <link rel="stylesheet" href="{{ 'section-image-banner.css' | asset_url }}">
+      </noscript>
+    
+    <script>
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+              
+    <!-- 8-25-2025 - Defer this JS to prevent it from blocking the main thread and delaying the rendering of the LCP -->      
+    <!-- Script tag for defer loading placed in the head tag for better performance -->  
+    <script src="https://milvertons.com/cdn/shopifycloud/shop-js/modules/v2/chunk.modal_4fr7SCRr.esm.js" defer="defer"></script>
+  
+    <!-- 8-31-2024 - Defer 'UPPUSH NOTIFICATION' APP (uppush-notification.min.js)' to eliminate LCP render blocking -->
+    <!-- Defer attribute will execute in the order in which they appear in the document -->   
+    <!-- Script tag for defer loading placed in the <body> for better performance --> 
+    <script src="https://milvertons.com/apps/pushup-notification/uppush-notification.min.js?v=1.15" defer="defer"></script>
+
+    <!-- 4-3-2023 - Google's HTML tag for google site verification of milvertons.com -->
+    <meta name="google-site-verification" content="rFEHfYJ6fSriTIl0--9G0LI5xLlerGiBveRWXc5D2co" />  
+    
+    {% comment %}
+    <!-- 2-7-2025 - This script adds Alt text without variant color and size for product images missing alt text on Home page -->
+    {% endcomment %}
+  
+    <!-- 2-6-2025 - Add Alt text to the trust badge placeholder image placed by the 'ModeMagic' app -->
+    <script>
+      (function() {
+        // Define the work function
+        function addAltToPlaceholderImage() {
+          // Check for images with the specific placeholder src
+          const images = document.querySelectorAll('img[src*="modemagic-store-conversions"]');
+          if(images.length === 0) return;
+
+          images.forEach((img) => {
+             if (!img.alt) {
+               img.alt = "Trust Badge Placeholder";
+             }
+          });
+        }
+
+        // EXECUTION STRATEGY:
+        // 1. If the browser supports requestIdleCallback, wait until the CPU is idle.
+        // 2. If not, wait 4 seconds (after LCP is likely done) to run.
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(addAltToPlaceholderImage, { timeout: 4000 });
+        } else {
+          setTimeout(addAltToPlaceholderImage, 4000);
+        }
+      })();
+    </script>   
+
+    {% render 'pagefly-app-header' %} 
+
+<!-- 4-3-2026 - FAQ Schema Markup for Milvertons -->
+<!-- Place right before the closing 'head' tag, keep this FAQ strictly homepage‑only -->
+{%- if template == 'index' -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer free shipping to the USA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! All orders to continental USA ship completely FREE with tracking. Typical delivery time is 5-10 business days from order confirmation. International shipping to the UK, Canada, Nigeria, Ghana, and other countries is available—rates calculated at checkout based on weight and destination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I track my order?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Once your order ships, you'll receive an email with tracking number and carrier information. You can also log into your Milvertons account to view order status. Most USA orders arrive within 5-10 business days. If you haven't received tracking info within 5 business days of ordering, you can contact us at sales@milvertons.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you ship to African countries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We ship to Nigeria, Ghana, Kenya, South Africa, and other African countries. International Shipping typically takes 15-35 business days. Import duties and taxes may apply based on your country's regulations—these are the customer's responsibility. We declare full value on customs forms to ensure smooth delivery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I choose the right size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most of our shoes use European sizing (EU 37-43). To find your size: (1) Measure your foot from heel to toe in centimeters, (2) Compare to our size chart: EU 37 = 23.5cm, EU 38 = 24.5cm, EU 39 = 25cm, EU 40 = 26cm, EU 41 = 26.5cm, EU 42 = 27.5cm, EU 43 = 28cm. If you're between sizes, we recommend sizing up. For wide feet, size up half a size. Each product page includes detailed measurements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your shoes true to size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most customers find our Italian-inspired sets true to European size. However, if you typically wear US sizing, note that EU sizes run slightly different: US 7 = EU 37-38, US 8 = EU 38-39, US 9 = EU 39-40, US 10 = EU 40-41. When in doubt, measure your foot or contact our customer service team for personalized sizing advice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer wide-width shoes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While we don't have dedicated wide-width sizing, many customers with wide feet find success by sizing up half a size. Our pointed-toe styles run narrower, while our round-toe and open-toe designs offer more room. For the best fit, contact us before ordering, and we'll recommend the ideal style for your foot shape."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your return policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 30-day returns on unworn items in original packaging with tags attached. Shoes must show no signs of wear (no scuffs on soles, no creasing). Clutch bags must be unused with dust bags included. To initiate a return, email sales@milvertons.com with your order number and reason for return. We'll provide a prepaid return label for USA customers. Refunds are processed within 5-10 business days of receiving the return. Customers are responsible for return shipping costs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I care for my rhinestone shoes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To keep your Italian shoe and bag sets looking luxurious: (1) Store in dust bags when not in use, (2) Avoid wearing in rain or wet conditions, (3) Clean rhinestones gently with a soft, dry cloth—never use water or chemicals, (4) For leather portions, use a damp cloth to wipe away dirt, then apply leather conditioner monthly, (5) Replace heel tips when worn down to prevent damage, (6) Stuff clutch bags with tissue paper to maintain shape. With proper care, your Milvertons set will last for years and multiple events."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I wear these shoes outdoors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but with caution. Our shoes are designed for special occasions, including outdoor African weddings. However, avoid grass, sand, or gravel if possible—these surfaces can damage heels and pick up dirt. For outdoor ceremonies, consider heel protectors or choose our block heel styles, which are more stable on uneven surfaces. After outdoor wear, clean soles and heels immediately to prevent staining."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer Buy Now, Pay Later?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! At checkout, select Shop Pay Installments or Klarna to split your purchase into 4 interest-free payments. For example, a $180 Italian shoe and bag set becomes 4 payments of $45, due every 2 weeks. No credit check required for orders under $500. This makes luxury accessible for wedding budgets. Simply select your preferred payment option at checkout and follow the prompts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer discounts for Aso Ebi groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! If you're ordering 5 or more sets for your Aso Ebi group, email sales@milvertons.com for a special group discount code. We offer 10-15% off bulk orders, plus coordinated shipping to ensure everyone receives their sets on time. Include your event date, desired styles, and quantity, and we'll create a custom quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your shoes made in Italy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our collections feature Italian-inspired designs sourced from trusted international partners who specialize in luxury footwear for global markets. Every set is curated to meet Italian design standards: sleek silhouettes, precision embellishment, and European sizing. We personally vet each supplier for quality, ethical practices, and cultural relevance before adding their pieces to the Milvertons collection. The result? Luxury aesthetics at accessible prices, with US-based service you can trust."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What materials are in your curated sets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We curate sets featuring: premium PU leather (durable, easy to clean, cruelty-free), Austrian rhinestones (maximum sparkle, secure setting), cushioned insoles (all-day comfort), non-slip rubber soles (safety on various surfaces), and reinforced stitching (long-lasting wear). Our clutch bags use matching materials, quality hardware, soft interior lining, and secure closures. Every material is evaluated during our curation process to ensure it meets our standards for luxury, durability, and value."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do the rhinestones fall off?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our rhinestones are hand-placed and secured with professional-grade adhesive designed for footwear. With proper care, they stay firmly attached through multiple wears. However, avoid excessive moisture, harsh impacts, or picking at stones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you ensure quality if you don't manufacture?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Great question! Our curation process includes: (1) Supplier vetting—we only partner with manufacturers who provide samples, quality certifications, and ethical practice documentation; (2) Sample testing—we order and personally evaluate every new style for comfort, durability, and finish; (3) Batch inspection—we randomly inspect inventory before shipping to catch any quality issues; (4) Customer feedback loop—we monitor reviews and returns to continuously refine our selections. If a style doesn't meet our standards or your expectations, we remove it from the collection. Your satisfaction is our quality guarantee."
+        }
+      }
+    ]
+  }
+  </script>
+{%- endif -%}
+
+  <!-- 4-3-2026 - Defer non-critical scripts -->
+  <!-- Place right before the closing 'head' tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(function(script) {
+        var newScript = document.createElement('script');
+        newScript.src = script.dataset.src;
+        script.parentNode.replaceChild(newScript, script);
+      });
+    });
+  </script>
+
+  </head>
+
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+      {{ 'accessibility.skip_to_text' | t }}
+    </a>
+
+    {%- if settings.cart_type == 'drawer' -%}
+      {%- render 'cart-drawer' -%}
+    {%- endif -%}
+
+    {% sections 'header-group' %}
+
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      <!-- 8-20-2024 - Add breadcrumbs navigation -->
+      {% render 'breadcrumbs' %}
+      {{ content_for_layout }}
+    </main>
+
+    {% sections 'footer-group' %}
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+    </ul>
+
+    <script>
+      window.shopUrl = '{{ request.origin }}';
+      window.routes = {
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+      };
+
+      window.cartStrings = {
+        error: `{{ 'sections.cart.cart_error' | t }}`,
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+      };
+
+      window.variantStrings = {
+        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
+        soldOut: `{{ 'products.product.sold_out' | t }}`,
+        unavailable: `{{ 'products.product.unavailable' | t }}`,
+        unavailable_with_option: `{{ 'products.product.value_unavailable' | t: option_value: '[value]' }}`,
+      };
+
+      window.quickOrderListStrings = {
+        itemsAdded: `{{ 'sections.quick_order_list.items_added.other' | t: quantity: '[quantity]' }}`,
+        itemAdded: `{{ 'sections.quick_order_list.items_added.one' | t: quantity: '[quantity]' }}`,
+        itemsRemoved: `{{ 'sections.quick_order_list.items_removed.other' | t: quantity: '[quantity]' }}`,
+        itemRemoved: `{{ 'sections.quick_order_list.items_removed.one' | t: quantity: '[quantity]' }}`,
+        viewCart: `{{- 'sections.quick_order_list.view_cart' | t -}}`,
+        each: `{{- 'sections.quick_order_list.each' | t: money: '[money]' }}`,
+        min_error: `{{- 'sections.quick_order_list.min_error' | t: min: '[min]' }}`,
+        max_error: `{{- 'sections.quick_order_list.max_error' | t: max: '[max]' }}`,
+        step_error: `{{- 'sections.quick_order_list.step_error' | t: step: '[step]' }}`,
+      };
+
+      window.accessibilityStrings = {
+        imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
+        shareSuccess: `{{ 'general.share.success_message' | t }}`,
+        pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
+        playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
+        recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
+        recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
+        countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
+      };
+    </script>
+   
+  <!-- 1-24-2026 - Delay Shopify Inbox chat bubble by 24 seconds to prevent it from loading above the fold -->
+  <!-- Paste this script immediately before the closing 'body' tag -->
+  <style id="delay-inbox-style">
+    /* Targeted selector for Shopify Inbox 2026 iframe container */
+    #shopify-chat, .shopify-chat, iframe#dummy-chat-button-iframe { 
+      display: none !important; 
+      visibility: hidden !important; 
+    }
+  </style>
+
+  <script>
+    (function() {
+      const delayTime = 24000; // 24 seconds
+      
+      // Function to reveal the chat bubble
+      function showInbox() {
+        const styleTag = document.getElementById('delay-inbox-style');
+        if (styleTag) styleTag.remove(); // Removes the "hide" rule
+        
+        const chatWidget = document.querySelector('#shopify-chat') || 
+                          document.querySelector('.shopify-chat') || 
+                          document.querySelector('iframe#dummy-chat-button-iframe');
+        
+        if (chatWidget) {
+          chatWidget.style.setProperty('display', 'block', 'important');
+          chatWidget.style.setProperty('visibility', 'visible', 'important');
+        }
+      }
+
+      // Initialize delay
+      setTimeout(showInbox, delayTime);
+
+      // Watch for Shopify's late-injection of the Inbox iframe
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (node.id === 'shopify-chat' || node.id === 'dummy-chat-button-iframe') {
+              node.style.setProperty('display', 'none', 'important');
+            }
+          });
+        });
+      });
+
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+
+      // Stop observing after the delay to allow the app to function normally
+      setTimeout(() => observer.disconnect(), delayTime + 500);
+    })();
+  </script> 
+  
+  <!-- 2-18-2026 - The "Master Idle Loader" -->
+  <!-- 2-18-2026 - Moved these script from the 'head' tag into this "Idle Engine" -->
+  <!-- inject these scripts into this "Idle Engine" here at the bottom --> 
+  <!-- This ensures they only load after the LCP image is painted -->
+  <!-- Add the 'defer' attribute to them all, to help improve loading performance -->
+  <!-- Place them here, right before the closing 'body' tag -->
+  {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%}
+
+  <script>
+    (function() {
+      const loadDelayedScripts = () => {
+        console.log('LCP Secure. Loading theme scripts...');
+        
+        // Helper to inject scripts
+        const inject = (src) => {
+          const s = document.createElement('script');
+          s.src = src;
+          s.defer = true;
+          document.body.appendChild(s);
+        };
+
+        // 1. THEME SCRIPTS (Functional)
+        {%- if settings.predictive_search_enabled -%}
+          inject("{{ 'predictive-search.js' | asset_url }}");
+        {%- endif -%}
+        
+        {%- if settings.cart_type == 'drawer' -%}
+          inject("{{ 'cart-drawer.js' | asset_url }}");
+        {%- endif -%}
+        
+        {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
+           inject("{{ 'localization-form.js' | asset_url }}");
+        {%- endif -%}
+
+        // 2. APP SCRIPTS (Marketing/Upsell)
+        // Cozy Antitheft
+        inject("{{ shop.metafields.CZAT.shopat_script }}");
+        
+        // Smart Stories
+        inject("https://d1mqdk3pxfmmxi.cloudfront.net/bC6eWkwy9zz1l2yy.js");
+        
+        // Sticky Cart Upsell
+        inject("https://cdn.shopify.com/extensions/019ca303-e909-78a0-adca-662e9357a616/xb-sticky-add-to-cart-upsell-452/assets/core_script.js");
+        
+        // Shop Follow Button
+        inject("https://milvertons.com/cdn/shopifycloud/shop-js/modules/v2/client.shop-follow-button_DzGbq68Y.en.esm.js");
+
+        // 3. Adoric Ads (if present)
+        {%- if content_for_header contains 'adoric.com' -%}
+          {%- render 'adoric-ads' -%}
+        {%- endif -%}
+      };
+
+      // EXECUTION STRATEGY
+      // Fast Idle: Trigger at 2.5s (giving LCP plenty of time, but restoring functionality quickly)
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          setTimeout(loadDelayedScripts, 2500); 
+        }, { timeout: 4000 });
+      } else {
+        setTimeout(loadDelayedScripts, 3000);
+      }
+    })();
+  </script>  
+  
+</body>
+</html>
+        <!-- Start-MakeAnOffer version: 7 -->
+        <script>
+          var makeAnOfferData = (function() {
+            var data = {
+              product: null,
+              cartProducts: [],
+              currency_iso_code: "{{ currency.iso_code }}",
+              settings: {{ shop.metafields.make_an_offer.user_setting | json }},
+              customer_email: "{{ customer.email }}"
+            };
+
+            {% if product %}
+              data.product = (function() {
+                var mf_featured_image = "{{ product.selected_or_first_available_variant.featured_image | default: product.featured_image | img_url: '1024x1024'}}";
+                var mf_other_image = "{{ product.images.first | img_url: '1024x1024' }}";
+                return {
+                  title: {{ product.title | json }},
+                  price: "{{ product.price | money_without_currency }}",
+                  currency: {{ shop.money_format | json }},
+                  image: mf_featured_image || mf_other_image,
+                  variants: {{ product.variants | json }},
+                  tags: {{ product.tags | json }},
+                  collections: {{ product.collections | json }},
+                  url: "{{ product.url | within: collections.all }}",
+                  available: {{ product.available }}
+                }
+              })();
+            {% endif %}
+
+            {% if cart.items.size > 0 %}
+              {% for item in cart.items %}
+                data.cartProducts.push(function() {
+                  return {
+                    title: {{ item.product.title | json }},
+                    price: `{{ item.price | money }}`,
+                    image: "{{ item | img_url: '1024x1024' }}",
+                    variants: {{ item.variants | json }},
+                    variant_id: "{{ item.variant.id }}",
+                    url: "{{ item.url | within: collections.all }}",
+                    sku: "{{ item.sku }}",
+                    tags: {{ item.product.tags | json }},
+                    collections: {{ item.product.collections | json }},
+                    available: {{ item.product.available }}
+                  }
+                }());
+              {% endfor %}
+            {% endif %}
+
+            return data;
+          })();
+
+        </script>
+        <!-- End-MakeAnOffer -->

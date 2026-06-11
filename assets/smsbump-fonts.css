@@ -1,0 +1,28 @@
+/* 7-29-2025 - Hosted font definitions for SMSBump popup */
+
+/* PT Serif Bold */
+@font-face {
+  font-family: 'PTSerifCustom';
+  src: url('https://cdn.shopify.com/s/files/1/0054/0694/9422/files/pt-serif-700.woff2?v=1753764303') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Regular */
+@font-face {
+  font-family: 'MontserratCustom';
+  src: url('https://cdn.shopify.com/s/files/1/0054/0694/9422/files/montserrat-400.woff2?v=1753764303') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat Bold */
+@font-face {
+  font-family: 'MontserratCustom';
+  src: url('https://cdn.shopify.com/s/files/1/0054/0694/9422/files/montserrat-700.woff2?v=1753764303') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

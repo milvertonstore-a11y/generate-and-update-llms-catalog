@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17591270573289f252": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_2020938_pGVdwq": {
+          "type": "ai_gen_block_2020938",
+          "disabled": true,
+          "settings": {
+            "logo_image": "shopify://shop_images/milvertons-logo-full-trnsp-approved-recmnded-size-cmp-200x200-square-165x165-live_a20b31fa-91f0-49bc-a27d-6db011c582ef.webp",
+            "logo_link": "https://milvertons.com/pages/shoe-bag-sets",
+            "alignment": "center",
+            "logo_width": 200,
+            "logo_width_mobile": 150,
+            "padding": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_2020938_pGVdwq"
+      ],
+      "settings": {}
+    },
+    "pf-c4081643": {
+      "type": "pf-c4081643",
+      "settings": {}
+    }
+  },
+  "order": [
+    "17591270573289f252",
+    "pf-c4081643"
+  ]
+}

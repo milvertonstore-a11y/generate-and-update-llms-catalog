@@ -1,0 +1,73 @@
+{% layout none %}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+{%- comment -%}
+PRODUCT IMAGES
+{%- endcomment -%}
+{% for product in collections.all.products %}
+  {% for media in product.media %}
+    {% if media.media_type == 'image' %}
+      <url>
+        <loc>{{ shop.url }}{{ product.url }}</loc>
+        <image:image>
+          <image:loc>{{ media.src | img_url: 'master' | prepend: 'https:' }}</image:loc>
+          <image:title>{{ media.alt | default: product.title | escape }}</image:title>
+          <image:caption>{{ media.alt | default: product.title | escape }}</image:caption>
+        </image:image>
+      </url>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{%- comment -%}
+COLLECTION IMAGES
+{%- endcomment -%}
+{% for collection in collections %}
+  {% if collection.image %}
+    <url>
+      <loc>{{ shop.url }}{{ collection.url }}</loc>
+      <image:image>
+        <image:loc>{{ collection.image.src | img_url: 'master' | prepend: 'https:' }}</image:loc>
+        <image:title>{{ collection.title | escape }}</image:title>
+        <image:caption>{{ collection.title | escape }}</image:caption>
+      </image:image>
+    </url>
+  {% endif %}
+{% endfor %}
+
+{%- comment -%}
+BLOG + ARTICLE IMAGES
+{%- endcomment -%}
+{% for blog in blogs %}
+  {% for article in blog.articles %}
+    {% if article.image %}
+      <url>
+        <loc>{{ shop.url }}{{ article.url }}</loc>
+        <image:image>
+          <image:loc>{{ article.image.src | img_url: 'master' | prepend: 'https:' }}</image:loc>
+          <image:title>{{ article.title | escape }}</image:title>
+          <image:caption>{{ article.title | escape }}</image:caption>
+        </image:image>
+      </url>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{%- comment -%}
+HOMEPAGE IMAGES (hero banners, featured images)
+{%- endcomment -%}
+{% if settings.logo %}
+  <url>
+    <loc>{{ shop.url }}</loc>
+    <image:image>
+      <image:loc>{{ settings.logo | img_url: 'master' | prepend: 'https:' }}</image:loc>
+      <image:title>{{ shop.name | escape }}</image:title>
+      <image:caption>{{ shop.name | escape }}</image:caption>
+    </image:image>
+  </url>
+{% endif %}
+
+</urlset>
+
