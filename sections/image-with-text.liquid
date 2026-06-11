@@ -1,4 +1,7 @@
-{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{% comment %}{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}{% endcomment %}
+
+<!-- 9-2-2024 - Async load this CSS to prevent render blocking -->
+<link rel="stylesheet" href="{{ 'component-image-with-text.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {%- style -%}
   .section-{{ section.id }}-padding {
