@@ -13,8 +13,8 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "show_collection_image": true,
+        "color_scheme": "background-1"
       }
     },
     "product-grid": {
@@ -22,10 +22,10 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
@@ -36,10 +36,44 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "17529224180e65ac9c": {
+      "type": "apps",
+      "blocks": {
+        "whatmore_shoppable_videos_app_block_collections_RmPDn8": {
+          "type": "shopify://apps/whatmore-shoppable-videos/blocks/app-block-collections/20db8a72-315a-4364-8885-64219ee48303",
+          "settings": {
+            "collectionHeading": "",
+            "template-type": "template-collections-b",
+            "tile-size": 60,
+            "tile-size-portrait": 60,
+            "min-height": 250,
+            "collectionId": "0"
+          }
+        }
+      },
+      "block_order": [
+        "whatmore_shoppable_videos_app_block_collections_RmPDn8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_cUyUdk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if template contains 'collection' and collection.handle == 'women-shoes-bags' %}\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> Our women’s shoes and bags collection brings together a wide range of styles to suit every occasion. Whether you’re dressing for a wedding, attending a formal event, or elevating your everyday wardrobe, the right combination of shoes and accessories can transform your look.</p>\n\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> High heels remain a timeless choice for formal events, offering elegance and confidence. Paired with a matching bag, they create a cohesive and polished appearance that works perfectly for weddings, evening parties, and special celebrations. For those who prefer versatility, neutral tones and classic silhouettes provide effortless styling across multiple outfits.</p>\n\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> Matching shoe and bag sets are especially popular for women who want a complete, coordinated look. These sets simplify styling while ensuring a refined finish, making them ideal for both modern and traditional fashion preferences.</p>\n\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> Inspired by Italian design and global fashion trends, this collection blends luxury aesthetics with accessible pricing. Whether you're looking for bold statement pieces or subtle elegance, you'll find options that suit your personal style and occasion.</p>\n{% endif %}\n\n{% if template contains 'collection' and collection.handle == 'shoes-with-matching-bag-sets' %}\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> Our shoe and bag sets are curated for women who want a complete, coordinated look without the stress of styling separate accessories. Perfect for weddings, gala events, and formal parties, these matching sets are designed to complement a wide range of outfits, from elegant dresses to traditional attire.</p>\n\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> For wedding guests, choosing the right shoe and bag set can elevate your entire outfit. Neutral tones like gold, silver, and nude offer versatility, while rhinestone and embellished designs add a statement finish for evening occasions. Brides can also find elegant options that pair beautifully with bridal gowns, ensuring both style and comfort throughout the day.</p>\n\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> These sets are especially popular for cultural celebrations, including African weddings, Aso Ebi occasions and formal gatherings, where coordinated accessories are essential for a polished look. With a focus on Italian-inspired design and global fashion influences, each piece blends sophistication with modern trends.</p>\n\n  <p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> Explore our collection to find the perfect shoe and bag set for your next event, whether you're looking for understated elegance or bold, eye-catching glamour.\n</p>\n{% endif %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "17529224180e65ac9c",
+    "custom_liquid_cUyUdk"
   ]
 }

@@ -23,9 +23,63 @@
           "type": "title",
           "settings": {}
         },
+        "judge_me_reviews_preview_badge_aphfEr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "4f43d66d-a849-42a7-98b3-1a5920462e99": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_9UtyWr": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- comment -%}\n/* This snippet displays a seasonal sales badge for products in specific collections. AND always displays 'FREE Shipping within USA' for all products\n\n  Logic:\n  - If the product belongs to either 'womens-shoes-and-bags' or 'shoes-with-matching-bag-sets',\n    show: \"🔥 50+ sold this season\"\n  - Else if the product belongs to either 'dresses' or 'pants',\n    show: \"🔥 20+ sold this season\"\n  - Products outside these four collections will not display any badge.\n\n  Only one badge is shown per product, based on priority.\n*/\n{%- endcomment -%}\n\n{%- assign badge_text = '' -%}\n\n{%- for c in product.collections -%}\n  {%- if c.handle == 'womens-shoes-and-bags' or c.handle == 'shoes-with-matching-bag-sets' -%}\n    {%- assign badge_text = '🔥 50+ sold this season' -%}\n    {%- break -%}\n  {%- endif -%}\n{%- endfor -%}\n\n{%- if badge_text == '' -%}\n  {%- for c in product.collections -%}\n    {%- if c.handle == 'dresses' or c.handle == 'pants' -%}\n      {%- assign badge_text = '🔥 20+ sold this season' -%}\n      {%- break -%}\n    {%- endif -%}\n  {%- endfor -%}\n{%- endif -%}\n\n{%- if badge_text != '' -%}\n  <p class=\"product__text inline-richtext\">{{ badge_text }}</p>\n{%- endif -%}\n\n<!-- Always show free shipping message -->\n{%- comment -%}<p class=\"product__text inline-richtext\">🚚 FREE Shipping within USA</p>{%- endcomment -%}\n<p class=\"product__text inline-richtext\">\n  🚚 FREE Shipping within\n  <img src=\"https://flagcdn.com/16x12/us.png\"\n       alt=\"USA\"\n       style=\"vertical-align:middle; margin:0 4px;\">\n  USA\n</p>"
+          }
+        },
+        "custom_liquid_K3NnPa": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<!-- 9-7-2025 - Display richtext badge based on product collections -->\n<!-- Place this code inside the 'Custom liquid' block, after the title block -->\n<!-- Prioritize \"50+ sold\" over \"20+ sold\" if product belongs to both -->\n\n{%- comment -%}\n/*\n  This snippet displays a seasonal sales badge for products in specific collections.\n\n  Logic:\n  - If the product belongs to either 'womens-shoes-and-bags' or 'shoes-with-matching-bag-sets',\n    show: \"🔥 50+ sold this season\"\n  - Else if the product belongs to either 'dresses' or 'pants',\n    show: \"🔥 20+ sold this season\"\n  - Products outside these four collections will not display any badge.\n\n  Only one badge is shown per product, based on priority.\n*/\n{%- endcomment -%}\n\n{%- assign badge_text = '' -%}\n\n{%- for c in product.collections -%}\n  {%- if c.handle == 'womens-shoes-and-bags' or c.handle == 'shoes-with-matching-bag-sets' -%}\n    {%- assign badge_text = '🔥 50+ sold this season' -%}\n    {%- break -%}\n  {%- endif -%}\n{%- endfor -%}\n\n{%- if badge_text == '' -%}\n  {%- for c in product.collections -%}\n    {%- if c.handle == 'dresses' or c.handle == 'pants' -%}\n      {%- assign badge_text = '🔥 20+ sold this season' -%}\n      {%- break -%}\n    {%- endif -%}\n  {%- endfor -%}\n{%- endif -%}\n\n{%- if badge_text != '' -%}\n  <p class=\"product__text inline-richtext\">{{ badge_text }}</p>\n{%- endif -%}"
+          }
+        },
+        "text_N67z8g": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "🔥 50+ sold this season",
+            "text_style": "body"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "woweta_estimated_delivery_date_woweta_template_block_6AfyXT": {
+          "type": "shopify://apps/woweta/blocks/woweta-template-block/d7b84d90-326a-44a0-a81b-e2ec109b6137",
+          "settings": {}
+        },
+        "delm_widget_DmmdMG": {
+          "type": "shopify://apps/delm/blocks/widget/3d06108d-c25c-49b1-bd75-89adde2de00e",
+          "disabled": true,
+          "settings": {
+            "widget_id": "019aeea0-2d95-73fc-80be-99a22461b06a",
+            "product": "{{product}}",
+            "watch_variant_id_selector": "form[action*=\"/cart/add\"] [name=\"id\"]"
+          }
+        },
+        "2de6c977-7125-4636-afdb-a5921904f978": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "disabled": true,
+          "settings": {
+            "data_key": "credit-promotion-badge",
+            "theme": "light",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -33,6 +87,10 @@
             "picker_type": "button",
             "swatch_shape": "circle"
           }
+        },
+        "smartsize_app_block_gBxreR": {
+          "type": "shopify://apps/smartsize/blocks/app-block/465a43e0-6a1a-4d30-b82e-fe6118568705",
+          "settings": {}
         },
         "quantity_selector": {
           "type": "quantity_selector",
@@ -42,44 +100,345 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
+          }
+        },
+        "modemagic_store_conversions_app_block_CMTVUW": {
+          "type": "shopify://apps/modemagic-store-conversions/blocks/app-block/f8a3f0c1-94a6-40ff-9a50-35bdf53cc91e",
+          "settings": {}
+        },
+        "custom_liquid_3Jb4X3": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<!-- 10-7-2024 - Add Shopify SSL secure badge near the Add to cart button on product pages -->\n<a  href=\"https://www.shopify.com/security/pci-compliant?utm_medium=shop&utm_source=secure\"\n  title=\"This online store is secured by Shopify\"\n  target=\"_blank\"\n  rel=\"nofollow\"\n>\n  <img    src=\"https://cdn.shopify.com/s/images/badges/shopify-secure-badge-white.svg\"\n    alt=\"Shopify secure badge\" width=\"102\" height=\"44\"\n  >\n</a>"
           }
         },
         "description": {
           "type": "description",
           "settings": {}
         },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Sizing Charts",
+            "icon": "ruler",
+            "content": "<p><a href=\"https://milvertons.com/pages/womens-sizing-chart\" title=\"Women's Sizing Chart\">Women's Sizing Chart</a></p><p><a href=\"https://milvertons.com/pages/mens-sizing-chart\" title=\"Men's Sizing Chart\">Men's Sizing Chart</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_Nj6YVx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping information",
+            "icon": "plane",
+            "content": "<p>- Ships within 2–4 business days<br/>- Free shipping on USA orders   <br/>- Need help? Our concierge team is here to assist</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_aUY7dX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery time",
+            "icon": "truck",
+            "content": "<p><strong>SHIPPING ESTIMATES</strong></p><p>The time frame for order delivery is divided into two parts:</p><p>Processing time:<br/>All orders are subject to processing time that is separate and apart from the time it takes for a shipment to reach its destination once it has been picked up from our fulfillment center by the applicable carrier. Depending on various factors, processing time takes 2-4 business days (excluding weekends and holidays).</p><p>Shipping time:<br/>This refers to the time it takes for items to be shipped from warehouse to destination (that is, the In-Transit time). Shipping time starts when your order has been shipped, and does not include processing time. </p><p>Shipping time varies by location. Below are our estimates:<br/><strong>United States (7-15 Business days)</strong><br/><strong>Canada (8-16 Business days)</strong><br/><strong>Europe (8-16 Business days)</strong><br/><strong>Australia, New Zealand (8-16 Business days)</strong><br/><strong>Central & South America (15-30 Business days)</strong><br/><strong>Asia (10-20 Business days)</strong><br/><strong>Africa (15-35 Business days)</strong></p><p>Note: These estimates can be affected by external factors, as such they are not guaranteed and may be subject to change. The delivery can be completed before or after the estimated delivery window.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_d8fXCY": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Features",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "{{ block.settings.page.content }}",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Shipping",
+            "icon": "truck",
+            "content": "<p>The time frame for order delivery is divided into two parts:</p><p>Processing time:<br/>All orders are subject to processing time that is separate and apart from the time it takes for a shipment to reach its destination once it has been picked up from our fulfillment center by the applicable carrier. Depending on various factors, processing time takes 2-4 business days (excluding weekends and holidays).</p><p>Shipping time:<br/>This refers to the time it takes for items to be shipped from warehouse to destination (that is, the In-Transit time). Shipping time starts when your order has been shipped, and does not include processing time. </p><p>Shipping time varies by location. Below are our estimates:<br/><strong>United States (7-21 Business days)</strong><br/><strong>Canada (12-21 Business days)</strong><br/><strong>Europe (8-15 Business days)</strong><br/><strong>Australia, New Zealand (8-15 Business days)</strong><br/><strong>Central & South America (15-30 Business days)</strong><br/><strong>Asia (10-25 Business days)</strong><br/><strong>Africa (15-35 Business days)</strong></p><p>Note: These estimates can be affected by external factors, as such they are not guaranteed and may be subject to change. The delivery can be completed before or after the estimated delivery window.</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "<p>- Wipe clean with a soft, damp cloth  <br/>- Avoid prolonged exposure to moisture  <br/>- Store in dust bags to maintain shape and finish</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_gNxPeY": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Shoe care instructions",
+            "icon": "shoe",
+            "content": "<p>- Wipe clean with a soft, damp cloth  <br/>- Avoid prolonged exposure to sunlight or moisture  <br/>- Store in a cool, dry place away from sunlight to maintain shape and finish <br/>- Use shoe trees or tissue stuffing to preserve shoe form</p>",
+            "page": ""
+          }
+        },
+        "a73fbb0b-5fa6-4930-8845-1b1e62713900": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Gender: {{ product.metafields[\"mm-google-shopping\"].gender.value }}",
+            "text_style": "body"
+          }
+        },
+        "9400c209-9172-4b5f-abbd-eed46c04d4eb": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Age Group: {{ product.metafields[\"mm-google-shopping\"].age_group.value }}",
+            "text_style": "body"
+          }
+        },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "76fdcf62-206a-4a4d-b23c-2e09bfe639fa": {
+          "type": "shopify://apps/simesy-product-faqs-faq-page/blocks/simesy-faq/467857aa-e495-4e93-917b-0cc9234489fd",
+          "disabled": true,
+          "settings": {
+            "embed_code": "",
+            "heading": "Frequently Asked Questions",
+            "heading_type": "h2",
+            "heading_alignment": "center",
+            "max_width": 900,
+            "id": "64bf86956a1ee96c234fcb7d",
+            "group_id": ""
+          }
+        },
+        "61b3f1cf-2757-4a75-9e8e-1f356a6876aa": {
+          "type": "shopify://apps/simesy-product-faqs-faq-page/blocks/simesy-faq/467857aa-e495-4e93-917b-0cc9234489fd",
+          "disabled": true,
+          "settings": {
+            "embed_code": "",
+            "heading": "Frequently Asked Questions",
+            "heading_type": "h2",
+            "heading_alignment": "center",
+            "max_width": 900,
+            "id": "64bf8a0b6a1ee96c234fd3d8",
+            "group_id": ""
+          }
+        },
+        "0caddbf4-59ac-42ea-b9fb-96b4b76ddaad": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_UrjPwQ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<!-- 9-4-2024 - Add automated links on product pages to collections they belong to -->\n<div class=\"collections-list\">\n  <h3>Collections:</h3>\n  <div>\n    {% for collection in product.collections %}\n      {% unless collection.title == \"All Products\" or collection.title == \"Milvertons Facebook Shop\" or collection.title == \"Sale\" %}\n        <span class=\"collection-tag\">\n          <a href=\"{{ collection.url }}\" class=\"collection-link\">{{ collection.title }}</a>\n        </span>\n      {% endunless %}\n    {% endfor %}\n  </div>\n</div>\n\n<style>\n  .collections-list {\n    margin-top: 20px;\n  }\n  .collection-tag {\n    display: inline-block;\n    background-color: #f2f2f2;\n    border-radius: 5px;\n    padding: 5px 10px;\n    margin: 5px;\n  }\n  .collection-link {\n    text-decoration: none;\n    color: #333;\n  }\n  .collection-link:hover {\n    text-decoration: underline;\n  }\n</style>"
           }
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "judge_me_reviews_preview_badge_aphfEr",
+        "4f43d66d-a849-42a7-98b3-1a5920462e99",
+        "custom_liquid_9UtyWr",
+        "custom_liquid_K3NnPa",
+        "text_N67z8g",
         "price",
+        "woweta_estimated_delivery_date_woweta_template_block_6AfyXT",
+        "delm_widget_DmmdMG",
+        "2de6c977-7125-4636-afdb-a5921904f978",
         "variant_picker",
+        "smartsize_app_block_gBxreR",
         "quantity_selector",
         "buy_buttons",
+        "modemagic_store_conversions_app_block_CMTVUW",
+        "custom_liquid_3Jb4X3",
         "description",
-        "share"
+        "collapsible-row-2",
+        "collapsible_tab_Nj6YVx",
+        "collapsible_tab_aUY7dX",
+        "collapsible_tab_d8fXCY",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-3",
+        "collapsible_tab_gNxPeY",
+        "a73fbb0b-5fa6-4930-8845-1b1e62713900",
+        "9400c209-9172-4b5f-abbd-eed46c04d4eb",
+        "share",
+        "76fdcf62-206a-4a4d-b23c-2e09bfe639fa",
+        "61b3f1cf-2757-4a75-9e8e-1f356a6876aa",
+        "0caddbf4-59ac-42ea-b9fb-96b4b76ddaad",
+        "custom_liquid_UrjPwQ"
+      ],
+      "custom_css": [
+        ".product__media img {max-width: 768px; width: 100%; height: auto; display: block;}"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "background-1",
         "media_size": "large",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "mobile_thumbnails": "hide",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": true,
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "dca142ad-3bd8-450e-b09e-b181591cefac": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!-- Klaviyo 1 - This script ensures that whenever a customer adds an item to their cart (through any method), Klaviyo receives detailed information about the cart contents -->\n<script type=\"text/javascript\">\nvar _learnq = _learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    _learnq.push(['track', 'Added to Cart', cart])\n  }))\n} \n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch))\n$(document).ajaxComplete(function(event, request, settings){\n  if(settings.url == \"/cart/add.js\"){\n      addedToCart()\n  }\n})</script>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "98917cd3-eb01-4574-8d6f-03f6986fffbf": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<!-- Klaviyo 2 - This is an enhanced version of the previous Klaviyo tracking script (Klaviyo 1), designed to be more robust and capture \"Added to Cart\" events from an additional method: standard form submissions -->\n<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "as_seen_badge_8ynfbV": {
+      "type": "as-seen-badge",
+      "name": "As Seen On Badge",
+      "settings": {
+        "heading": "As Seen On",
+        "pinterest_icon": "shopify://shop_images/Pinterest_Logo.svg",
+        "pinterest_url": "https://www.pinterest.com/milvertonstore/",
+        "instagram_icon": "shopify://shop_images/Instagram_logo_2016.svg",
+        "instagram_url": "https://www.instagram.com/milvertonstore/",
+        "facebook_icon": "shopify://shop_images/Facebook_f_logo__2019.svg",
+        "facebook_url": "https://www.facebook.com/milvertonstore/",
+        "x_icon": "shopify://shop_images/X_logo_2023.svg",
+        "x_url": "https://x.com/milvertonstore",
+        "subtext": "Join 6,800+ Fashion Lovers Following Our Latest Trends"
+      }
+    },
+    "1690274032624ad49a": {
+      "type": "apps",
+      "blocks": {
+        "47449714-e506-49bb-b22f-b54db590a81d": {
+          "type": "shopify://apps/simesy-product-faqs-faq-page/blocks/simesy-faq/467857aa-e495-4e93-917b-0cc9234489fd",
+          "settings": {
+            "embed_code": "",
+            "heading": "Frequently Asked Questions",
+            "heading_type": "h2",
+            "heading_alignment": "center",
+            "max_width": 900,
+            "id": "64bf86956a1ee96c234fcb7d",
+            "group_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "47449714-e506-49bb-b22f-b54db590a81d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "168758342944fb5ca3": {
+      "type": "apps",
+      "blocks": {
+        "kobu_menu_highlight_app_block_xM8xQ8": {
+          "type": "shopify://apps/kobu-menu-highlight/blocks/app-block/09834ec7-34c9-444c-86c6-fab2bbb63d27",
+          "settings": {
+            "menu_group": "Group 1",
+            "group_title": "",
+            "menu_shape": "circle",
+            "menu_margin_top": 8,
+            "menu_margin_bottom": 8,
+            "menu_gap": 20,
+            "menu_width": 80,
+            "menu_height": 80,
+            "menu_title_alignment": "center",
+            "menu_title_font_size": 14,
+            "menu_title_font_weight": 4,
+            "menu_title_font_decoration": "none",
+            "menu_title_font_style": "normal",
+            "menu_mode": "slider",
+            "menu_position": "center",
+            "fixed_menu": "none",
+            "section_background": "",
+            "menu_display_max_width": "9999",
+            "badge_font_size": 14,
+            "custom_css": "",
+            "custom_js": ""
+          }
+        }
+      },
+      "block_order": [
+        "kobu_menu_highlight_app_block_xM8xQ8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1690274077c34ac845": {
+      "type": "apps",
+      "blocks": {
+        "423c6351-11db-44b6-9361-bfea911f00d7": {
+          "type": "shopify://apps/simesy-product-faqs-faq-page/blocks/simesy-faq/467857aa-e495-4e93-917b-0cc9234489fd",
+          "disabled": true,
+          "settings": {
+            "embed_code": "",
+            "heading": "Frequently Asked Questions",
+            "heading_type": "h2",
+            "heading_alignment": "center",
+            "max_width": 900,
+            "id": "64bf8a0b6a1ee96c234fd3d8",
+            "group_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "423c6351-11db-44b6-9361-bfea911f00d7"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_zUUbWF": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What is the status of my order?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Once you have placed your order, we will send you a confirmation email to track the status of your order.\" \n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Can I change my order?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"We can only change orders that have not been processed for shipping yet. Once your order is under the status 'preparing for shipping', 'in transit', or 'delivered', then we cannot accept any edits to your order. To make changes to your order, please email us at sales@milvertons.com\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Do you ship to my country?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"We ship to most countries around the world although we may not be able to ship to a select few due to logistical reasons.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Where can I track my order?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"You can track your order at <a href='https://milvertons.com/apps/parcelpanel'>Track your order</a>.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How long will it take my order to process for shipment?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"All orders are subject to processing time that is separate from the time it takes for a shipment to reach its destination once it has been picked up from our fulfillment center by the applicable carrier. Depending on a number of factors, domestic and international orders may take 2-4 business days (excluding weekends and holidays) to process.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"How long is the In-Transit time to deliver my package?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"This refers to the time it takes for items to be shipped from warehouse to destination (that is, the In-Transit time). Shipping time starts when your order has been shipped, and does not include processing time. For more information, please refer to our Shipping Policy at <a href='https://milvertons.com/policies/shipping-policy'>Shipping Policy</a>.\nShipping time varies by location. Below are our estimates:\nUnited States (7-21 Business days)\nCanada (12-21 Business days)\nEurope (8-15 Business days)\nAustralia, New Zealand (8-15 Business days)\nCentral & South America (15-30 Business days)\nAsia (10-25 Business days)\nAfrica (15-35 Business days)\nNote: These estimates can be affected by external factors, as such they are not guaranteed and may be subject to change. The delivery can be completed before or after the estimated delivery window.\"\n      }\n    },\n    {\n      \"@type\": \"Question\",\n      \"name\": \"What is your return policy?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Our return policy lasts for 30 days, which means we accept returns and exchanges within 30 days of purchase. If you want to return an item, send an email to sales@milvertons.com within three days after delivery. You will be responsible for paying for your own shipping costs for returning your item. Item must be unused and in the same condition that you received it, with tags attached. It must also be in the original packaging. For more information, please refer to our Return and Refund policy at <a href='https://milvertons.com/policies/refund-policy'>Return and Refund Policy</a>.\"\n      }\n    }\n  ]\n}\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "related-products": {
@@ -89,20 +448,76 @@
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "scheme-1",
+        "color_scheme": "background-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "16910324135eac6490": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "169103592700f2ddd0": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1699400595a50c184d": {
+      "type": "apps",
+      "blocks": {
+        "5e94a32d-f709-4b47-8f3d-919c8a29aaa7": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "5e94a32d-f709-4b47-8f3d-919c8a29aaa7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "175292007685b6c146": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17529206875891d911": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "dca142ad-3bd8-450e-b09e-b181591cefac",
+    "98917cd3-eb01-4574-8d6f-03f6986fffbf",
+    "as_seen_badge_8ynfbV",
+    "1690274032624ad49a",
+    "168758342944fb5ca3",
+    "1690274077c34ac845",
+    "custom_liquid_zUUbWF",
+    "related-products",
+    "16910324135eac6490",
+    "169103592700f2ddd0",
+    "1699400595a50c184d",
+    "175292007685b6c146",
+    "17529206875891d911"
   ]
 }

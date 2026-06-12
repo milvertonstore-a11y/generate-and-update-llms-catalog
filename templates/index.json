@@ -9,62 +9,113 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "17529971410688943c": {
+      "type": "apps",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "vidify_clickable_video_banner_star_rating_UDQMiF": {
+          "type": "shopify://apps/vidify-clickable-video-banner/blocks/star_rating/7357708d-6874-410b-8a9b-9f53a46d84b2",
+          "disabled": true,
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "show_on_desktop": true,
+            "show_on_mobile": true,
+            "banner_video": "shopify://files/videos/Women's Round Toe Block Heel Pumps.mp4",
+            "banner_ratio": "75%",
+            "object_fit": "cover",
+            "banner_link": "",
+            "link_target": "_self",
+            "banner_text": "",
+            "banner_text_color": "#ffffff",
+            "font_size": 6,
+            "show_text_background": false,
+            "text_background_color": "#000000",
+            "text_padding": 10,
+            "banner_text_position": "center-middle",
+            "button_text": "",
+            "button_text_color": "#ffffff",
+            "banner_button_position": "bottom-right",
+            "button_font_size": 1,
+            "button_width": "100px",
+            "button_height": "40px",
+            "button_padding": "10px",
+            "button_background_color": "#000000",
+            "button_link": "",
+            "button_link_target": "_self"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "vidify_clickable_video_banner_star_rating_UDQMiF"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "include_margins": true
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "image_banner": {
+      "type": "image-banner",
+      "custom_css": [],
       "settings": {
-        "title": "Featured products",
+        "image": "shopify://shop_images/milvertons-homepage-hero-banner-new-collection-1080X836-cntr-40-v2.avif",
+        "image_overlay_opacity": 40,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "custom_liquid_XVHgGH": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"as-seen-badge-wrapper\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  <h3 class=\"as-seen-badge-heading\">As Seen On</h3>\n  <div class=\"as-seen-badge-icons\">\n    <a href=\"https://www.pinterest.com/milvertonstore\" target=\"_blank\" rel=\"noopener\">\n      <img \n        src=\"{{ 'Pinterest_Logo.svg' | asset_url }}\" \n        alt=\"Pinterest\" \n        class=\"as-seen-badge__img\"\n        width=\"36\" \n        height=\"36\"\n        loading=\"lazy\"\n        decoding=\"async\"\n        fetchpriority=\"low\"\n      >\n    </a>\n    <a href=\"https://www.instagram.com/milvertonstore\" target=\"_blank\" rel=\"noopener\">\n      <img \n        src=\"{{ 'Instagram_logo_2016.svg' | asset_url }}\" \n        alt=\"Instagram\" \n        class=\"as-seen-badge__img\"\n        width=\"36\" \n        height=\"36\"\n        loading=\"lazy\"\n        decoding=\"async\"\n        fetchpriority=\"low\"\n      >\n    </a>\n    <a href=\"https://www.facebook.com/ milvertonstore\" target=\"_blank\" rel=\"noopener\">\n      <img \n        src=\"{{ 'Facebook_f_logo_(2019).svg' | asset_url }}\" \n        alt=\"Facebook\" \n        class=\"as-seen-badge__img\"\n        width=\"36\" \n        height=\"36\"\n        loading=\"lazy\"\n        decoding=\"async\"\n        fetchpriority=\"low\"\n      >\n    </a>\n    <a href=\"https://x.com/milvertonstore\" target=\"_blank\" rel=\"noopener\">\n      <img \n        src=\"{{ 'X_logo_2023.svg' | asset_url }}\" \n        alt=\"X\" \n        class=\"as-seen-badge__img\"\n        width=\"36\" \n        height=\"36\"\n        loading=\"lazy\"\n        decoding=\"async\"\n        fetchpriority=\"low\"\n      >\n    </a>\n  </div>\n  <p class=\"as-seen-badge-subtext\">Join 6,800+ Fashion Lovers Following Our Latest Trends</p>\n</div>",
+        "color_scheme": "accent-1",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "custom_liquid_gikzEq": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"brand-story\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  <h2>Why Fashion Lovers Choose Milvertons</h2>\n  \n  <h3>✨ Italian Design, African Soul</h3>\n  <p>\n    At Milvertons, we believe luxury fashion should honor both heritage and innovation. Our <strong>Italian shoe and bag sets</strong> are inspired by Milanese craftsmanship—sleek silhouettes, precision embellishment, and timeless elegance—while celebrating the vibrant spirit of African celebrations. From Lagos to London, Atlanta to Accra, our designs are made for women who refuse to compromise on style or cultural pride.\n  </p>\n  \n  <h3>💎 Crafted for Special Occasions</h3>\n  <p>\n    Every Milvertons <strong>shoe and bag set</strong> in our collections is curated for the grandeur of <strong>African weddings</strong>, the tradition of <strong>Aso Ebi</strong>, and the most prestigious <strong>Owambe celebrations and galas</strong>. We understand the importance of coordinated looks: our matching shoe and bag sets eliminate the stress of styling, so you can focus on celebrating. Whether you need <strong>bridal heels with a clutch</strong> or statement rhinestone sets for a guest look, we've curated collections that photograph beautifully and feel luxurious all night long.\n  </p>\n  \n  <h3>🌱 Sustainable Luxury, Exclusively Curated</h3>\n  <p>\n    We partner with ethical manufacturers who prioritize quality over quantity. Our limited-edition collections ensure you won't see your look at every event—because your style should be as unique as your story. Plus, our commitment to sustainable materials means you can shine with confidence.\n  </p>\n  \n  <h3>🚚 US-Based, Diaspora-Focused</h3>\n  <p>\n    Unlike UK-based competitors, Milvertons ships orders from the USA with <strong>free domestic shipping</strong> and no customs surprises. We understand the African diaspora experience—fast delivery, easy returns, and customer service that gets your cultural context. Based in California, serving the world.\n  </p>\n  <p>\n  🛍️ Shop elegant Italian shoe and bag sets designed for weddings, parties, and special occasions. Our matching heels and bags are crafted for women who want a polished, coordinated look without the stress of styling separate accessories.\n  </p>\n</section>",
+        "color_scheme": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "custom_liquid_fpmMPy": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<p class=\"collection-intro\" style=\"max-width: 1160px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">Explore our newest <strong>Italian shoe and bag sets for weddings and special occasions</strong>. Fresh arrivals feature trending colors, updated embellishments, and exclusive designs you won't find elsewhere. Perfect for last-minute <strong>Aso Ebi styling</strong> or planning your 2026 bridal look.</p>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "ae730ba1-bb86-4fb3-bf1f-c5a8d94b9470": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 24px !important;}"
+      ],
+      "settings": {
+        "title": "New Arrivals - Trendy New In",
         "heading_size": "h2",
-        "description": "",
+        "description": "<p>Explore our newest <strong>Italian shoe and bag sets for weddings and special occasions</strong>. Fresh arrivals feature trending colors, updated embellishments, and exclusive designs you won't find elsewhere. Perfect for last-minute <strong>Aso Ebi styling</strong> or planning your 2026 bridal look.</p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "new-arrivals",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -72,13 +123,418 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "force_load": 4
+      }
+    },
+    "custom_liquid_3wwRM4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"homepage-story-expanded\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  <h2>From Milan to Lagos: The Milvertons Curation Journey</h2>\n  \n  <h3>Our Mission: Curating Luxury for the African Diaspora</h3>\n  <p>\n    Milvertons was born from a simple observation: African women attending weddings, galas, and Aso Ebi celebrations deserved access to luxury shoe and bag sets that honored both their cultural heritage and their modern aspirations—but finding them required endless scrolling through overseas sites, uncertain sizing, and risky shipping. We set out to solve this by becoming your trusted curators.\n  </p>\n  \n  <p>\n    We don't manufacture—we <strong>curate</strong>. Our team scours global markets, fashion weeks, and artisan networks to source the finest <strong>Italian-inspired shoe and bag sets</strong> that meet our strict standards for style, quality, and cultural relevance. Then, we bring them to you with US-based service, clear sizing, and reliable shipping. Think of us as your personal luxury fashion buyer, specializing in African celebrations.\n  </p>\n  \n  <h3>Our Curation Philosophy: Quality Without Compromise</h3>\n  <p>\n    Every Milvertons set undergoes rigorous vetting before it reaches our collection. We evaluate:\n  </p>\n  \n  <ul>\n    <li><strong>Design Authenticity:</strong> Does it capture Italian elegance—sleek silhouettes, precision embellishment, timeless proportions?</li>\n    <li><strong>Cultural Relevance:</strong> Will it complement Ankara prints, lace fabrics, and the bold palettes of African fashion?</li>\n    <li><strong>Quality Standards:</strong> Premium PU leather, secure rhinestone setting, durable hardware, comfortable construction</li>\n    <li><strong>Value Proposition:</strong> Luxury aesthetics at accessible price points for wedding budgets</li>\n    <li><strong>Ethical Sourcing:</strong> Partners who provide fair wages and safe working conditions</li>\n  </ul>\n  \n  <p>\n    Only sets that pass all five criteria earn a place in the Milvertons collection. We reject dozens of options for every one we curate—so you never have to compromise.\n  </p>\n  \n  <h3>Why Curation Matters for African Celebrations</h3>\n  <p>\n    Generic luxury retailers don't understand the unique needs of Nigerian weddings, Aso Ebi parties, or Owambe celebrations. They don't know that:\n  </p>\n  \n  <ul>\n    <li>You need heels that photograph beautifully under African sun and indoor lighting</li>\n    <li>Matching clutch bags aren't optional—they're essential for coordinated Aso Ebi looks</li>\n    <li>Comfort matters for 6+ hours of dancing at traditional ceremonies</li>\n    <li>Color matching is critical when your entire group wears the same fabric</li>\n  </ul>\n  \n  <p>\n    As curators specializing in this niche, we understand these needs intimately. Every set in our collection is chosen with your celebration in mind.\n  </p>\n  \n  <h3>The Milvertons Advantage: Curated Selection, US-Based Service</h3>\n  <p>\n    When you shop Milvertons, you get the best of both worlds:\n  </p>\n  \n  <ul>\n    <li><strong>Global Curation:</strong> Access to Italian-inspired designs sourced from trusted international partners</li>\n    <li><strong>Local Convenience:</strong> Free shipping on all USA orders </li>\n    <li><strong>Cultural Expertise:</strong> Styling guidance that understands Aso Ebi, Owambe, and African wedding traditions</li>\n    <li><strong>Quality Assurance:</strong> Every set inspected before shipping—no surprises</li>\n    <li><strong>Community Trust:</strong> Join 6,800+ satisfied customers across the diaspora</li>\n  </ul>\n  \n  <p>\n    We're not just a store—we're your fashion partner, curating luxury that celebrates who you are.\n  </p>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_W7Uqqj": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "Shoe and Bag Sets for Special Occasions",
+        "heading_size": "h2",
+        "description": "<p>Discover <strong>matching shoe and bag sets</strong> crafted <strong>for African weddings, Aso Ebi and Owambe parties</strong>, and special occasions — featuring rhinestone designs, metallic finishes, bridal heels, and coordinated styles that deliver a polished, luxurious look effortlessly.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "shoes-with-matching-bag-sets",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "force_load": 0
+      }
+    },
+    "daf3e65a-d539-4a60-9824-8f88e2d380f6": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 24px !important;}"
+      ],
+      "settings": {
+        "title": "Women's Shoes and Bags",
+        "heading_size": "h2",
+        "description": "<p>Shop our core collection of <strong>Women's shoes and bags</strong> designed for <strong>Nigerian weddings, parties, cultural ceremonies, and pan-African celebrations</strong>. From pointed-toe rhinestone heels to comfortable block-heel options, find your perfect pair with a coordinating clutch—ready to ship free across the USA.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "women-shoes-bags",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "force_load": 0
+      }
+    },
+    "custom_liquid_twaiG6": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<p style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\"/> \n  ✨ From bridal styles to statement pieces for evening events, our collections feature rhinestone designs, metallic finishes, and timeless silhouettes. Perfect for wedding guests, cultural celebrations, and formal occasions, these sets combine elegance with comfort.\n</p>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "17529784205bf9d0a9": {
+      "type": "apps",
+      "blocks": {
+        "whatmore_shoppable_videos_app_block_qQWNPg": {
+          "type": "shopify://apps/whatmore-shoppable-videos/blocks/app-block/20db8a72-315a-4364-8885-64219ee48303",
+          "settings": {
+            "heading": "Watch and Buy",
+            "widget-identity": "wgt_default",
+            "template-type": "template-h",
+            "title-font-size": 26,
+            "title-font-size-portrait": 24,
+            "landscape-padding": 40,
+            "top-bottom-padding": 20,
+            "scroll-video-tile-size": 80,
+            "scroll-video-tile-size-portrait": 80,
+            "min-height": 80
+          }
+        }
+      },
+      "block_order": [
+        "whatmore_shoppable_videos_app_block_qQWNPg"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_zYcULP": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"category-guides\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  <h2>Complete Guide to Choosing Your Perfect Shoe & Bag Set</h2>\n  \n  <h3>👠 Heel Heights for Every Occasion</h3>\n  <p class=\"curator-intro\">\n    <strong>As your luxury fashion curators</strong>, we've tested dozens of Italian-inspired sets to bring you only the best. This guide shares what we've learned about heel heights, color matching, and embellishment styles—so you can choose with confidence for your next African wedding, Aso Ebi celebration, or gala.\n  </p>\n  \n  <p>\n    <strong>3-3.5 Inch Medium Heels:</strong> The sweet spot for most African weddings and parties. Tall enough to elongate your legs and complement flowing gowns, comfortable enough for 6+ hours of wear. Our bestselling rhinestone sets feature this height. Perfect for: church weddings, reception dinners, evening Aso Ebi celebrations.\n  </p>\n  \n  <p>\n    <strong>4+ Inch Statement Heels:</strong> For the bold bride, bridesmaid, or guest who wants to make an entrance. These Italian-inspired stilettos command attention and photograph beautifully. Pair with a clutch bag for red carpet moments. Perfect for: bridal looks, gala entrances, award ceremonies, fashion-forward Owambe parties.\n  </p>\n  \n  <h3>🎨 Color Matching for Aso Ebi & African Weddings</h3>\n  <p>\n    <strong>Neutral Sets (Nude, Beige, Champagne):</strong> The ultimate versatile choice. Neutral Italian shoe and bag sets complement any Aso Ebi fabric color, from bright coral to deep burgundy. They elongate the leg and keep focus on your outfit's intricate details. Best for: when your Aso Ebi fabric has multiple colors, when you want timeless elegance, when you'll reuse the set for multiple events.\n  </p>\n  \n  <p>\n    <strong>Metallic Sets (Gold, Silver, Rose Gold):</strong> Add glamour without clashing. Metallic rhinestone sets catch light beautifully in photos and pair well with both warm and cool-toned fabrics. Gold complements yellow, orange, and green Ankara prints. Silver enhances blue, purple, and burgundy lace. Best for: evening receptions, galas, when you want to add sparkle to a simple outfit.\n  </p>\n  \n  <p>\n    <strong>Bold Color Sets (Royal Blue, Emerald, Burgundy, Red):</strong> Make a statement. Our colored Italian shoe and bag sets are perfect when you want your accessories to be part of the conversation. Match them to accent colors in your fabric or go tonal for a monochromatic look. Best for: when your Aso Ebi group chose a specific color, when you want to stand out, for themed parties.\n  </p>\n  \n  <h3>💎 Embellishment Styles</h3>\n  <p>\n    <strong>Rhinestone & Diamond-Embellished:</strong> Our signature style. Hand-placed crystals create maximum sparkle for weddings and galas. These Italian-inspired sets feature everything from subtle toe-cap accents to full-coverage glamour. Best for: bridal looks, evening events, when you want to shine in photos.\n  </p>\n  \n  <p>\n    <strong>Minimalist Elegance:</strong> Clean lines, premium leather, subtle hardware. Perfect for women who prefer understated luxury or need versatile sets for professional events. Best for: daytime weddings, office parties, when your outfit is already heavily embellished.\n  </p>\n  \n  <p>\n    <strong>Pearl & Beaded Details:</strong> Romantic and feminine, these sets complement lace fabrics and soft color palettes. Perfect for spring weddings, bridal showers, and traditional ceremonies. Best for: brides, bridesmaids, romantic Aso Ebi looks.\n  </p>\n  \n  <h3>👜 Clutch Bag Features to Consider</h3>\n  <p>\n    Most Milvertons matching clutch bags include:\n  </p>\n  \n  <ul>\n    <li><strong>Size:</strong> 8-10 inches wide—large enough for phone, lipstick, tissues, and cards</li>\n    <li><strong>Closure:</strong> Secure magnetic snap or zipper to protect your belongings</li>\n    <li><strong>Strap Options:</strong> Detachable chain or wristlet for hands-free convenience</li>\n    <li><strong>Interior:</strong> Lined with soft fabric, includes card slots in select styles</li>\n    <li><strong>Embellishment Match:</strong> Rhinestones, pearls, or hardware mirror the shoe design</li>\n  </ul>\n  \n  <p>\n    <strong>Pro Tip:</strong> If you'll be dancing all night, choose a clutch with a wristlet or chain strap so you can wear it crossbody while keeping your hands free.\n  </p>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_aaYfef": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<p class=\"collection-intro\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  Discover chic and stylish women's clothing at Milvertons! Browse our latest collection of fashionable apparel, from timeless classics to on-trend pieces. Elevate your wardrobe with top-quality materials and designs. Shop now for the ultimate fashion experience!\n</p>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "66dfa83a-5586-494c-a432-c4e591fd5938": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 24px !important;}"
+      ],
+      "settings": {
+        "title": "Women's Clothing",
+        "heading_size": "h2",
+        "description": "<p>Discover chic and stylish women's clothing at Milvertons — from timeless classics to on-trend pieces crafted in top-quality materials, designed to complement your matching shoe and bag sets for weddings, parties, and every occasion.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "womens-clothing",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "force_load": 0
+      }
+    },
+    "custom_liquid_86rd4h": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "h1 {font-size: 24px !important;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"center\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n<!-- Add a condition to assign the H1 tag only on the home page -->\n{% if template == 'index' %}\n  <h1 loading=\"lazy\">Italian Shoe and Bag Sets for Weddings and Special Occasions\n</h1>\n  <h2>Where Italian Craftsmanship Meets African Elegance</h2>\n  <p class=\"hero-intro\">\n    Discover luxury <strong>Italian-inspired shoe and bag sets</strong> designed for the modern African woman. Whether you're styling your <strong>Aso Ebi look</strong>, preparing for a <strong>Nigerian wedding</strong>, or dressing for a gala, our curated collections blend European design precision with African cultural flair. Every pair features hand-placed rhinestones, premium materials, and coordinating clutch bags—crafted to make you shine. <strong>Free shipping across the USA</strong>, with Buy Now, Pay Later options available.\n  </p>\n{% else %}\n  <h2 loading=\"lazy\">Italian Shoe and Bag Sets for Weddings and Special Occasions</h2>\n{% endif %}",
+        "color_scheme": "accent-1",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "custom_liquid_UTagre": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<p class=\"collection-intro\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  Discover luxury for less: discounted <strong>Italian-inspired heels and bag sets</strong> without compromising on quality. These exclusive offers let you elevate your <strong>African wedding guest look</strong> or refresh your party wardrobe while staying within budget. Limited quantities—shop before they're gone.\n</p>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_eHriXP": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {font-size: 24px !important;}"
+      ],
+      "settings": {
+        "title": "Sale Collection",
+        "heading_size": "h2",
+        "description": "<p>Discover luxury for less: discounted <strong>Italian-inspired heels and bag sets</strong> without compromising on quality. These exclusive offers let you elevate your <strong>African wedding guest look</strong> or refresh your party wardrobe while staying within budget. Limited quantities—shop before they're gone.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "sale",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "force_load": 0
+      }
+    },
+    "4d4bfc48-910b-40ef-a13a-2fcbc68ae756": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16736437731566__4d4bfc48-910b-40ef-a13a-2fcbc68ae756-16757294855d887ecc-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Our Selling Principle",
+            "heading_size": "h2"
+          }
+        },
+        "template--16736437731566__4d4bfc48-910b-40ef-a13a-2fcbc68ae756-16757294855d887ecc-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>At Milvertons, we offer products which we believe are useful, well designed, aesthetically pleasing, and have fair value. We look for items that are innovative, inspiring and functional. We hope you agree with this simple principle, and like what we offer.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--16736437731566__4d4bfc48-910b-40ef-a13a-2fcbc68ae756-16757294855d887ecc-0",
+        "template--16736437731566__4d4bfc48-910b-40ef-a13a-2fcbc68ae756-16757294855d887ecc-1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/woman-shopping-for-clothes-v2-10-25-2023-4xcmp.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_ppww38": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"value-props\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  <h2>The Milvertons Promise: Luxury You Can Trust</h2>\n  \n  <div class=\"prop-grid\">\n    <div class=\"prop-item\">\n  <h3>✨ Curated Italian-Inspired Designs</h3>\n  <p>We source luxury shoe and bag sets that capture Milanese elegance—hand-placed rhinestones, premium materials, precision construction—then vet each piece for quality, cultural relevance, and value before adding to our collection.</p>\n</div>\n    \n    <div class=\"prop-item\">\n      <h3>🌍 Made for African Celebrations</h3>\n      <p>Every set is tested for real-world wear at Nigerian weddings, Aso Ebi parties, and galas. Comfort meets glamour, so you shine all night.</p>\n    </div>\n    \n    <div class=\"prop-item\">\n      <h3>🚚 Free USA Shipping + Easy Returns</h3>\n      <p>Order with confidence: free shipping on USA orders, 30-day returns, and US-based customer support that understands your cultural needs.</p>\n    </div>\n    \n    <div class=\"prop-item\">\n      <h3>💳 Flexible Payment Options</h3>\n      <p>Pay in full or use Buy Now, Pay Later to split your purchase into 4 interest-free installments. Luxury should be accessible.</p>\n    </div>\n    \n    <div class=\"prop-item\">\n      <h3>♻️ Sustainable & Exclusive</h3>\n      <p>Limited-edition collections mean your look stays unique. We partner with ethical manufacturers committed to responsible production.</p>\n    </div>\n    \n    <div class=\"prop-item\">\n      <h3>⭐ Loved by 6,800+ Fashion Lovers</h3>\n      <p>Join our community of stylish women across the African diaspora. Follow us for styling tips, new arrivals, and exclusive offers.</p>\n    </div>\n  </div>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_ky4bRL": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"blog-teaser\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  <h2>Style Inspiration & Wedding Planning Tips</h2>\n  <p>\n    Elevate your occasion style with expert advice from the Milvertons blog. We publish weekly guides on <strong>African wedding fashion</strong>, <strong>Aso Ebi color coordination</strong>, and how to style <strong>Italian shoe and bag sets</strong> for maximum impact.\n  </p>\n  \n  <ul class=\"blog-links\">\n    <li><a href=\"/blogs/blog/italian-shoe-and-bag-set-pairings-that-never-go-out-of-style\">Italian Shoe and Bag Set Pairings That Never Go Out of Style</a></li>\n    <li><a href=\"/blogs/blog/the-ultimate-guide-to-selecting-stylish-shoe-and-bag-sets-for-women\">The Ultimate Guide to Selecting Stylish Shoe and Bag Sets for Women</a></li>\n    <li><a href=\"/blogs/blog/elevate-your-wardrobe-with-expert-tips-on-matching-shoes-and-bags\">Elevate Your Wardrobe with Expert Tips on Matching Shoes and Bags</a></li>\n    <li><a href=\"/blogs/blog/unlocking-the-secrets-to-effortlessly-chic-dresses-and-shoe-and-bag-combos\">Unlocking the Secrets to Effortlessly Chic Dresses and Shoe and Bag Combos</a></li>\n    <li><a href=\"/blogs/blog/innovative-styles-in-womens-fashion-seamless-accessory-matchups\">Innovative Styles in Women's Fashion: Seamless Accessory Matchups</a></li>\n  </ul>\n  \n  <p><a href=\"/blogs/blog\" class=\"btn-secondary\">Read More Style Guides →</a></p>\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_6YaMPk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"expanded-faq\" style=\"max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  <h2>Everything You Need to Know About Italian Shoe & Bag Sets for African Weddings</h2>\n  \n  <h3>SHIPPING & DELIVERY</h3>\n  \n  <h4>Do you offer free shipping to the USA?</h4>\n  <p>\n    Yes! All orders to continental USA ship completely FREE with tracking. Typical delivery time is 5-10 business days from order confirmation. International shipping to the UK, Canada, Nigeria, Ghana, and other countries is available—rates calculated at checkout based on weight and destination.\n  </p>\n  \n  <h4>How do I track my order?</h4>\n  <p>\n    Once your order ships, you'll receive an email with tracking number and carrier information. You can also log into your Milvertons account to view order status. Most USA orders arrive within 5-10 business days. If you haven't received tracking info within 5 business days of ordering, you can contact us at sales@milvertons.com.\n  </p>\n  \n  <h4>Do you ship to African countries?</h4>\n  <p>\n    Yes! We ship to Nigeria, Ghana, Kenya, South Africa, and other African countries. International Shipping typically takes 15-35 business days. Import duties and taxes may apply based on your country's regulations—these are the customer's responsibility. We declare full value on customs forms to ensure smooth delivery.\n  </p>\n  \n  <h3>SIZING & FIT</h3>\n  \n  <h4>How do I choose the right size?</h4>\n  <p>\n    Most of our shoes use European sizing (EU 37-43). To find your size: (1) Measure your foot from heel to toe in centimeters, (2) Compare to our size chart: EU 37 = 23.5cm, EU 38 = 24.5cm, EU 39 = 25cm, EU 40 = 26cm, EU 41 = 26.5cm, EU 42 = 27.5cm, EU 43 = 28cm. If you're between sizes, we recommend sizing up. For wide feet, size up half a size. Each product page includes detailed measurements.\n  </p>\n  \n  <h4>Are your shoes true to size?</h4>\n  <p>\n    Most customers find our Italian-inspired sets true to European size. However, if you typically wear US sizing, note that EU sizes run slightly different: US 7 = EU 37-38, US 8 = EU 38-39, US 9 = EU 39-40, US 10 = EU 40-41. When in doubt, measure your foot or contact our customer service team for personalized sizing advice.\n  </p>\n  \n  <h4>Do you offer wide-width shoes?</h4>\n  <p>\n    While we don't have dedicated wide-width sizing, many customers with wide feet find success by sizing up half a size. Our pointed-toe styles run narrower, while our round-toe and open-toe designs offer more room. For the best fit, contact us before ordering, and we'll recommend the ideal style for your foot shape.\n  </p>\n  \n  <h3>RETURNS & EXCHANGES</h3>\n  \n  <h4>What is your return policy?</h4>\n  <p>\n    We offer 30-day returns on unworn items in original packaging with tags attached. Shoes must show no signs of wear (no scuffs on soles, no creasing). Clutch bags must be unused with dust bags included. To initiate a return, email sales@milvertons.com with your order number and reason for return. We'll provide a prepaid return label for USA customers. Refunds are processed within 5-10 business days of receiving the return. Customers are responsible for return shipping costs. For details, please refer to our Return and Refund policy at https://milvertons.com/policies/refund-policy\n  </p>\n  \n  <h3>CARE & MAINTENANCE</h3>\n  \n  <h4>How do I care for my rhinestone shoes?</h4>\n  <p>\n    To keep your Italian shoe and bag sets looking luxurious: (1) Store in dust bags when not in use, (2) Avoid wearing in rain or wet conditions, (3) Clean rhinestones gently with a soft, dry cloth—never use water or chemicals, (4) For leather portions, use a damp cloth to wipe away dirt, then apply leather conditioner monthly, (5) Replace heel tips when worn down to prevent damage, (6) Stuff clutch bags with tissue paper to maintain shape. With proper care, your Milvertons set will last for years and multiple events.\n  </p>\n  \n  <h4>Can I wear these shoes outdoors?</h4>\n  <p>\n    Yes, but with caution. Our shoes are designed for special occasions, including outdoor African weddings. However, avoid grass, sand, or gravel if possible—these surfaces can damage heels and pick up dirt. For outdoor ceremonies, consider heel protectors or choose our block heel styles, which are more stable on uneven surfaces. After outdoor wear, clean soles and heels immediately to prevent staining.\n  </p>\n  \n  <h3>PAYMENT & PRICING</h3>\n  \n  <h4>Do you offer Buy Now, Pay Later?</h4>\n  <p>\n    Yes! At checkout, select Shop Pay Installments or Klarna to split your purchase into 4 interest-free payments. For example, a $180 Italian shoe and bag set becomes 4 payments of $45, due every 2 weeks. No credit check required for orders under $500. This makes luxury accessible for wedding budgets. Simply select your preferred payment option at checkout and follow the prompts.\n  </p>\n  \n  <h4>Do you offer discounts for Aso Ebi groups?</h4>\n  <p>\n    Yes! If you're ordering 5 or more sets for your Aso Ebi group, email sales@milvertons.com for a special group discount code. We offer 10-15% off bulk orders, plus coordinated shipping to ensure everyone receives their sets on time. Include your event date, desired styles, and quantity, and we'll create a custom quote.\n  </p>\n  \n  <h3>PRODUCT QUESTIONS</h3>\n  \n  <h4>Are your shoes made in Italy?</h4>\n  <p>\n    Our collections feature Italian-inspired designs sourced from trusted international partners who specialize in luxury footwear for global markets. Every set is curated to meet Italian design standards: sleek silhouettes, precision embellishment, and European sizing. We personally vet each supplier for quality, ethical practices, and cultural relevance before adding their pieces to the Milvertons collection. The result? Luxury aesthetics at accessible prices, with US-based service you can trust.\n  </p>\n  \n  <h4>What materials are in your curated sets?</h4>\n  <p>\n    We curate sets featuring: premium PU leather (durable, easy to clean, cruelty-free), Austrian rhinestones (maximum sparkle, secure setting), cushioned insoles (all-day comfort), non-slip rubber soles (safety on various surfaces), and reinforced stitching (long-lasting wear). Our clutch bags use matching materials, quality hardware, soft interior lining, and secure closures. Every material is evaluated during our curation process to ensure it meets our standards for luxury, durability, and value.\n  </p>\n  \n  <h4>Do the rhinestones fall off?</h4>\n  <p>\n    Our rhinestones are hand-placed and secured with professional-grade adhesive designed for footwear. With proper care, they stay firmly attached through multiple wears. However, avoid excessive moisture, harsh impacts, or picking at stones. \n  </p>\n  \n  <h4>How do you ensure quality if you don't manufacture?</h4>\n  <p>\n    Great question! Our curation process includes: (1) Supplier vetting—we only partner with manufacturers who provide samples, quality certifications, and ethical practice documentation; (2) Sample testing—we order and personally evaluate every new style for comfort, durability, and finish; (3) Batch inspection—we randomly inspect inventory before shipping to catch any quality issues; (4) Customer feedback loop—we monitor reviews and returns to continuously refine our selections. If a style doesn't meet our standards or your expectations, we remove it from the collection. Your satisfaction is our quality guarantee.\n  </p>\n</section>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "f9124564-6424-4200-97d3-5068bfd633ef": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16736437731566__f9124564-6424-4200-97d3-5068bfd633ef-1675730746eef78506-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sale Collection",
+            "heading_size": "h2"
+          }
+        },
+        "template--16736437731566__f9124564-6424-4200-97d3-5068bfd633ef-1675730746eef78506-1": {
+          "type": "text",
+          "settings": {
+            "text": "Shop now and take advantage of our Sales items! Don't miss out on these products and great deals. Hurry, quantities are limited! Click now to start browsing and saving.",
+            "text_style": "body"
+          }
+        },
+        "template--16736437731566__f9124564-6424-4200-97d3-5068bfd633ef-1675730746eef78506-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Sale",
+            "button_link_1": "shopify://collections/sale",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16736437731566__f9124564-6424-4200-97d3-5068bfd633ef-1675730746eef78506-0",
+        "template--16736437731566__f9124564-6424-4200-97d3-5068bfd633ef-1675730746eef78506-1",
+        "template--16736437731566__f9124564-6424-4200-97d3-5068bfd633ef-1675730746eef78506-2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {color: white;}",
+        "p {color: white;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/milvertons-our-selling-principle-v1-9-26-2023-mobile-5xcmp-600x600.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "174107953475c3a96f": {
+      "type": "apps",
+      "blocks": {
+        "shoppable_instagram_feed_ugc_getclother_app_block_index_8dgLYd": {
+          "type": "shopify://apps/shoppable-instagram-feed-ugc/blocks/getclother-app-block-index/de60b7bb-ddf8-4d1c-b666-c1cbaa4a114a",
+          "disabled": true,
+          "settings": {
+            "title": "<h2><strong>Instagram Gallery</strong></h2>",
+            "subtitle": "<p><strong>milvertonstore - Follow us on Instagram </strong>for exclusive content and special offers. Join our community, stay connected and never miss a post!</p>",
+            "products_to_show": 20,
+            "hide_when_empty": true,
+            "desktop_appearance": "grid",
+            "columns_desktop": 4,
+            "mobile_appearance": "carousel",
+            "columns_mobile": 2,
+            "image_ratio": "square",
+            "gap": 10,
+            "radius": 0,
+            "display_author": "on",
+            "padding_top": 36,
+            "padding_bottom": 36,
+            "max_width": 1700,
+            "cta_label": "",
+            "cta_url": "",
+            "cta_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "shoppable_instagram_feed_ugc_getclother_app_block_index_8dgLYd"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1758502378d10c70b1": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
+    "17529971410688943c",
     "image_banner",
-    "featured_collection"
+    "custom_liquid_XVHgGH",
+    "custom_liquid_gikzEq",
+    "custom_liquid_fpmMPy",
+    "ae730ba1-bb86-4fb3-bf1f-c5a8d94b9470",
+    "custom_liquid_3wwRM4",
+    "featured_collection_W7Uqqj",
+    "daf3e65a-d539-4a60-9824-8f88e2d380f6",
+    "custom_liquid_twaiG6",
+    "17529784205bf9d0a9",
+    "custom_liquid_zYcULP",
+    "custom_liquid_aaYfef",
+    "66dfa83a-5586-494c-a432-c4e591fd5938",
+    "custom_liquid_86rd4h",
+    "custom_liquid_UTagre",
+    "featured_collection_eHriXP",
+    "4d4bfc48-910b-40ef-a13a-2fcbc68ae756",
+    "custom_liquid_ppww38",
+    "custom_liquid_ky4bRL",
+    "custom_liquid_6YaMPk",
+    "f9124564-6424-4200-97d3-5068bfd633ef",
+    "174107953475c3a96f",
+    "1758502378d10c70b1"
   ]
 }
