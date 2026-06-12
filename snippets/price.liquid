@@ -103,6 +103,9 @@
             </s>
           </span>
         {%- endunless -%}
+        {%- assign savings = compare_at_price | minus: price -%}
+        {%- assign percent_saved = savings | times: 100.0 | divided_by: compare_at_price | round -%}
+        <span class="percent-saved-badge">{{ percent_saved }}% off</span>
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
         <span class="price-item price-item--sale price-item--last">
           {{ money_price }}
