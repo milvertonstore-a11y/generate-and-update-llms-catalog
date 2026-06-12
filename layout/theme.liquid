@@ -566,6 +566,8 @@
       }
     </script>
 
+    {% render 'pagefly-app-header' %}
+
     <!-- 4-3-2026 - FAQ Schema Markup - homepage only -->
     {%- if template == 'index' -%}
       <script type="application/ld+json">
@@ -594,7 +596,7 @@
             "name": "Do you ship to African countries?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes! We ship to Nigeria, Ghana, Kenya, South Africa, and other African countries. International Shipping typically takes 15-35 business days. Import duties and taxes may apply based on your country's regulations—these are the customer's responsibility."
+              "text": "Yes! We ship to Nigeria, Ghana, Kenya, South Africa, and other African countries. International Shipping typically takes 15-35 business days. Import duties and taxes may apply based on your country's regulations—these are the customer's responsibility. We declare full value on customs forms to ensure smooth delivery."
             }
           },
           {
@@ -602,7 +604,23 @@
             "name": "How do I choose the right size?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most of our shoes use European sizing (EU 37-43). To find your size: measure your foot from heel to toe in centimeters and compare to our size chart: EU 37=23.5cm, EU 38=24.5cm, EU 39=25cm, EU 40=26cm, EU 41=26.5cm, EU 42=27.5cm, EU 43=28cm. If between sizes, size up."
+              "text": "Most of our shoes use European sizing (EU 37-43). To find your size: (1) Measure your foot from heel to toe in centimeters, (2) Compare to our size chart: EU 37 = 23.5cm, EU 38 = 24.5cm, EU 39 = 25cm, EU 40 = 26cm, EU 41 = 26.5cm, EU 42 = 27.5cm, EU 43 = 28cm. If you're between sizes, we recommend sizing up. For wide feet, size up half a size. Each product page includes detailed measurements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your shoes true to size?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most customers find our Italian-inspired sets true to European size. However, if you typically wear US sizing, note that EU sizes run slightly different: US 7 = EU 37-38, US 8 = EU 38-39, US 9 = EU 39-40, US 10 = EU 40-41. When in doubt, measure your foot or contact our customer service team for personalized sizing advice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer wide-width shoes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While we don't have dedicated wide-width sizing, many customers with wide feet find success by sizing up half a size. Our pointed-toe styles run narrower, while our round-toe and open-toe designs offer more room. For the best fit, contact us before ordering, and we'll recommend the ideal style for your foot shape."
             }
           },
           {
@@ -610,7 +628,23 @@
             "name": "What is your return policy?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We offer 30-day returns on unworn items in original packaging with tags attached. To initiate a return, email sales@milvertons.com with your order number. Refunds processed within 5-10 business days of receiving the return."
+              "text": "We offer 30-day returns on unworn items in original packaging with tags attached. Shoes must show no signs of wear (no scuffs on soles, no creasing). Clutch bags must be unused with dust bags included. To initiate a return, email sales@milvertons.com with your order number and reason for return. We'll provide a prepaid return label for USA customers. Refunds are processed within 5-10 business days of receiving the return. Customers are responsible for return shipping costs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I care for my rhinestone shoes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To keep your Italian shoe and bag sets looking luxurious: (1) Store in dust bags when not in use, (2) Avoid wearing in rain or wet conditions, (3) Clean rhinestones gently with a soft, dry cloth—never use water or chemicals, (4) For leather portions, use a damp cloth to wipe away dirt, then apply leather conditioner monthly, (5) Replace heel tips when worn down to prevent damage, (6) Stuff clutch bags with tissue paper to maintain shape. With proper care, your Milvertons set will last for years and multiple events."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I wear these shoes outdoors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, but with caution. Our shoes are designed for special occasions, including outdoor African weddings. However, avoid grass, sand, or gravel if possible—these surfaces can damage heels and pick up dirt. For outdoor ceremonies, consider heel protectors or choose our block heel styles, which are more stable on uneven surfaces. After outdoor wear, clean soles and heels immediately to prevent staining."
             }
           },
           {
@@ -618,7 +652,47 @@
             "name": "Do you offer Buy Now, Pay Later?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes! At checkout, select Shop Pay Installments or Klarna to split your purchase into 4 interest-free payments. No credit check required for orders under $500."
+              "text": "Yes! At checkout, select Shop Pay Installments or Klarna to split your purchase into 4 interest-free payments. For example, a $180 Italian shoe and bag set becomes 4 payments of $45, due every 2 weeks. No credit check required for orders under $500. This makes luxury accessible for wedding budgets. Simply select your preferred payment option at checkout and follow the prompts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer discounts for Aso Ebi groups?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! If you're ordering 5 or more sets for your Aso Ebi group, email sales@milvertons.com for a special group discount code. We offer 10-15% off bulk orders, plus coordinated shipping to ensure everyone receives their sets on time. Include your event date, desired styles, and quantity, and we'll create a custom quote."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your shoes made in Italy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our collections feature Italian-inspired designs sourced from trusted international partners who specialize in luxury footwear for global markets. Every set is curated to meet Italian design standards: sleek silhouettes, precision embellishment, and European sizing. We personally vet each supplier for quality, ethical practices, and cultural relevance before adding their pieces to the Milvertons collection. The result? Luxury aesthetics at accessible prices, with US-based service you can trust."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What materials are in your curated sets?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We curate sets featuring: premium PU leather (durable, easy to clean, cruelty-free), Austrian rhinestones (maximum sparkle, secure setting), cushioned insoles (all-day comfort), non-slip rubber soles (safety on various surfaces), and reinforced stitching (long-lasting wear). Our clutch bags use matching materials, quality hardware, soft interior lining, and secure closures. Every material is evaluated during our curation process to ensure it meets our standards for luxury, durability, and value."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do the rhinestones fall off?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our rhinestones are hand-placed and secured with professional-grade adhesive designed for footwear. With proper care, they stay firmly attached through multiple wears. However, avoid excessive moisture, harsh impacts, or picking at stones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you ensure quality if you don't manufacture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Great question! Our curation process includes: (1) Supplier vetting—we only partner with manufacturers who provide samples, quality certifications, and ethical practice documentation; (2) Sample testing—we order and personally evaluate every new style for comfort, durability, and finish; (3) Batch inspection—we randomly inspect inventory before shipping to catch any quality issues; (4) Customer feedback loop—we monitor reviews and returns to continuously refine our selections. If a style doesn't meet our standards or your expectations, we remove it from the collection. Your satisfaction is our quality guarantee."
             }
           }
         ]
