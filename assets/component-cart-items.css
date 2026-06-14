@@ -113,6 +113,11 @@ cart-items .title-wrapper-with-link {
   opacity: 0.7;
 }
 
+.cart-item__old-price s,
+s.cart-item__old-price {
+  text-decoration: line-through;
+}
+
 .cart-item__final-price {
   font-weight: 400;
 }
@@ -206,7 +211,8 @@ cart-remove-button .icon-remove {
   margin-top: 0.25rem;
 }
 
-.cart-item__error-text:empty + .svg-wrapper {
+.cart-item__error-text:empty + .svg-wrapper,
+.cart-item__error-text:empty + svg {
   display: none;
 }
 
