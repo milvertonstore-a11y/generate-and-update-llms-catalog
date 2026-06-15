@@ -11,25 +11,97 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_liquid_pYDJDD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"homepage-bottomcontent\" style=\"max-width: 1160px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px;\">\n  {% if template == 'index' %}\n    <p>\n      Shoe and bag sets are a popular choice for weddings and special occasions because they provide a complete and coordinated look. Whether you are attending a wedding, party, or formal event, matching heels and bags help elevate your outfit effortlessly.\n    </p>\n    <p>\n      Neutral tones like gold and silver offer versatility, while embellished designs add glamour for evening wear. These sets are also widely worn for cultural events, including African weddings and Aso Ebi celebrations, where coordinated accessories are essential.\n    </p>\n  {% endif %}\n</section>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "as_seen_badge_4R4dtK": {
+      "type": "as-seen-badge",
+      "disabled": true,
+      "name": "As Seen On Badge",
+      "settings": {
+        "heading": "As Seen On",
+        "pinterest_icon": "shopify://shop_images/Pinterest_Logo.svg",
+        "pinterest_url": "https://www.pinterest.com/milvertonstore/_saved/",
+        "instagram_icon": "shopify://shop_images/Instagram_logo_2016.svg",
+        "instagram_url": "https://www.instagram.com/milvertonstore/",
+        "facebook_icon": "shopify://shop_images/Facebook_f_logo__2019.svg",
+        "facebook_url": "https://www.facebook.com/milvertonstore/",
+        "x_icon": "shopify://shop_images/X_logo_2023.svg",
+        "x_url": "https://x.com/milvertonstore",
+        "subtext": "Join 6,800+ Fashion Lovers Following Our Latest Trends"
+      }
+    },
+    "17586719690737e623": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "footer": {
       "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Company Information</strong>",
+            "menu": "footer"
+          }
+        },
+        "542f0775-4ce1-4b96-97aa-db960660743b": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Customer Service</strong>",
+            "menu": "customer-service"
+          }
+        },
+        "3b39d08a-1ace-49e7-94fd-cf3a426ef3e4": {
+          "type": "text",
+          "settings": {
+            "heading": "<strong>Our Store</strong>",
+            "subtext": "<p>The Milvertons Store is your premier online destination for a carefully curated selection of contemporary products, specializing in Women's Shoes, Bags, Clothing, and Accessories. Our user-friendly platform ensures a seamless shopping experience, offering responsive, professional advice to help you choose the right items and navigate the ordering process. Enjoy a stress-free online shopping experience, backed by affordable pricing and a reliable refund policy.</p>"
+          }
+        },
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "<strong>Contact Information</strong>",
+            "subtext": "<p>Milvertons<br/>4757 Snyder Ln, Rohnert Park, California 94928, United States    <br/>✉️ sales@milvertons.com    <br/>📞 +1 707-595-8856</p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "542f0775-4ce1-4b96-97aa-db960660743b",
+        "3b39d08a-1ace-49e7-94fd-cf3a426ef3e4",
+        "footer-2"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Be the first to know — sign up for launches, offers & insider updates.",
+        "enable_follow_on_shop": false,
         "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "payment_enable": true,
-        "show_policy": true,
-        "margin_top": 0,
+        "show_policy": false,
+        "margin_top": 16,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "custom_liquid_pYDJDD",
+    "as_seen_badge_4R4dtK",
+    "17586719690737e623",
     "footer"
   ]
 }
