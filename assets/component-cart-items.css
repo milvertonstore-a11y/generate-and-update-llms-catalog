@@ -371,10 +371,3 @@ cart-remove-button .icon-remove {
     padding-left: 0;
   }
 }
-
-/* Override app CSS resets stripping strikethrough on compare-at price */
-.cart-items s.cart-item__old-price,
-.cart-items .cart-item__old-price s {
-  text-decoration: line-through !important;
-  opacity: 0.7;
-}
