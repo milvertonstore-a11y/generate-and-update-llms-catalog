@@ -413,17 +413,3 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
   }
 }
 
-/* Cart drawer savings message */
-.cart-drawer .cart-savings-message {
-  display: block !important;
-  visibility: visible !important;
-  overflow: visible !important;
-  background: #f0f8f0;
-  border: 1px solid #d4edda;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 20px 0;
-  text-align: center;
-  font-weight: 600;
-  color: #155724;
-}
