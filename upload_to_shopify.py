@@ -3,7 +3,12 @@ import sys
 import requests
 
 ACCESS_TOKEN = os.environ.get("SHOPIFY_ADMIN_ACCESS_TOKEN")
-SHOP_DOMAIN = os.environ.get("SHOPIFY_STORE_DOMAIN", "milvertons.com")
+RAW_DOMAIN = os.environ.get("SHOPIFY_STORE_DOMAIN", "")
+
+# Clean domain to remove protocols and trailing slashes
+SHOP_DOMAIN = (
+    RAW_DOMAIN.replace("https://", "").replace("http://", "").strip("/")
+)
 GRAPHQL_URL = f"https://{SHOP_DOMAIN}/admin/api/2026-01/graphql.json"
 
 HEADERS = {
