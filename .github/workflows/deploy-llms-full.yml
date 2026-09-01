@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  generate-catalog:
+  generate-and-upload:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,10 +26,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run extraction script
+      - name: Generate llms-full.txt
         run: python build_llms_full.py
 
-      - name: Commit and push updated llms-full.txt
+      - name: Upload llms-full.txt to Shopify Admin
+        env:
+          SHOPIFY_ADMIN_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ADMIN_ACCESS_TOKEN }}
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+        run: python upload_to_shopify.py
+
+      - name: Commit and push updated catalog to GitHub
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
