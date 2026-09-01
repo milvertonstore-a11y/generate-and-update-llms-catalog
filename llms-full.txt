@@ -1,0 +1,212 @@
+# MILVERTONS EXTENDED CATALOG & CONTENT ARCHIVE (https://milvertons.com/llms-full.txt)
+
+This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
+
+Primary LLMS File: https://milvertons.com/llms.txt
+Last Updated: 2026-09-01
+Platform: Shopify E-commerce Engine
+
+---
+
+## 1. AUTOMATED JSON EXTRACTION ARCHITECTURE
+AI agents, automated web parsers, and shopping assistants can programmatically consume Milvertons' complete store catalog in structured JSON using Shopify's native endpoints.
+
+### Pagination & Query Specification
+- Base Endpoint: https://milvertons.com/collections/all/products.json
+- Page Limit: limit=250 (maximum products returned per request)
+- Pagination Query: https://milvertons.com/collections/all/products.json?limit=250&page={page_number}
+- Single Product JSON: https://milvertons.com/products/{product-handle}.json
+- Collection JSON: https://milvertons.com/collections/{collection-handle}/products.json?limit=250
+
+---
+
+## 2. ITEMIZED PRODUCT FEED & COLLECTION DIRECTORY
+
+### Core Flagship Collections
+- Matching Shoe & Bag Sets for African Weddings: https://milvertons.com/collections/matching-shoe-and-bag-sets-for-african-weddings-free-us-shipping
+- African Elegance Collection: https://milvertons.com/collections/african-elegance
+- Shoe & Bag Sets for Weddings & Parties: https://milvertons.com/collections/shoes-with-matching-bag-sets
+- Shoe & Bag Sets for Weddings: https://milvertons.com/collections/shoe-and-bag-sets-for-weddings
+- Shoe & Bag Sets for Parties: https://milvertons.com/collections/shoe-and-bag-sets-for-parties
+- Italian Luxury Collection: https://milvertons.com/collections/italian-luxury-collection
+- Luxury Matching Shoe & Bag Sets: https://milvertons.com/collections/luxury-matching-shoe-bag-sets
+
+### Color Family Collections
+- Red Rhinestone Sets: https://milvertons.com/collections/red-rhinestone-shoe-bag-sets
+- Gold Rhinestone Sets: https://milvertons.com/collections/gold-rhinestone-shoe-bag-sets
+- Silver Rhinestone Sets: https://milvertons.com/collections/silver-rhinestone-shoe-bag-sets
+- Royal Blue Rhinestone Sets: https://milvertons.com/collections/royal-blue-rhinestone-shoe-bag-sets
+- Black Rhinestone Sets: https://milvertons.com/collections/black-rhinestone-shoe-bag-sets
+- Fuchsia Rhinestone Sets: https://milvertons.com/collections/fuchsia-rhinestone-shoe-bag-sets
+- Purple Rhinestone Sets: https://milvertons.com/collections/purple-rhinestone-shoe-bag-sets
+- Emerald Rhinestone Sets: https://milvertons.com/collections/emerald-rhinestone-shoe-bag-sets
+- Burgundy Rhinestone Sets: https://milvertons.com/collections/burgundy-rhinestone-shoe-bag-sets
+- Green Rhinestone Sets: https://milvertons.com/collections/green-rhinestone-shoe-bag-sets
+
+### Footwear & Accessories
+- Pointed Toe Heels: https://milvertons.com/collections/pointed-toe-heels
+- Slingback & Strappy Heels: https://milvertons.com/collections/slingback-and-strappy-heels
+- Rhinestone & Bling Accessories: https://milvertons.com/collections/rhinestone-and-bling
+- Women's Shoes & Bags General Index: https://milvertons.com/collections/women-shoes-bags
+- Best Sellers: https://milvertons.com/collections/best-sellers
+- New Arrivals: https://milvertons.com/collections/new-arrivals
+- Sale Items: https://milvertons.com/collections/sale
+
+### Dynamically Extracted Live Catalog (124 Active Items)
+- **2025 Pointed Toe Heels & Bag Set – Wedding Party Pumps**: https://milvertons.com/products/2025-pointed-toe-heels-bag-set-wedding-party-pumps
+- **2025 Rhinestone Heels & Handbag Set for Weddings | Elegant**: https://milvertons.com/products/2025-rhinestone-heels-handbag-set-for-weddings-elegant
+- **2026 Women's Diamond-Embellished Pointed-Toe Heels & Bag Set**: https://milvertons.com/products/2026-womens-diamond-embellished-pointed-toe-heels-bag-set
+- **Active Camo Fitness Set**: https://milvertons.com/products/active-camo-fitness-set
+- **Asymmetric Casual Camo Dress, Mid-Calf**: https://milvertons.com/products/asymmetric-casual-camo-dress
+- **Balloon Sleeve Boat Neck Sweater Mini Dress, Knit**: https://milvertons.com/products/balloon-sleeve-boat-neck-sweater-mini-dress
+- **BiBi Popcorn Waffle Knit with Buttoned Front Cami Top**: https://milvertons.com/products/bibi-popcorn-waffle-knit-with-buttoned-front-cami-top
+- **Black Halter Mini Dress Bodycon Femme Vestiods Robe Lace Dress**: https://milvertons.com/products/black-halter-mini-dress-bodycon-femme-vestiods-robe-lace-dress
+- **Bold Cubic Zirconia Statement Ring – Trendy 2024 Boho Jewelry**: https://milvertons.com/products/bold-cubic-zirconia-statement-ring-trendy-2024-boho-jewelry
+- **Butterfly Slingback Sandals & Bag Set – Wedding Party Look**: https://milvertons.com/products/butterfly-slingback-sandals-bag-set-wedding-party-look
+- **Cap Sleeve Round Neck Knit Two-Piece Set - Top & Pants**: https://milvertons.com/products/cap-sleeve-round-neck-knit-two-piece-set-top-pants
+- **Chic Italian Crystal Diamond Shoes + Bag Set - Party/Wedding**: https://milvertons.com/products/chic-italian-crystal-diamond-shoes-bag-set-party-wedding
+- **Chic Italian Shoes & Bag Set with Stones for Parties**: https://milvertons.com/products/chic-italian-shoes-bag-set-with-stones-for-parties
+- **Chic Plaid Sherpa Jacket: Button Front for Trendy Contrast**: https://milvertons.com/products/chic-plaid-sherpa-jacket-button-front-for-trendy-contrast
+- **Chic Tie Neck Frill Dress with Three-Quarter Sleeves**: https://milvertons.com/products/chic-tie-neck-frill-dress-with-three-quarter-sleeves
+- **Classy Faux Suede Ankle Boots for Women**: https://milvertons.com/products/classy-faux-suede-ankle-boots-for-women
+- **Classy Wooden Platform Strap Heels for Women**: https://milvertons.com/products/classy-wooden-platform-strap-heels-for-women
+- **Cropped Blazer with Fringe Trim and Lapel Collar Detail**: https://milvertons.com/products/fringe-trim-lapel-collar-cropped-blazer
+- **Cubic Zirconia Leaf Charm Link Chain Bracelet**: https://milvertons.com/products/cubic-zirconia-leaf-charm-link-chain-bracelet
+- **Davi & Dani Floral Mesh Long Sleeve Sheer Layering Top**: https://milvertons.com/products/davi-dani-floral-mesh-long-sleeve-sheer-layering-top
+- **Davi & Dani Floral Mesh Long-Sleeved Sheer Layering Top**: https://milvertons.com/products/davi-dani-floral-mesh-long-sleeved-sheer-layering-top
+- **Denim Upset Jacket for Women**: https://milvertons.com/products/denim-upset-jacket-for-women
+- **Double Take Full Size V-Neck Sleeveless Jumpsuit with Pockets**: https://milvertons.com/products/double-take-full-size-v-neck-sleeveless-jumpsuit-with-pockets
+- **Drop Shoulder Hoodie & Drawstring Pants - Comfy Active Set**: https://milvertons.com/products/drop-shoulder-hoodie-drawstring-pants-comfy-active-set
+- **Dubai African Jewelry Set – Elegant Luxury Women’s Accessory**: https://milvertons.com/products/dubai-african-jewelry-set-elegant-luxury-women-s-accessory
+- **Dubai African Jewelry Sets Luxury Wedding & Party Style**: https://milvertons.com/products/dubai-african-jewelry-sets-luxury-wedding-party-style
+- **Elastic Waist Drawstring Wide-Leg Pants**: https://milvertons.com/products/drawstring-elastic-waist-wide-leg-pants
+- **Elegant  Handmade Apple Shape Evening Party Accessory With Crystals**: https://milvertons.com/products/elegant-handmade-apple-shape-evening-party-accessory-with-crystals
+- **Elegant A-Line Midi Dress Front Ruched V-Neck Long Sleeve**: https://milvertons.com/products/elegant-a-line-midi-dress-front-ruched-v-neck-long-sleeve
+- **Elegant Affairs: Ladies' High Heels & Bag Set for Weddings**: https://milvertons.com/products/elegant-affairs-ladies-high-heels-bag-set-for-weddings
+- **Elegant Italian Rhinestone Shoes and Bag for Evening Parties**: https://milvertons.com/products/elegant-italian-rhinestone-shoes-and-bag-for-evening-parties
+- **Elegant Party Shoes & Bag Set with Rhinestone Detailing**: https://milvertons.com/products/elegant-party-shoes-bag-set-with-rhinestone-detailing
+- **Elegant Peep-Toe Heels and Bag Set – Italian Style 2025**: https://milvertons.com/products/elegant-peep-toe-heels-and-bag-set-italian-style-2025
+- **Elegant Pointed Toe Rhinestone Heels & Bag Set for Women**: https://milvertons.com/products/elegant-pointed-toe-rhinestone-heels-bag-set-for-women
+- **Elegant Rhinestone Heels & Bag Set  - Ideal for Weddings**: https://milvertons.com/products/elegant-rhinestone-heels-bag-set-ideal-for-weddings
+- **Elegant Rhinestone Pointed Toe Heels & Matching Handbag Set**: https://milvertons.com/products/elegant-rhinestone-pointed-toe-heels-matching-handbag-set
+- **Elegant Vintage Midi Dress Office Lady African Woman  Party Bodycon Split Female Retro Dress Summer**: https://milvertons.com/products/elegant-vintage-midi-dress-office-lady-african-woman-party-bodycon-split-female-retro-dress-summer
+- **Elegant Vintage pleated belt plaid dress**: https://milvertons.com/products/elegant-vintage-pleated-belt-plaid-dress
+- **Elegant Wedding Shoe and Bag Set with Handmade Flowers**: https://milvertons.com/products/elegant-wedding-shoe-and-bag-set-with-handmade-flowers
+- **Enia Cascade Print Skirt**: https://milvertons.com/products/enia-cascade-print-skirt
+- **Exquisite Italian Shoes and Matching Bag Set for Night Glam**: https://milvertons.com/products/exquisite-italian-shoes-and-matching-bag-set-for-night-glam
+- **Exquisite Stone Studded Socialite Evening Party Accessory**: https://milvertons.com/products/exquisite-stone-studded-socialite-evening-party-accessory
+- **Extreme High Pointed Rhinestone Fashion Cat Eye Retro Sunglasses**: https://milvertons.com/products/extreme-high-pointed-rhinestone-fashion-cat-eye-retro-sunglasses
+- **Fame Braided Accent Double Pocket Shoulder Bag**: https://milvertons.com/products/fame-braided-accent-double-pocket-shoulder-bag
+- **Fame Faux Leather Studded Trim Shoulder Bag**: https://milvertons.com/products/fame-faux-leather-studded-trim-shoulder-bag
+- **Fame Weathered Faux Leather And Studs Bucket Bag**: https://milvertons.com/products/fame-weathered-faux-leather-and-studs-bucket-bag
+- **Glam Sexy High Heels Sandals 2025 | Wedding Party Style**: https://milvertons.com/products/glam-sexy-high-heels-sandals-2025-wedding-party-style
+- **Hemp Wedge Heel Slippers – Casual Sandals for Women**: https://milvertons.com/products/hemp-wedge-heel-slippers-casual-sandals-for-women
+- **High-Quality Glam: Italian Shoes & Bag Set for Party Delight**: https://milvertons.com/products/high-quality-glam-italian-shoes-bag-set-for-party-delight
+- **High-Waist Gym Leggings with Pockets – Stretchy, Comfortable**: https://milvertons.com/products/high-waist-gym-leggings-with-pockets-stretchy-comfortable
+- **Italian Bling Heel Shoe & Bag Set for Weddings & Parties**: https://milvertons.com/products/italian-bling-heel-shoe-bag-set-for-weddings-parties
+- **Italian Crystal High Heels and Clutch Bag Set for Parties**: https://milvertons.com/products/italian-crystal-high-heels-and-clutch-bag-set-for-parties
+- **Italian Design Rhinestone Shoes and Bag for African Weddings**: https://milvertons.com/products/italian-design-rhinestone-shoes-and-bag-for-african-weddings
+- **Italian Design Rhinestone Shoes and Matching Bag for Weddings**: https://milvertons.com/products/italian-design-rhinestone-shoes-and-matching-bag-for-weddings
+- **Italian Design Shoes with Matching Bag for Women**: https://milvertons.com/products/italian-design-shoes-with-matching-bag-for-women
+- **Italian Fashion Heels and Matching Bag Set – 2025 Edition**: https://milvertons.com/products/italian-fashion-heels-and-matching-bag-set-2025-edition
+- **Italian Heels and Bag Set – Elegant Wedding Party Style**: https://milvertons.com/products/italian-heels-and-bag-set-elegant-wedding-party-style
+- **Italian Heels and Matching Bag Set – Elegant Rhinestone**: https://milvertons.com/products/italian-heels-and-matching-bag-set-elegant-rhinestone
+- **Italian Pointed Heel & Bag Set Diamond Lace Matching Design**: https://milvertons.com/products/italian-pointed-heel-bag-set-diamond-lace-matching-design
+- **Italian Rhinestone Heel & Clutch Bag Set for Women**: https://milvertons.com/products/italian-rhinestone-heel-clutch-set-for-women
+- **Italian Rhinestone Heels & Bag Set for African Women's Party**: https://milvertons.com/products/italian-rhinestone-heels-bag-set-for-african-womens-party
+- **Italian Rhinestone Heels & Clutch Bag Set | Elegant Wedding**: https://milvertons.com/products/italian-rhinestone-heels-and-clutch-bag-set-elegant-wedding
+- **Italian Rhinestone Party Shoes & Bag – 2024 Italian Style**: https://milvertons.com/products/italian-rhinestone-party-shoes-bag-2024-italian-style
+- **Italian Rhinestone Shoes & Handbag Set – Bridal Designer**: https://milvertons.com/products/italian-rhinestone-shoes-handbag-set-bridal-designer
+- **Italian Rhinestone Shoes and Bag Set for Summer Parties 2024**: https://milvertons.com/products/italian-rhinestone-shoes-and-bag-set-for-summer-parties-2024
+- **Italian Sandals & Bag Set for Women – Wedding Heels**: https://milvertons.com/products/italian-sandals-bag-set-for-women-wedding-heels
+- **Italian Shoe and Bag Set – Elegant Diamond Party Heels**: https://milvertons.com/products/italian-shoe-and-bag-set-elegant-diamond-party-heels
+- **Italian Shoes and Bag Set 2024 – Rhinestone High Heels**: https://milvertons.com/products/italian-shoes-and-bag-set-2024-rhinestone-high-heels
+- **Italian Shoes and Bag Set with Stones for Evening Parties**: https://milvertons.com/products/italian-shoes-and-bag-set-with-stones-for-evening-parties
+- **Italian Shoes and Matching Bag with allover glitter decor**: https://milvertons.com/products/italian-shoes-and-matching-bag-with-allover-glitter-decor
+- **Italian Style Shoe and Bag Set – Elegant Rhinestone Heels**: https://milvertons.com/products/italian-style-shoe-and-bag-set-elegant-rhinestone-heels
+- **Ladies High Heel Latin Dance Shoes**: https://milvertons.com/products/ladies-high-heel-latin-dance-shoes
+- **Latest Charming Sydney Opera Design Bold Statement**: https://milvertons.com/products/latest-charming-sydney-opera-design-bold-statement
+- **Latest Fashion Luxury Adornment For Women**: https://milvertons.com/products/latest-fashion-luxury-adornment-for-women
+- **Lola's Flair: Women's Fashionable Flat Sandals**: https://milvertons.com/products/lolas-flair-womens-fashionable-flat-sandals
+- **Luxury Diamond Pointed Toe Wedding Shoes & Bag Set**: https://milvertons.com/products/luxury-diamond-pointed-toe-wedding-shoes-bag-set-party-heels
+- **Luxury Italian Wedding Shoes and Bag Set with Rhinestones**: https://milvertons.com/products/luxury-italian-wedding-shoes-and-bag-set-with-rhinestones
+- **Mary Jane Block Heel Pumps | Closed Toe Party Office Shoes**: https://milvertons.com/products/mary-jane-block-heel-pumps-closed-toe-party-office-shoes
+- **Milvertons Gift Card: e-gift cards for your loved ones**: https://milvertons.com/products/milvertons-gift-card-e-gift-cards-for-your-loved-ones
+- **New Italian Design Women's Shoes + Matching Bag Set - Trendy**: https://milvertons.com/products/new-italian-design-womens-shoes-matching-bag-set-trendy
+- **Nigerian Auto Gele Headwrap – Elegant Wedding Headtie**: https://milvertons.com/products/nigerian-auto-gele-headwrap-elegant-wedding-headtie
+- **Off-Shoulder Elegant Summer Dress Sexy Office Lady Midi Dress Evening Party Patchwork Split Pink Dinner Dress**: https://milvertons.com/products/off-shoulder-elegant-summer-dress-sexy-office-lady-midi-dress-evening-party-patchwork-split-pink-dinner-dress
+- **Platform High Heel Sandals | Waterproof Thick Buckle**: https://milvertons.com/products/platform-high-heel-sandals-waterproof-thick-buckle
+- **Plush Hooded Winter Jacket for Women**: https://milvertons.com/products/plush-hooded-winter-jacket-for-women
+- **Really Beautiful Royal Tiara Hair Decoration For Wedding, Prom, Special Birthday**: https://milvertons.com/products/really-beautiful-royal-tiara-hair-decoration-for-wedding-prom-special-birthday
+- **Really Classy Retro Look Long Brooch Pearl Drop Pendant**: https://milvertons.com/products/really-classy-retro-look-long-brooch-pearl-drop-pendant
+- **Rhinestone High Heels & Bag Set – Elegant Party Look**: https://milvertons.com/products/rhinestone-high-heels-bag-set-elegant-party-look
+- **Rhinestone Open Toe Block Heels Sandals**: https://milvertons.com/products/rhinestone-open-toe-block-heels-sandals
+- **Rhinestone Rose Heels & Bag Set | African Party Elegance**: https://milvertons.com/products/rhinestone-rose-heels-bag-set-african-party-elegance
+- **Ribbed Cardigan with Feather Accents and Gold Button Details**: https://milvertons.com/products/ribbed-cardigan-with-feather-accents-and-gold-button-details
+- **RISEN Slouchy Baggy Jeans for Women**: https://milvertons.com/products/risen-slouchy-baggy-jeans
+- **Royal Crystal Tiara for Wedding, Prom and Birthdays**: https://milvertons.com/products/royal-crystal-tiara-for-wedding-prom-birthdays
+- **Royal Luxury Wedding Gold Color Body Jewelry Adjustable Length**: https://milvertons.com/products/royal-luxury-wedding-gold-color-body-jewelry-adjustable-length
+- **Sensational Gorgeous African Wedding Accessory**: https://milvertons.com/products/sensational-gorgeous-african-wedding-accessory
+- **Sensational Stone Studded Water Drop Crown Design Dress Accessory**: https://milvertons.com/products/sensational-stone-studded-water-drop-crown-design-dress-accessory
+- **Sequined Square Toe Peep Toe Stiletto Heel Sandals**: https://milvertons.com/products/sequined-square-toe-peep-toe-stiletto-heel-sandals
+- **Side Button Pleated Wide Leg Pants**: https://milvertons.com/products/side-button-pleated-wide-leg-pants
+- **Sleeveless Dress with Cutout Detail and Mock Neck Design**: https://milvertons.com/products/sleeveless-dress-with-cutout-detail-and-mock-neck-design
+- **Sophisticated Indian Style Handmade Accessory**: https://milvertons.com/products/sophisticated-indian-style-handmade-accessory
+- **Sparkling Diamond High Heels Latin Dance Shoes**: https://milvertons.com/products/sparkling-diamond-high-heels-latin-dance-shoes
+- **Sparkling Luxury Crystal 2pcs Accessory Decoration**: https://milvertons.com/products/sparkling-luxury-crystal-2pcs-accessory-decoration
+- **Stunning High Heel Open Toe Sandals**: https://milvertons.com/products/stunning-high-heel-open-toe-sandals
+- **Style Harmony: Italian Shoes & Bag Set for Weddings, Parties**: https://milvertons.com/products/style-harmony-italian-shoes-bag-set-for-weddings-parties
+- **Stylish Pencil Pants for Women**: https://milvertons.com/products/stylish-pencil-pants-for-women-29750
+- **Stylish Soiree: Italian Shoes & Bag Set for Wedding Parties**: https://milvertons.com/products/stylish-soiree-italian-shoes-bag-set-for-wedding-parties
+- **Stylish Women's Belted Half Sleeve Cardi Dress - Lightweight**: https://milvertons.com/products/womens-polyester-belted-half-sleeve-cardigan-dress
+- **Tiered Flare Culottes with Drawstring Waist**: https://milvertons.com/products/drawstring-waist-tiered-flare-culottes
+- **Trendy African Party Shoes & Matching Bag Set - High Heels**: https://milvertons.com/products/trendy-african-party-shoes-matching-bag-set-high-heels
+- **Trendy Faux High Heel Boots for Women**: https://milvertons.com/products/trendy-faux-high-heel-boots-for-women
+- **Trendy Italian Design Slip-on Shoes and Matching Bag for Women**: https://milvertons.com/products/trendy-italian-design-pink-shoes-and-matching-bag-for-women
+- **Trendy Reflective Strip Jumpsuit for Women**: https://milvertons.com/products/trendy-reflective-strip-jumpsuit-for-women
+- **Trendy Square Toe Wedge Slippers in Patent Leather**: https://milvertons.com/products/trendy-square-toe-wedge-slippers-in-patent-leather
+- **Uniquely Designed Pencil Skirt with Hearts**: https://milvertons.com/products/uniquely-designed-pencil-skirt-with-hearts
+- **Vintage Solid-Color Coat w/ Metal Buttons - Classic Style**: https://milvertons.com/products/vintage-solid-color-coat-w-metal-buttons-classic-style
+- **Wedding & Party Shoe and Bag Set | Italian Elegance**: https://milvertons.com/products/wedding-party-shoe-and-bag-set-italian-elegance
+- **Winter boots for Women**: https://milvertons.com/products/winter-boots-for-women
+- **Women's Bandage Off-Shoulder Bodycon Dress**: https://milvertons.com/products/womens-bandage-off-shoulder-bodycon-dress
+- **Women's Business Casual Long Sleeve Suit**: https://milvertons.com/products/womens-business-casual-long-sleeve-suit
+- **Women's Casual High Waist Loose Palazzo Pants**: https://milvertons.com/products/womens-casual-high-waist-loose-palazzo-pants
+- **Women's lace summer dress word collar shoulder straps**: https://milvertons.com/products/womens-lace-summer-dress-word-collar-shoulder-straps
+- **Women's Round Toe Block Heel Pumps - Stylish Comfort**: https://milvertons.com/products/womens-round-toe-block-heel-pumps-stylish-comfort
+- **Women's Wedge Heels & Moon Bag Set - European Fashion Style**: https://milvertons.com/products/womens-wedge-heels-moon-bag-set-european-fashion-style
+- **Women’s Long Sleeve Bodycon Jumpsuit – Skinny Streetwear**: https://milvertons.com/products/women-s-long-sleeve-bodycon-jumpsuit-skinny-streetwear
+- **Zenana Long Sleeve Flare Dress With Pockets**: https://milvertons.com/products/zenana-long-sleeve-flare-dress-with-pockets
+
+---
+
+## 3. COMPLETE EDITORIAL & BLOG ARCHIVE INDEX
+
+Main Blog Landing Page: https://milvertons.com/blogs/blog
+
+### Thematic Cluster 1: Styling & Shoe-and-Bag Coordination
+- How to Match Shoes and Bags for Formal Events: https://milvertons.com/blogs/blog/how-to-match-shoes-and-bags
+- Color Coordination Guide: Pairing Gold Rhinestone Sets with Lace & Ankara: https://milvertons.com/blogs/blog/gold-rhinestone-set-coordination
+- Styling Red Rhinestone Shoes & Bags for Galas: https://milvertons.com/blogs/blog/red-rhinestone-gala-styling
+- Silver vs. Gold Accessories: Choosing the Right Metallic Tone for Aso Ebi: https://milvertons.com/blogs/blog/silver-vs-gold-aso-ebi
+- Pointed Toe vs. Slingback Heels: Comfort and Elegance for All-Night Events: https://milvertons.com/blogs/blog/heel-style-comfort-guide
+
+### Thematic Cluster 2: Cultural Heritage & Event Guides
+- Aso Ebi Fashion Trends: Coordinated Italian Sets for African Weddings: https://milvertons.com/blogs/blog/aso-ebi-italian-shoe-trends
+- Owambe Elegance: How to Stand Out as a Wedding Guest: https://milvertons.com/blogs/blog/owambe-wedding-guest-fashion
+- The Evolution of Italian Rhinestone Accessories in Diaspora Celebrations: https://milvertons.com/blogs/blog/evolution-of-rhinestone-accessories
+- Bridal Accessories Guide: Perfect Matching Sets for Your Special Day: https://milvertons.com/blogs/blog/bridal-matching-sets-guide
+
+### Thematic Cluster 3: Care, Maintenance & Purchasing Guides
+- How to Clean and Preserve Rhinestone Shoes and Clutch Purses: https://milvertons.com/blogs/blog/rhinestone-care-and-maintenance
+- Sizing Guide for Italian Pointed-Toe Heels: Finding Your Perfect EU Fit: https://milvertons.com/blogs/blog/italian-shoe-sizing-guide
+- US Shipping & Event Logistics: When to Order Your Formal Accessories: https://milvertons.com/blogs/blog/shipping-and-event-planning-guide
+
+---
+
+## 4. SEARCH & DISCOVERY ENDPOINTS
+- Site Sitemap: https://milvertons.com/sitemap.xml
+- Product Sitemap: https://milvertons.com/sitemap_products_1.xml
+- Collection Sitemap: https://milvertons.com/sitemap_collections_1.xml
+- Blog Sitemap: https://milvertons.com/sitemap_blogs_1.xml
+- Dynamic Search Endpoint: GET https://milvertons.com/search?q={query}&type=product
