@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-09-03
+Last Updated: 2026-09-04
 Platform: Shopify E-commerce Engine
 
 ---
