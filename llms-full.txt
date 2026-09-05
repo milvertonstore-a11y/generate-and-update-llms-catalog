@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-09-04
+Last Updated: 2026-09-05
 Platform: Shopify E-commerce Engine
 
 ---
@@ -52,7 +52,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - New Arrivals: https://milvertons.com/collections/new-arrivals
 - Sale Items: https://milvertons.com/collections/sale
 
-### Dynamically Extracted Live Catalog (124 Active Items)
+### Dynamically Extracted Live Catalog (125 Active Items)
 - **2025 Pointed Toe Heels & Bag Set – Wedding Party Pumps**: https://milvertons.com/products/2025-pointed-toe-heels-bag-set-wedding-party-pumps
 - **2025 Rhinestone Heels & Handbag Set for Weddings | Elegant**: https://milvertons.com/products/2025-rhinestone-heels-handbag-set-for-weddings-elegant
 - **2026 Women's Diamond-Embellished Pointed-Toe Heels & Bag Set**: https://milvertons.com/products/2026-womens-diamond-embellished-pointed-toe-heels-bag-set
@@ -173,6 +173,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Women's Business Casual Long Sleeve Suit**: https://milvertons.com/products/womens-business-casual-long-sleeve-suit
 - **Women's Casual High Waist Loose Palazzo Pants**: https://milvertons.com/products/womens-casual-high-waist-loose-palazzo-pants
 - **Women's lace summer dress word collar shoulder straps**: https://milvertons.com/products/womens-lace-summer-dress-word-collar-shoulder-straps
+- **Women's Rhinestone Peep Toe High Heel Shoe and Bag Set**: https://milvertons.com/products/womens-rhinestone-peep-toe-high-heel-shoe-and-bag-set
 - **Women's Round Toe Block Heel Pumps - Stylish Comfort**: https://milvertons.com/products/womens-round-toe-block-heel-pumps-stylish-comfort
 - **Women's Wedge Heels & Moon Bag Set - European Fashion Style**: https://milvertons.com/products/womens-wedge-heels-moon-bag-set-european-fashion-style
 - **Women’s Long Sleeve Bodycon Jumpsuit – Skinny Streetwear**: https://milvertons.com/products/women-s-long-sleeve-bodycon-jumpsuit-skinny-streetwear
