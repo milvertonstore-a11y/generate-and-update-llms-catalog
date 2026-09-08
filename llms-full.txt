@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-09-07
+Last Updated: 2026-09-08
 Platform: Shopify E-commerce Engine
 
 ---
@@ -52,17 +52,17 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - New Arrivals: https://milvertons.com/collections/new-arrivals
 - Sale Items: https://milvertons.com/collections/sale
 
-### Dynamically Extracted Live Catalog (125 Active Items)
+### Dynamically Extracted Live Catalog (126 Active Items)
 - **2025 Pointed Toe Heels & Bag Set – Wedding Party Pumps**: https://milvertons.com/products/2025-pointed-toe-heels-bag-set-wedding-party-pumps
 - **2025 Rhinestone Heels & Handbag Set for Weddings | Elegant**: https://milvertons.com/products/2025-rhinestone-heels-handbag-set-for-weddings-elegant
 - **2026 Women's Diamond-Embellished Pointed-Toe Heels & Bag Set**: https://milvertons.com/products/2026-womens-diamond-embellished-pointed-toe-heels-bag-set
-- **Active Camo Fitness Set**: https://milvertons.com/products/active-camo-fitness-set
 - **Asymmetric Casual Camo Dress, Mid-Calf**: https://milvertons.com/products/asymmetric-casual-camo-dress
 - **Balloon Sleeve Boat Neck Sweater Mini Dress, Knit**: https://milvertons.com/products/balloon-sleeve-boat-neck-sweater-mini-dress
 - **BiBi Popcorn Waffle Knit with Buttoned Front Cami Top**: https://milvertons.com/products/bibi-popcorn-waffle-knit-with-buttoned-front-cami-top
 - **Black Halter Mini Dress Bodycon Femme Vestiods Robe Lace Dress**: https://milvertons.com/products/black-halter-mini-dress-bodycon-femme-vestiods-robe-lace-dress
 - **Bold Cubic Zirconia Statement Ring – Trendy 2024 Boho Jewelry**: https://milvertons.com/products/bold-cubic-zirconia-statement-ring-trendy-2024-boho-jewelry
 - **Butterfly Slingback Sandals & Bag Set – Wedding Party Look**: https://milvertons.com/products/butterfly-slingback-sandals-bag-set-wedding-party-look
+- **Camo Workout Set for Women | Active Camo Fitness Set**: https://milvertons.com/products/active-camo-fitness-set
 - **Cap Sleeve Round Neck Knit Two-Piece Set - Top & Pants**: https://milvertons.com/products/cap-sleeve-round-neck-knit-two-piece-set-top-pants
 - **Chic Italian Crystal Diamond Shoes + Bag Set - Party/Wedding**: https://milvertons.com/products/chic-italian-crystal-diamond-shoes-bag-set-party-wedding
 - **Chic Italian Shoes & Bag Set with Stones for Parties**: https://milvertons.com/products/chic-italian-shoes-bag-set-with-stones-for-parties
@@ -177,6 +177,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Women's Round Toe Block Heel Pumps - Stylish Comfort**: https://milvertons.com/products/womens-round-toe-block-heel-pumps-stylish-comfort
 - **Women's Wedge Heels & Moon Bag Set - European Fashion Style**: https://milvertons.com/products/womens-wedge-heels-moon-bag-set-european-fashion-style
 - **Women’s Long Sleeve Bodycon Jumpsuit – Skinny Streetwear**: https://milvertons.com/products/women-s-long-sleeve-bodycon-jumpsuit-skinny-streetwear
+- **Women’s Rhinestone Heels & Matching Bag Set for Special Events**: https://milvertons.com/products/women-s-rhinestone-heels-matching-bag-set-for-special-events
 - **Zenana Long Sleeve Flare Dress With Pockets**: https://milvertons.com/products/zenana-long-sleeve-flare-dress-with-pockets
 
 ---
