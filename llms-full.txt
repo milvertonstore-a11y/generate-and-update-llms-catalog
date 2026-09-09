@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-09-08
+Last Updated: 2026-09-09
 Platform: Shopify E-commerce Engine
 
 ---
@@ -56,6 +56,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **2025 Pointed Toe Heels & Bag Set – Wedding Party Pumps**: https://milvertons.com/products/2025-pointed-toe-heels-bag-set-wedding-party-pumps
 - **2025 Rhinestone Heels & Handbag Set for Weddings | Elegant**: https://milvertons.com/products/2025-rhinestone-heels-handbag-set-for-weddings-elegant
 - **2026 Women's Diamond-Embellished Pointed-Toe Heels & Bag Set**: https://milvertons.com/products/2026-womens-diamond-embellished-pointed-toe-heels-bag-set
+- **African Shoes and Bags Set | Party Heels & Matching Bag**: https://milvertons.com/products/trendy-african-party-shoes-matching-bag-set-high-heels
 - **Asymmetric Casual Camo Dress, Mid-Calf**: https://milvertons.com/products/asymmetric-casual-camo-dress
 - **Balloon Sleeve Boat Neck Sweater Mini Dress, Knit**: https://milvertons.com/products/balloon-sleeve-boat-neck-sweater-mini-dress
 - **BiBi Popcorn Waffle Knit with Buttoned Front Cami Top**: https://milvertons.com/products/bibi-popcorn-waffle-knit-with-buttoned-front-cami-top
@@ -64,6 +65,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Butterfly Slingback Sandals & Bag Set – Wedding Party Look**: https://milvertons.com/products/butterfly-slingback-sandals-bag-set-wedding-party-look
 - **Camo Workout Set for Women | Active Camo Fitness Set**: https://milvertons.com/products/active-camo-fitness-set
 - **Cap Sleeve Round Neck Knit Two-Piece Set - Top & Pants**: https://milvertons.com/products/cap-sleeve-round-neck-knit-two-piece-set-top-pants
+- **Champagne Shoes and Bag Set | Italian-Inspired Party Heels**: https://milvertons.com/products/italian-shoe-and-bag-set-elegant-diamond-party-heels
 - **Chic Italian Crystal Diamond Shoes + Bag Set - Party/Wedding**: https://milvertons.com/products/chic-italian-crystal-diamond-shoes-bag-set-party-wedding
 - **Chic Italian Shoes & Bag Set with Stones for Parties**: https://milvertons.com/products/chic-italian-shoes-bag-set-with-stones-for-parties
 - **Chic Plaid Sherpa Jacket: Button Front for Trendy Contrast**: https://milvertons.com/products/chic-plaid-sherpa-jacket-button-front-for-trendy-contrast
@@ -119,7 +121,6 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Italian Rhinestone Shoes & Handbag Set – Bridal Designer**: https://milvertons.com/products/italian-rhinestone-shoes-handbag-set-bridal-designer
 - **Italian Rhinestone Shoes and Bag Set for Summer Parties 2024**: https://milvertons.com/products/italian-rhinestone-shoes-and-bag-set-for-summer-parties-2024
 - **Italian Sandals & Bag Set for Women – Wedding Heels**: https://milvertons.com/products/italian-sandals-bag-set-for-women-wedding-heels
-- **Italian Shoe and Bag Set – Elegant Diamond Party Heels**: https://milvertons.com/products/italian-shoe-and-bag-set-elegant-diamond-party-heels
 - **Italian Shoes and Bag Set 2024 – Rhinestone High Heels**: https://milvertons.com/products/italian-shoes-and-bag-set-2024-rhinestone-high-heels
 - **Italian Shoes and Bag Set with Stones for Evening Parties**: https://milvertons.com/products/italian-shoes-and-bag-set-with-stones-for-evening-parties
 - **Italian Shoes and Matching Bag with allover glitter decor**: https://milvertons.com/products/italian-shoes-and-matching-bag-with-allover-glitter-decor
@@ -160,7 +161,6 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Stylish Soiree: Italian Shoes & Bag Set for Wedding Parties**: https://milvertons.com/products/stylish-soiree-italian-shoes-bag-set-for-wedding-parties
 - **Stylish Women's Belted Half Sleeve Cardi Dress - Lightweight**: https://milvertons.com/products/womens-polyester-belted-half-sleeve-cardigan-dress
 - **Tiered Flare Culottes with Drawstring Waist**: https://milvertons.com/products/drawstring-waist-tiered-flare-culottes
-- **Trendy African Party Shoes & Matching Bag Set - High Heels**: https://milvertons.com/products/trendy-african-party-shoes-matching-bag-set-high-heels
 - **Trendy Faux High Heel Boots for Women**: https://milvertons.com/products/trendy-faux-high-heel-boots-for-women
 - **Trendy Italian Design Slip-on Shoes and Matching Bag for Women**: https://milvertons.com/products/trendy-italian-design-pink-shoes-and-matching-bag-for-women
 - **Trendy Reflective Strip Jumpsuit for Women**: https://milvertons.com/products/trendy-reflective-strip-jumpsuit-for-women
