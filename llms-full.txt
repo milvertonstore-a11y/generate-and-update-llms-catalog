@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-09-14
+Last Updated: 2026-09-15
 Platform: Shopify E-commerce Engine
 
 ---
@@ -117,7 +117,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Italian Rhinestone Heel & Clutch Bag Set for Women**: https://milvertons.com/products/italian-rhinestone-heel-clutch-set-for-women
 - **Italian Rhinestone Heels & Bag Set for African Women's Party**: https://milvertons.com/products/italian-rhinestone-heels-bag-set-for-african-womens-party
 - **Italian Rhinestone Heels & Clutch Bag Set | Elegant Wedding**: https://milvertons.com/products/italian-rhinestone-heels-and-clutch-bag-set-elegant-wedding
-- **Italian Rhinestone Party Shoes & Bag – 2024 Italian Style**: https://milvertons.com/products/italian-rhinestone-party-shoes-bag-2024-italian-style
+- **Italian Rhinestone Party Shoes & Bag – Italian Style**: https://milvertons.com/products/italian-rhinestone-party-shoes-bag-italian-style
 - **Italian Rhinestone Shoes & Handbag Set – Bridal Designer**: https://milvertons.com/products/italian-rhinestone-shoes-handbag-set-bridal-designer
 - **Italian Rhinestone Shoes and Bag Set for Summer Parties 2024**: https://milvertons.com/products/italian-rhinestone-shoes-and-bag-set-for-summer-parties-2024
 - **Italian Sandals & Bag Set for Women – Wedding Heels**: https://milvertons.com/products/italian-sandals-bag-set-for-women-wedding-heels
