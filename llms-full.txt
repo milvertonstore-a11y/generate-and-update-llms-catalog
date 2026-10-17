@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-10-16
+Last Updated: 2026-10-17
 Platform: Shopify E-commerce Engine
 
 ---
@@ -52,7 +52,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - New Arrivals: https://milvertons.com/collections/new-arrivals
 - Sale Items: https://milvertons.com/collections/sale
 
-### Dynamically Extracted Live Catalog (126 Active Items)
+### Dynamically Extracted Live Catalog (116 Active Items)
 - **2025 Pointed Toe Heels & Bag Set – Wedding Party Pumps**: https://milvertons.com/products/2025-pointed-toe-heels-bag-set-wedding-party-pumps
 - **2025 Rhinestone Heels & Handbag Set for Weddings | Elegant**: https://milvertons.com/products/2025-rhinestone-heels-handbag-set-for-weddings-elegant
 - **2026 Women's Diamond-Embellished Pointed-Toe Heels & Bag Set**: https://milvertons.com/products/2026-womens-diamond-embellished-pointed-toe-heels-bag-set
@@ -70,7 +70,6 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Chic Italian Shoes & Bag Set with Stones for Parties**: https://milvertons.com/products/chic-italian-shoes-bag-set-with-stones-for-parties
 - **Chic Plaid Sherpa Jacket: Button Front for Trendy Contrast**: https://milvertons.com/products/chic-plaid-sherpa-jacket-button-front-for-trendy-contrast
 - **Chic Tie Neck Frill Dress with Three-Quarter Sleeves**: https://milvertons.com/products/chic-tie-neck-frill-dress-with-three-quarter-sleeves
-- **Classy Faux Suede Ankle Boots for Women**: https://milvertons.com/products/classy-faux-suede-ankle-boots-for-women
 - **Classy Wooden Platform Strap Heels for Women**: https://milvertons.com/products/classy-wooden-platform-strap-heels-for-women
 - **Cropped Blazer with Fringe Trim and Lapel Collar Detail**: https://milvertons.com/products/fringe-trim-lapel-collar-cropped-blazer
 - **Cubic Zirconia Leaf Charm Link Chain Bracelet**: https://milvertons.com/products/cubic-zirconia-leaf-charm-link-chain-bracelet
@@ -132,27 +131,20 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Luxury Diamond Pointed Toe Wedding Shoes & Bag Set**: https://milvertons.com/products/luxury-diamond-pointed-toe-wedding-shoes-bag-set-party-heels
 - **Luxury Italian Wedding Shoes and Bag Set with Rhinestones**: https://milvertons.com/products/luxury-italian-wedding-shoes-and-bag-set-with-rhinestones
 - **Mary Jane Block Heel Pumps | Closed Toe Party Office Shoes**: https://milvertons.com/products/mary-jane-block-heel-pumps-closed-toe-party-office-shoes
-- **Milvertons Gift Card: e-gift cards for your loved ones**: https://milvertons.com/products/milvertons-gift-card-e-gift-cards-for-your-loved-ones
 - **New Italian Design Women's Shoes + Matching Bag Set - Trendy**: https://milvertons.com/products/new-italian-design-womens-shoes-matching-bag-set-trendy
 - **Nigerian Auto Gele Headwrap – Elegant Wedding Headtie**: https://milvertons.com/products/nigerian-auto-gele-headwrap-elegant-wedding-headtie
 - **Off-Shoulder Elegant Summer Dress Sexy Office Lady Midi Dress Evening Party Patchwork Split Pink Dinner Dress**: https://milvertons.com/products/off-shoulder-elegant-summer-dress-sexy-office-lady-midi-dress-evening-party-patchwork-split-pink-dinner-dress
 - **Platform High Heel Sandals | Waterproof Thick Buckle**: https://milvertons.com/products/platform-high-heel-sandals-waterproof-thick-buckle
 - **Plush Hooded Winter Jacket for Women**: https://milvertons.com/products/plush-hooded-winter-jacket-for-women
-- **Really Beautiful Royal Tiara Hair Decoration For Wedding, Prom, Special Birthday**: https://milvertons.com/products/really-beautiful-royal-tiara-hair-decoration-for-wedding-prom-special-birthday
-- **Really Classy Retro Look Long Brooch Pearl Drop Pendant**: https://milvertons.com/products/really-classy-retro-look-long-brooch-pearl-drop-pendant
 - **Rhinestone High Heels & Bag Set – Elegant Party Look**: https://milvertons.com/products/rhinestone-high-heels-bag-set-elegant-party-look
 - **Rhinestone Open Toe Block Heels Sandals**: https://milvertons.com/products/rhinestone-open-toe-block-heels-sandals
 - **Rhinestone Rose Heels & Bag Set | African Party Elegance**: https://milvertons.com/products/rhinestone-rose-heels-bag-set-african-party-elegance
 - **Ribbed Cardigan with Feather Accents and Gold Button Details**: https://milvertons.com/products/ribbed-cardigan-with-feather-accents-and-gold-button-details
 - **RISEN Slouchy Baggy Jeans for Women**: https://milvertons.com/products/risen-slouchy-baggy-jeans
 - **Royal Crystal Tiara for Wedding, Prom and Birthdays**: https://milvertons.com/products/royal-crystal-tiara-for-wedding-prom-birthdays
-- **Royal Luxury Wedding Gold Color Body Jewelry Adjustable Length**: https://milvertons.com/products/royal-luxury-wedding-gold-color-body-jewelry-adjustable-length
-- **Sensational Gorgeous African Wedding Accessory**: https://milvertons.com/products/sensational-gorgeous-african-wedding-accessory
-- **Sensational Stone Studded Water Drop Crown Design Dress Accessory**: https://milvertons.com/products/sensational-stone-studded-water-drop-crown-design-dress-accessory
 - **Sequined Square Toe Peep Toe Stiletto Heel Sandals**: https://milvertons.com/products/sequined-square-toe-peep-toe-stiletto-heel-sandals
 - **Side Button Pleated Wide Leg Pants**: https://milvertons.com/products/side-button-pleated-wide-leg-pants
 - **Sleeveless Dress with Cutout Detail and Mock Neck Design**: https://milvertons.com/products/sleeveless-dress-with-cutout-detail-and-mock-neck-design
-- **Sophisticated Indian Style Handmade Accessory**: https://milvertons.com/products/sophisticated-indian-style-handmade-accessory
 - **Sparkling Diamond High Heels Latin Dance Shoes**: https://milvertons.com/products/sparkling-diamond-high-heels-latin-dance-shoes
 - **Sparkling Luxury Crystal 2pcs Accessory Decoration**: https://milvertons.com/products/sparkling-luxury-crystal-2pcs-accessory-decoration
 - **Stunning High Heel Open Toe Sandals**: https://milvertons.com/products/stunning-high-heel-open-toe-sandals
@@ -161,14 +153,12 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Stylish Soiree: Italian Shoes & Bag Set for Wedding Parties**: https://milvertons.com/products/stylish-soiree-italian-shoes-bag-set-for-wedding-parties
 - **Stylish Women's Belted Half Sleeve Cardi Dress - Lightweight**: https://milvertons.com/products/womens-polyester-belted-half-sleeve-cardigan-dress
 - **Tiered Flare Culottes with Drawstring Waist**: https://milvertons.com/products/drawstring-waist-tiered-flare-culottes
-- **Trendy Faux High Heel Boots for Women**: https://milvertons.com/products/trendy-faux-high-heel-boots-for-women
 - **Trendy Italian Design Slip-on Shoes and Matching Bag for Women**: https://milvertons.com/products/trendy-italian-design-pink-shoes-and-matching-bag-for-women
 - **Trendy Reflective Strip Jumpsuit for Women**: https://milvertons.com/products/trendy-reflective-strip-jumpsuit-for-women
 - **Trendy Square Toe Wedge Slippers in Patent Leather**: https://milvertons.com/products/trendy-square-toe-wedge-slippers-in-patent-leather
 - **Uniquely Designed Pencil Skirt with Hearts**: https://milvertons.com/products/uniquely-designed-pencil-skirt-with-hearts
 - **Vintage Solid-Color Coat w/ Metal Buttons - Classic Style**: https://milvertons.com/products/vintage-solid-color-coat-w-metal-buttons-classic-style
 - **Wedding & Party Shoe and Bag Set | Italian Elegance**: https://milvertons.com/products/wedding-party-shoe-and-bag-set-italian-elegance
-- **Winter boots for Women**: https://milvertons.com/products/winter-boots-for-women
 - **Women's Bandage Off-Shoulder Bodycon Dress**: https://milvertons.com/products/womens-bandage-off-shoulder-bodycon-dress
 - **Women's Business Casual Long Sleeve Suit**: https://milvertons.com/products/womens-business-casual-long-sleeve-suit
 - **Women's Casual High Waist Loose Palazzo Pants**: https://milvertons.com/products/womens-casual-high-waist-loose-palazzo-pants
