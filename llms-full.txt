@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-11-11
+Last Updated: 2026-11-12
 Platform: Shopify E-commerce Engine
 
 ---
@@ -97,7 +97,6 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Italian Rhinestone Shoes and Bag Set for Summer Parties 2024**: https://milvertons.com/products/italian-rhinestone-shoes-and-bag-set-for-summer-parties-2024
 - **Italian Sandals & Bag Set for Women – Wedding Heels**: https://milvertons.com/products/italian-sandals-bag-set-for-women-wedding-heels
 - **Italian Shoes and Bag Set 2024 – Rhinestone High Heels**: https://milvertons.com/products/italian-shoes-and-bag-set-2024-rhinestone-high-heels
-- **Italian Shoes and Bag Set with Stones for Evening Parties**: https://milvertons.com/products/italian-shoes-and-bag-set-with-stones-for-evening-parties
 - **Italian Shoes and Matching Bag with allover glitter decor**: https://milvertons.com/products/italian-shoes-and-matching-bag-with-allover-glitter-decor
 - **Italian Style Shoe and Bag Set – Elegant Rhinestone Heels**: https://milvertons.com/products/italian-style-shoe-and-bag-set-elegant-rhinestone-heels
 - **Ladies High Heel Latin Dance Shoes**: https://milvertons.com/products/ladies-high-heel-latin-dance-shoes
@@ -116,6 +115,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Sequined Square Toe Peep Toe Stiletto Heel Sandals**: https://milvertons.com/products/sequined-square-toe-peep-toe-stiletto-heel-sandals
 - **Sparkling Diamond High Heels Latin Dance Shoes**: https://milvertons.com/products/sparkling-diamond-high-heels-latin-dance-shoes
 - **Sparkling Luxury Crystal 2pcs Accessory Decoration**: https://milvertons.com/products/sparkling-luxury-crystal-2pcs-accessory-decoration
+- **Stone-Embellished Peep-Toe Heels & Matching Bag Set**: https://milvertons.com/products/italian-shoes-and-bag-set-with-stones-for-evening-parties
 - **Style Harmony: Italian Shoes & Bag Set for Weddings, Parties**: https://milvertons.com/products/style-harmony-italian-shoes-bag-set-for-weddings-parties
 - **Stylish Soiree: Italian Shoes & Bag Set for Wedding Parties**: https://milvertons.com/products/stylish-soiree-italian-shoes-bag-set-for-wedding-parties
 - **Trendy Italian Design Slip-on Shoes and Matching Bag for Women**: https://milvertons.com/products/trendy-italian-design-pink-shoes-and-matching-bag-for-women
