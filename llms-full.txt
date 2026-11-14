@@ -3,7 +3,7 @@
 This extended document contains the comprehensive product catalog index, automated extraction endpoints, and complete editorial blog archive for Milvertons (https://milvertons.com).
 
 Primary LLMS File: https://milvertons.com/llms.txt
-Last Updated: 2026-11-13
+Last Updated: 2026-11-14
 Platform: Shopify E-commerce Engine
 
 ---
@@ -53,9 +53,6 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - Sale Items: https://milvertons.com/collections/sale
 
 ### Dynamically Extracted Live Catalog (71 Active Items)
-- **2025 Pointed Toe Heels & Bag Set – Wedding Party Pumps**: https://milvertons.com/products/2025-pointed-toe-heels-bag-set-wedding-party-pumps
-- **2025 Rhinestone Heels & Handbag Set for Weddings | Elegant**: https://milvertons.com/products/2025-rhinestone-heels-handbag-set-for-weddings-elegant
-- **2026 Women's Diamond-Embellished Pointed-Toe Heels & Bag Set**: https://milvertons.com/products/2026-womens-diamond-embellished-pointed-toe-heels-bag-set
 - **African Shoes and Bags Set | Party Heels & Matching Bag**: https://milvertons.com/products/trendy-african-party-shoes-matching-bag-set-high-heels
 - **Bold Cubic Zirconia Statement Ring – Trendy 2024 Boho Jewelry**: https://milvertons.com/products/bold-cubic-zirconia-statement-ring-trendy-2024-boho-jewelry
 - **Butterfly Slingback Sandals & Bag Set – Wedding Party Look**: https://milvertons.com/products/butterfly-slingback-sandals-bag-set-wedding-party-look
@@ -69,7 +66,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Elegant Affairs: Ladies' High Heels & Bag Set for Weddings**: https://milvertons.com/products/elegant-affairs-ladies-high-heels-bag-set-for-weddings
 - **Elegant Italian Rhinestone Shoes and Bag for Evening Parties**: https://milvertons.com/products/elegant-italian-rhinestone-shoes-and-bag-for-evening-parties
 - **Elegant Party Shoes & Bag Set with Rhinestone Detailing**: https://milvertons.com/products/elegant-party-shoes-bag-set-with-rhinestone-detailing
-- **Elegant Peep-Toe Heels and Bag Set – Italian Style 2025**: https://milvertons.com/products/elegant-peep-toe-heels-and-bag-set-italian-style-2025
+- **Elegant Peep-Toe Heels and Bag Set – Italian Style**: https://milvertons.com/products/elegant-peep-toe-heels-and-bag-set-italian-style-2025
 - **Elegant Pointed Toe Rhinestone Heels & Bag Set for Women**: https://milvertons.com/products/elegant-pointed-toe-rhinestone-heels-bag-set-for-women
 - **Elegant Rhinestone Heels & Bag Set  - Ideal for Weddings**: https://milvertons.com/products/elegant-rhinestone-heels-bag-set-ideal-for-weddings
 - **Elegant Rhinestone Pointed Toe Heels & Matching Handbag Set**: https://milvertons.com/products/elegant-rhinestone-pointed-toe-heels-matching-handbag-set
@@ -85,7 +82,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Italian Design Rhinestone Shoes and Bag for African Weddings**: https://milvertons.com/products/italian-design-rhinestone-shoes-and-bag-for-african-weddings
 - **Italian Design Rhinestone Shoes and Matching Bag for Weddings**: https://milvertons.com/products/italian-design-rhinestone-shoes-and-matching-bag-for-weddings
 - **Italian Design Shoes with Matching Bag for Women**: https://milvertons.com/products/italian-design-shoes-with-matching-bag-for-women
-- **Italian Fashion Heels and Matching Bag Set – 2025 Edition**: https://milvertons.com/products/italian-fashion-heels-and-matching-bag-set-2025-edition
+- **Italian Fashion Heels and Matching Bag Set**: https://milvertons.com/products/italian-fashion-heels-and-matching-bag-set-2025-edition
 - **Italian Heels and Bag Set – Elegant Wedding Party Style**: https://milvertons.com/products/italian-heels-and-bag-set-elegant-wedding-party-style
 - **Italian Heels and Matching Bag Set – Elegant Rhinestone**: https://milvertons.com/products/italian-heels-and-matching-bag-set-elegant-rhinestone
 - **Italian Pointed Heel & Bag Set Diamond Lace Matching Design**: https://milvertons.com/products/italian-pointed-heel-bag-set-diamond-lace-matching-design
@@ -96,7 +93,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Italian Rhinestone Shoes & Handbag Set – Bridal Designer**: https://milvertons.com/products/italian-rhinestone-shoes-handbag-set-bridal-designer
 - **Italian Rhinestone Shoes and Bag Set for Summer Parties 2024**: https://milvertons.com/products/italian-rhinestone-shoes-and-bag-set-for-summer-parties-2024
 - **Italian Sandals & Bag Set for Women – Wedding Heels**: https://milvertons.com/products/italian-sandals-bag-set-for-women-wedding-heels
-- **Italian Shoes and Bag Set 2024 – Rhinestone High Heels**: https://milvertons.com/products/italian-shoes-and-bag-set-2024-rhinestone-high-heels
+- **Italian Shoes and Bag Set – Rhinestone High Heels**: https://milvertons.com/products/italian-shoes-and-bag-set-2024-rhinestone-high-heels
 - **Italian Shoes and Matching Bag with allover glitter decor**: https://milvertons.com/products/italian-shoes-and-matching-bag-with-allover-glitter-decor
 - **Italian Style Shoe and Bag Set – Elegant Rhinestone Heels**: https://milvertons.com/products/italian-style-shoe-and-bag-set-elegant-rhinestone-heels
 - **Ladies High Heel Latin Dance Shoes**: https://milvertons.com/products/ladies-high-heel-latin-dance-shoes
@@ -109,6 +106,8 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **New Italian Design Women's Shoes + Matching Bag Set - Trendy**: https://milvertons.com/products/new-italian-design-womens-shoes-matching-bag-set-trendy
 - **Nigerian Auto Gele Headwrap – Elegant Wedding Headtie**: https://milvertons.com/products/nigerian-auto-gele-headwrap-elegant-wedding-headtie
 - **Platform High Heel Sandals | Waterproof Thick Buckle**: https://milvertons.com/products/platform-high-heel-sandals-waterproof-thick-buckle
+- **Pointed Toe Heels & Bag Set – Wedding Party Pumps**: https://milvertons.com/products/2025-pointed-toe-heels-bag-set-wedding-party-pumps
+- **Rhinestone Heels & Handbag Set for Weddings | Elegant**: https://milvertons.com/products/2025-rhinestone-heels-handbag-set-for-weddings-elegant
 - **Rhinestone High Heels & Bag Set – Elegant Party Look**: https://milvertons.com/products/rhinestone-high-heels-bag-set-elegant-party-look
 - **Rhinestone Rose Heels & Bag Set | African Party Elegance**: https://milvertons.com/products/rhinestone-rose-heels-bag-set-african-party-elegance
 - **Royal Crystal Tiara for Wedding, Prom and Birthdays**: https://milvertons.com/products/royal-crystal-tiara-for-wedding-prom-birthdays
@@ -121,6 +120,7 @@ AI agents, automated web parsers, and shopping assistants can programmatically c
 - **Trendy Italian Design Slip-on Shoes and Matching Bag for Women**: https://milvertons.com/products/trendy-italian-design-pink-shoes-and-matching-bag-for-women
 - **Trendy Square Toe Wedge Slippers in Patent Leather**: https://milvertons.com/products/trendy-square-toe-wedge-slippers-in-patent-leather
 - **Wedding & Party Shoe and Bag Set | Italian Elegance**: https://milvertons.com/products/wedding-party-shoe-and-bag-set-italian-elegance
+- **Women's Diamond-Embellished Pointed-Toe Heels & Bag Set**: https://milvertons.com/products/2026-womens-diamond-embellished-pointed-toe-heels-bag-set
 - **Women's Rhinestone Peep Toe High Heel Shoe and Bag Set**: https://milvertons.com/products/womens-rhinestone-peep-toe-high-heel-shoe-and-bag-set
 - **Women's Wedge Heels & Moon Bag Set - European Fashion Style**: https://milvertons.com/products/womens-wedge-heels-moon-bag-set-european-fashion-style
 - **Women’s Rhinestone Heels & Matching Bag Set for Special Events**: https://milvertons.com/products/women-s-rhinestone-heels-matching-bag-set-for-special-events
